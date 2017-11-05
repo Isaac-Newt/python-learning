@@ -1,4 +1,8 @@
-# my first python program with pygobject
+# my second python program with pygobject
+
+# this creates a GTK window with a button
+# and some other stuff
+
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
