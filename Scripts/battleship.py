@@ -19,7 +19,7 @@ def random_row(board):
     return randint(0, len(board) - 1)
 # Choose random column
 def random_col(board):
-    return randing(0, len(board) - 1)
+    return randint(0, len(board) - 1)
 
 # Choose random grid plot
 ship_row = random_row(board)
@@ -34,9 +34,9 @@ guess_col = int(raw_input("Guess Column: "))
 
 # Give user 4 turns
 for turn in range(4):
-    print "Turn", turn + 1
+    print("Turn", turn + 1)
     # Do after guess
-    if guess_row == ship_row and guess_col = ship_col:
+    if guess_row == ship_row and guess_col == ship_col:
         print("Contratulations! You sank the Battleship!")
         break
     elif board[guess_row][guess_col] == "X":
@@ -54,4 +54,4 @@ for turn in range(4):
             board[guess_row][guess_col] = "X"
         print_board(board)
     if turn == 3:
-        print "Game Over"
+        print("Game Over")
