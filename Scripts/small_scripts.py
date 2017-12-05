@@ -1,0 +1,79 @@
+phrase = "A bird in the hand..."
+
+# Replace all A's in phrase with X
+for char in phrase:
+  if char == "A" or char == "a":
+    print("X"),
+  else:
+    print(char),
+
+print()
+
+# # # # # # # # # #
+
+numbers  = [7, 9, 12, 54, 99]
+
+print("This list contains: ")
+
+for num in numbers:
+  print(num)
+
+for num in numbers:
+  print(num ** 2)
+  
+# # # # # # # # # #
+
+list_a = [3, 9, 17, 15, 19]
+list_b = [2, 4, 8, 10, 30, 40, 50, 60, 70, 80, 90]
+
+for a, b in zip(list_a, list_b):
+  # Add your code here!
+  if a > b:
+    print(a)
+  elif b > a:
+    print(b)
+    
+# # # # # # # # # #
+
+def is_even(x):
+  if x % 2 == 0:
+    return True
+  else:
+    return False
+  
+# # # # # # # # # #
+
+def is_int(x):
+  if x % 1 == 0:
+    return True
+  else:
+    return False
+  
+# # # # # # # # # #
+
+def digit_sum(n):
+  string = str(n)
+  total = 0
+  for char in string:
+    num = int(char)
+    total += num
+  return total
+
+# # # # # # # # # #
+
+def factorial(x):
+  if x == 1:
+    return 1
+  else:
+    return x * factorial(x-1)
+  
+# # # # # # # # # #
+
+def is_prime(x):
+  if x < 2:
+    return False
+  else:
+    for n in range(2, x-1):
+      if x % n == 0:
+        return False
+    return True
