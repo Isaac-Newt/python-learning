@@ -93,3 +93,31 @@ def scrabble_score(word):
     value = score[char]
     total += value
   return total
+
+# # # # # # # # # #
+
+def count(sequence, item):
+  total = 0
+  for ob in sequence:
+    if ob == item:
+      total += 1
+  return total
+
+# # # # # # # # # #
+
+def purify(list):
+  new_list = []
+  for item in list:
+    if item % 2 == 0:
+      new_list.append(item)
+  return new_list
+
+# # # # # # # # # #
+
+def product(list):
+  total = 1
+  for num in list:
+    total *= num
+  return total
+
+# # # # # # # # # # 
