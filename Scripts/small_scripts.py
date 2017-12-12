@@ -121,3 +121,41 @@ def product(list):
   return total
 
 # # # # # # # # # # 
+
+grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5]
+
+def grades_sum(scores):
+  total = 0
+  for grade in scores:
+    total += grade
+  return total
+
+def grades_average(grades_input):
+  total = grades_sum(grades_input)
+  avg = total / float(len(grades_input))
+  return avg
+
+def grades_variance(scores):
+  average = grades_average(scores)
+  variance = 0
+  for score in scores:
+    dif = (average - score) ** 2
+    variance += dif
+  return variance / len(scores)
+
+def grades_std_deviation(variance):
+  return variance ** 0.5
+
+variance = grades_variance(grades)
+
+print(print_grades(grades))
+print(grades_sum(grades))
+print(grades_average(grades))
+print(variance)
+print(grades_std_deviation(variance))
+
+# # # # # # # # # #
+
+
+
+# # # # # # # # # #
