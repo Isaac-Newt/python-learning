@@ -25,6 +25,7 @@ class MainWindow(Gtk.Window):
         headerbar.props.title = "Text Editor"
         self.set_titlebar(headerbar)
 
+        # Set up buttons
         open_button = Gtk.Button(label="Open")
         open_button.connect("clicked", self.on_open_clicked)
         headerbar.pack_start(open_button)
@@ -32,6 +33,10 @@ class MainWindow(Gtk.Window):
         save_button = Gtk.Button(label="Save")
         save_button.connect("clicked", self.on_save_clicked)
         headerbar.pack_start(save_button)
+
+        about_button = Gtk.Button("About")
+        about_button.connect("clicked", self.on_about_clicked)
+        headerbar.pack_start(about_button)
 
         # Create scrolled window
         scrolledwindow = Gtk.ScrolledWindow()
@@ -54,6 +59,30 @@ class MainWindow(Gtk.Window):
         self.textbuffer.get_text(self.textbuffer.get_start_iter(), self.textbuffer.get_end_iter(), True)
         filename = savechooser.get_filename()
         print(filename, 'selected.')
+
+    # About Dialog actions
+    def on_about_clicked(self, widget):
+        Dialog = Popup(self)
+        response = Dialog.run()
+
+        if response == Gtk.ResponseType.OK:
+            print("You clicked ok")
+        elif response == Gtk.ResponseType.CANCEL:
+            print("You clicked cancel")
+
+        Dialog.destroy()
+
+class Popup(Gtk.Dialog):
+    def __init__(self, parent):
+        Gtk.Dialog.__init__(self, "Popup Title", parent, Gtk.DialogFlags.MODAL,
+            ("Custom Cancel Text", Gtk.ResponseType.CANCEL,
+            Gtk.STOCK_OK, Gtk.ResponseType.OK))
+        self.set_border_width(10)
+        self.set_default_size(200, 250)
+
+        area = self.get_content_area()
+        area.add(Gtk.Label("This is descriptive text for the about Dialog"))
+        self.show_all()
 
 window = MainWindow()
 window.connect("delete-event", Gtk.main_quit)
