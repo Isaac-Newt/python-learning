@@ -161,3 +161,7 @@ print(filter(lambda x: x>29 and x<70, squares))
 
 # # # # # # # # # #
 
+garbled = "IXXX aXXmX aXXXnXoXXXXXtXhXeXXXXrX sXXXXeXcXXXrXeXt mXXeXsXXXsXaXXXXXXgXeX!XX"
+
+message = filter(lambda x: x != "X", garbled)
+print(message)
