@@ -175,3 +175,27 @@ def check_bit4(input):
     return "on"
   else:
     return "off"
+
+# # # # # # # # # #
+
+a = 0b10111011
+mask = 0b10000100
+desired = a | mask 
+
+print(bin(desired))
+
+# # # # # # # # # # 
+
+a = 0b11101110
+mask = 0b11111111
+desired = a ^ mask
+print(bin(desired))
+
+# # # # # # # # # # 
+
+def flip_bit(number, n):
+  mask = (0b1 << n - 1)
+  result = number ^ mask
+  return bin(result)
+
+# # # # # # # # # # 
