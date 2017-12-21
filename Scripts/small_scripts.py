@@ -165,3 +165,13 @@ garbled = "IXXX aXXmX aXXXnXoXXXXXtXhXeXXXXrX sXXXXeXcXXXrXeXt mXXeXsXXXsXaXXXXX
 
 message = filter(lambda x: x != "X", garbled)
 print(message)
+
+# # # # # # # # # #
+
+def check_bit4(input):
+  mask = 0b1000
+  check = input & mask
+  if check > 0:
+    return "on"
+  else:
+    return "off"
