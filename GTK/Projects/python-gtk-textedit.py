@@ -1,9 +1,13 @@
 # A very, very simple text editor.
 # Made with Python and GTK3 (via gobject)
 
+# Import GTK
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio
+
+# Import OS (File management)
+import os
 
 # define window
 class MainWindow(Gtk.Window):
@@ -15,7 +19,7 @@ class MainWindow(Gtk.Window):
         self.set_border_width(10)
         self.set_default_size(500, 400)
 
-        # Add grid
+        # Add gridut
         self.grid = Gtk.Grid()
         self.add(self.grid)
 
@@ -47,6 +51,7 @@ class MainWindow(Gtk.Window):
         # Add text typing area
         self.textview = Gtk.TextView()
         self.textbuffer = self.textview.get_buffer()
+
         # Set text to wrap after words
         self.textview.set_wrap_mode(Gtk.WrapMode.WORD)
         scrolledwindow.add(self.textview)
