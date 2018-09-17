@@ -1,9 +1,12 @@
 #
-# This program uses two turtles to draw two squares, with turtles 
+# This program uses two turtles to draw two squares, with turtles
 # drawing in opposite directions, taking turns drawing sides.
-# 
+#
 # Isaac List - CS150, 09-14-2018 Lab 3b
 #
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import turtle
 
@@ -32,6 +35,6 @@ for sideNumber in [ 1, 2, 3, 4 ] :
     green.forward(50)
     green.right(90)
     purple.forward(50)
-    purple.left(90)   
+    purple.left(90)
 
 canvas.exitonclick()
