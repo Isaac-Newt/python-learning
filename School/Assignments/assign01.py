@@ -4,6 +4,8 @@
 # Furlongs per Fortnight
 # This program converts a given in Furlongs/Fortnight to Knots
 #
+# Comments explain each step taken
+# 
 
 def conversion(value):
     # fortnight = 14 days
@@ -25,8 +27,8 @@ def conversion(value):
 
     return knots
 
-fpf = float(input("Enter a speed in Furlongs per Fortnight: "))
+fpfInupt = float(input("Enter a speed in Furlongs per Fortnight: "))
 
-knots = conversion(fpf)
+knots = conversion(fpfInput)
 
-print(fpf, "Furlongs per Fortnight = ", knots, "Knots")
+print(fpfInput, "Furlongs per Fortnight = ", knots, "Knots")
