@@ -19,19 +19,20 @@ import random
 
 # Integer input
 def inputInt(prompt) :
-    """Prompts for, reads, and returns an int value"""
+    # Prompts for, reads, and returns an int value
     return int(input(prompt + ' (an int) '))
 
 # Float input
 def inputFloat(prompt) :
-    """Prompts for, reads, and returns a float value"""
+    # Prompts for, reads, and returns a float value
     return float(input(prompt + ' (a float) '))
 
 # Setup
 
 # Drawing the arena boundary
 def drawArenaBoundary(arenaRadius) :
-    """Draws a square of a given radius centered on world coordinate (0, 0) showing the boundary of an arena"""
+    # Draws a square of a given radius centered on world coordinate (0, 0)
+    # showing the boundary of an arena
 
     turtleForDrawingArenaBorder = turtle.Turtle()
 
@@ -62,7 +63,6 @@ def arenaSetup():
     drawArenaBoundary(arenaRadius)
 
 # Turtles Setup
-
 def turtlesSetup():
     # Create Player 1's turtle
     turtleForPlayer1 = turtle.Turtle()
@@ -89,12 +89,14 @@ def turtlesSetup():
 
 # Determine x-coordinates of turtle if move is made
 def newXCoordinate(direction, distance, subjectTurtle) :
-    """Returns the x-coordinate a subject turtle would be at if it were to move in a given direction for a given distance"""
+    # Returns the x-coordinate a subject turtle would be at if it were
+    # to move in a given direction for a given distance
     return subjectTurtle.xcor() + distance * math.cos(math.radians(direction))
 
 # Determine y-coordinates of turtle if move is made
 def newYCoordinate(direction, distance, subjectTurtle) :
-    """Returns the x-coordinate a subject turtle would be at if it were to move in a given direction for a given distance"""
+    # Returns the x-coordinate a subject turtle would be at if it were
+    # to move in a given direction for a given distance
     return subjectTurtle.ycor() + distance * math.sin(math.radians(direction))
 
 """                      """
@@ -117,7 +119,7 @@ def getUserDirection():
     # Until user inputs a valid direction, keep asking
     direction = ""
     while isInvalidDirection(direction):
-        direction = input("What direction should your turtle travel? (east, west, north, or south\)")
+        direction = input("What direction should your turtle travel? (east, west, north, or south\): ")
 
     # Convert direction to a numerical heading
     if direction == "east":
@@ -158,7 +160,7 @@ else :
 
     # Set up turtles
     turtlesSetup()
-    
+
     # Pseudo-randomly decide which player moves first
     playerMakingMove = random.randrange(1, 3)
 
