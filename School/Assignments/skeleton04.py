@@ -63,6 +63,7 @@ def arenaSetup():
     drawArenaBoundary(arenaRadius)
 
 # Turtles Setup
+
 def turtlesSetup():
     # Create Player 1's turtle
     turtleForPlayer1 = turtle.Turtle()
@@ -99,9 +100,9 @@ def newYCoordinate(direction, distance, subjectTurtle) :
     # to move in a given direction for a given distance
     return subjectTurtle.ycor() + distance * math.sin(math.radians(direction))
 
-"""                      """
-"""Below are MY functions"""
-"""                      """
+"""                        """
+""" Below are MY functions """
+"""                        """
 
 # Given a direction "candidate", returns True if invalid, False if valid
 def isInvalidDirection(candidate):
@@ -114,8 +115,10 @@ def isInvalidDirection(candidate):
 # Get user inputs for the move
 #
 
+# User Inputs
+
 # Direction (north/east/south/west)
-def getUserDirection():
+def getUserDirection(playerTurtle):
     # Until user inputs a valid direction, keep asking
     direction = ""
     while isInvalidDirection(direction):
@@ -136,14 +139,55 @@ def getUserDistance():
     distance = inputInt("How far should your turtle move?: ") # still in Turtle units!!!
     return distance
 
+# Evaluations
+
 # Decide if move will take turtle out of bounds
 def moveWouldTakeTurtleOutOfArena(direction, distance, subject, radius):
-    pass
+    # Get potential coordinates
+    newXLocation = newXCoordinate(direction, distance, subject)
+    newYLocation = newXCoordinate(direction, distance, subject)
+    # Check potential coordinates, return if they are within arena or not
+    if abs(newXLocation) > radius or abs(newYLocation) > radius:
+        return False
+    else:
+        return True
+
+# Move the turtle if conditions are met
+def moveTurtle(distance, subject):
+    subject.forward(distance)
 
 # Function to play one move, given the move number,
 # arena size, and player details
 def playOneMove(moveNumber, playerNumber, playerTurtle, arenaRadius):
-    pass
+    # Define which turtle to use
+
+    # Get user inputs
+
+    # This will turn the turtle on its own
+    getUserDirection(playerTurtle)
+    # This will set distance equal to the return value of getUserDistance()
+    distanceToTravel = getUserDistance()
+
+    # Check to see if within arena
+    while not moveWouldTakeTurtleOutOfArena(direction, distance, subject, radius):
+        print("This will take your turtle out of bounds, please enter a new direction.")
+        # This will turn the turtle on its own
+        getUserDirection()
+        # This will set distance equal to the return value of getUserDistance()
+        distanceToTravel = getUserDistance()
+
+    # once given good distance/directions, move the turtle distanceToTravel
+    moveTurtle(distanceToTravel, subject)
+
+    # Check whether player has won
+    # if x-coordinates difference and y-coordinates difference <= winningDistanceUpperBound:
+        # victory = True
+
+    # Switch the user
+    if playerNumber == 1:
+        playerNumber == 2
+    else:
+        playerNumber == 1
 
 #
 # Actual program body.  No functions below here!
@@ -152,58 +196,49 @@ def playOneMove(moveNumber, playerNumber, playerTurtle, arenaRadius):
 # Get custom arena size from user
 arenaRadius = inputInt('Enter the radius of the arena: ')
 
-if arenaRadius <= 0 :
+# If chosen value is invalid, ask again, keep asking until given good value
+while arenaRadius <= 0 :
     print('**** The arena radius must be > zero')
-else :
-    # Set up Arena
-    arenaSetup()
+    arenaRadius = inputInt("Enter the radius of the arena: ")
 
-    # Set up turtles
-    turtlesSetup()
+# Set up Arena
+arenaSetup()
 
-    # Pseudo-randomly decide which player moves first
-    playerMakingMove = random.randrange(1, 3)
+# Set up turtles
+turtlesSetup()
 
-    # Let winningDistanceUpperBound be the maximum distance between the centers of two
-    # turtles that still constitutes one turtle being positioned over another turtle
-    winningDistanceUpperBound = 20
+# Pseudo-randomly decide which player moves first
+playerMakingMove = random.randrange(1, 3)
 
-    # Let maximumNumberOfMoves be the maximum number of moves a game can go before the
-    # game is considered to be a draw
-    maximumNumberOfMoves = 20
+# Let winningDistanceUpperBound be the maximum distance between the centers of two
+# turtles that still constitutes one turtle being positioned over another turtle
+winningDistanceUpperBound = 20
 
-    # Remind the players which turtle belongs to which player
-    print('Player 1 is the square;  player 2 is the triangle')
+# Let maximumNumberOfMoves be the maximum number of moves a game can go before the
+# game is considered to be a draw
+maximumNumberOfMoves = 20
 
-    #
-    # THE CODE FOR THE REST OF THE MAIN PROGRAM SHOULD GO BELOW THIS BLOCK OF COMMENTS
-    #
+# Remind the players which turtle belongs to which player
+print('Player 1 is the square;  player 2 is the triangle')
 
-    # Run game for 20 rounds, or until a player wins
-    round = 1
-    while round <= 20 or victory :
-        playerNumber = playerMakingMove
-        #
-        # This will go in playOneMove() function
-        #
+"""                  """
+""" Below is MY work """
+"""                  """
 
-        # Get user inputs
-        getUserDirection()
-        getUserDistance()
+# Run game for 20 rounds, or until a player wins
+round = 1
+victory = False
+while round <= (maximumNumberOfMoves * 2) or victory :
+    playerNumber = playerMakingMove
+    # Run the player's turn, will alternate each time
+    playOneMove()
 
-        # Check to see if within arena
-        # Yeah, this'll take some math stuff :|
+    # incriment round counter
+    round += 1
 
-        # Switch the user
-        if playerNumber == 1:
-            playerNumber == 2
-        else:
-            playerNumber == 1
+#
+# THE CODE FOR THE REST OF THE MAIN PROGRAM SHOULD GO ABOVE THIS BLOCK OF COMMENTS
+#
 
-
-    #
-    # THE CODE FOR THE REST OF THE MAIN PROGRAM SHOULD GO ABOVE THIS BLOCK OF COMMENTS
-    #
-
-    print('Click on the arena to end the game')
-    arena.exitonclick()
+print('Click on the arena to end the game')
+arena.exitonclick()
