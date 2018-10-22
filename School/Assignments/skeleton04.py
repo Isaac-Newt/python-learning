@@ -61,6 +61,8 @@ def arenaSetup():
 
     # Draw the boundary around the arena
     drawArenaBoundary(arenaRadius)
+    
+    return arena
 
 # Turtles Setup
 
@@ -85,6 +87,9 @@ def turtlesSetup():
         random.randrange(- arenaRadius, arenaRadius + 1),
         random.randrange(- arenaRadius, arenaRadius + 1)
         )
+    
+    # return turtle names, which will be set to variables in main program body
+    return turtleForPlayer1, turtleForPlayer2
 
 # During a turn
 
@@ -92,6 +97,11 @@ def turtlesSetup():
 def newXCoordinate(direction, distance, subjectTurtle) :
     # Returns the x-coordinate a subject turtle would be at if it were
     # to move in a given direction for a given distance
+    
+    print(str(subjectTurtle.xcor()))
+    print(str(distance))
+    print(str(direction))
+    print(str((math.cos(math.radians(direction)))))
     return subjectTurtle.xcor() + distance * math.cos(math.radians(direction))
 
 # Determine y-coordinates of turtle if move is made
@@ -104,9 +114,21 @@ def newYCoordinate(direction, distance, subjectTurtle) :
 """ Below are MY functions """
 """                        """
 
+# Get arenaRadius input 
+def getArenaRadiusInput():
+    # Get custom arena size from user
+    arenaRadius = inputInt('Enter the radius of the arena: ')
+    
+    # If chosen value is invalid, ask again, keep asking until given good value
+    while arenaRadius <= 0 :
+        print('**** The arena radius must be > zero')
+        arenaRadius = inputInt("Enter the radius of the arena: ")    
+    
+    return arenaRadius
+
 # Given a direction "candidate", returns True if invalid, False if valid
 def isInvalidDirection(candidate):
-    if candidate == "north" or candidate == "east" or candidate == "south" or candidate == "west":
+    if candidate == "up" or candidate == "down" or candidate == "left" or candidate == "right":
         return False
     else:
         return True
@@ -122,17 +144,24 @@ def getUserDirection(playerTurtle):
     # Until user inputs a valid direction, keep asking
     direction = ""
     while isInvalidDirection(direction):
-        direction = input("What direction should your turtle travel? (east, west, north, or south\): ")
+        direction = input("What direction should your turtle travel? left, right, up, or down: ")
 
-    # Convert direction to a numerical heading
-    if direction == "east":
+    # Convert direction to a numerical heading, and set turtle's heading
+    if direction == "right":
         playerTurtle.setheading(0)
-    elif direction == "north":
+        direction = 0
+    elif direction == "up":
         playerTurtle.setheading(90)
-    elif direction == "west":
+        direction = 90
+    elif direction == "left":
         playerTurtle.setheading(180)
-    elif direction == "south":
+        direction = 180
+    elif direction == "down":
         playerTurtle.setheading(270)
+        direction = 270
+    
+    # direction needs to be returned so it can be used in out of bounds function
+    return direction
 
 # Distance
 def getUserDistance():
@@ -145,7 +174,9 @@ def getUserDistance():
 def moveWouldTakeTurtleOutOfArena(direction, distance, subject, radius):
     # Get potential coordinates
     newXLocation = newXCoordinate(direction, distance, subject)
-    newYLocation = newXCoordinate(direction, distance, subject)
+    newYLocation = newYCoordinate(direction, distance, subject)
+    
+    print(newXLocation, newYLocation)
     # Check potential coordinates, return if they are within arena or not
     if abs(newXLocation) > radius or abs(newYLocation) > radius:
         return False
@@ -159,53 +190,67 @@ def moveTurtle(distance, subject):
 # Function to play one move, given the move number,
 # arena size, and player details
 def playOneMove(moveNumber, playerNumber, playerTurtle, arenaRadius):
-    # Define which turtle to use
-
+    # Define which turtle to use, and which one is the opponent's
+    if playerNumber == 1:
+        playerTurtle = turtleForPlayer1
+        opponentTurtle = turtleForPlayer2
+    else:
+        playerTurtle = turtleForPlayer2  
+        opponentTurtle = turtleForPlayer1
+        
+    # Print the current player
+    print("It is player ", playerNumber, "'s turn")
+    
     # Get user inputs
 
     # This will turn the turtle on its own
-    getUserDirection(playerTurtle)
+    direction = getUserDirection(playerTurtle)
     # This will set distance equal to the return value of getUserDistance()
     distanceToTravel = getUserDistance()
 
     # Check to see if within arena
-    while not moveWouldTakeTurtleOutOfArena(direction, distance, subject, radius):
+    while not moveWouldTakeTurtleOutOfArena(direction, distanceToTravel, playerTurtle, arenaRadius):
         print("This will take your turtle out of bounds, please enter a new direction.")
         # This will turn the turtle on its own
-        getUserDirection()
+        getUserDirection(playerTurtle)
         # This will set distance equal to the return value of getUserDistance()
         distanceToTravel = getUserDistance()
 
     # once given good distance/directions, move the turtle distanceToTravel
-    moveTurtle(distanceToTravel, subject)
+    moveTurtle(distanceToTravel, playerTurtle)
 
     # Check whether player has won
-    # if x-coordinates difference and y-coordinates difference <= winningDistanceUpperBound:
-        # victory = True
+    #
+    # Using the turtle.distance() function to determine distance between
+    # the player's turtle and their opponent's turtle
+    if (playerTurtle.distance(opponentTurtle) <= winningDistanceUpperBound):
+        victory = True
+    else: 
+        victory = False
 
-    # Switch the user
-    if playerNumber == 1:
-        playerNumber == 2
+    # Switch the user, except if a player has won
+    if victory: 
+        playerNumber = playerNumber
+    elif playerNumber == 1:
+        playerNumber = 2
     else:
-        playerNumber == 1
+        playerNumber = 1
+    
+    # Return playerNumber so the While loop knows to switch 
+    return playerNumber, victory
 
 #
 # Actual program body.  No functions below here!
 #
 
 # Get custom arena size from user
-arenaRadius = inputInt('Enter the radius of the arena: ')
-
-# If chosen value is invalid, ask again, keep asking until given good value
-while arenaRadius <= 0 :
-    print('**** The arena radius must be > zero')
-    arenaRadius = inputInt("Enter the radius of the arena: ")
+arenaRadius = getArenaRadiusInput()
 
 # Set up Arena
-arenaSetup()
+arena = arenaSetup()
 
 # Set up turtles
-turtlesSetup()
+turtleForPlayer1, turtleForPlayer2 = turtlesSetup()
 
 # Pseudo-randomly decide which player moves first
 playerMakingMove = random.randrange(1, 3)
@@ -225,20 +270,39 @@ print('Player 1 is the square;  player 2 is the triangle')
 """ Below is MY work """
 """                  """
 
-# Run game for 20 rounds, or until a player wins
-round = 1
+# Initialize necessary variables and conditions and such
+
+# Run game for max of 20 turns, start count at 1
+turn = 1
+
+# No one has won yet, so victory == False
 victory = False
-while round <= (maximumNumberOfMoves * 2) or victory :
-    playerNumber = playerMakingMove
-    # Run the player's turn, will alternate each time
-    playOneMove()
+
+# Start with pseudo-randomly chosen player, then alternates each turn
+playerNumber = playerMakingMove
+
+# Run the game for a max of 20 turns for each player, or until someone wins.
+# 
+# In boolean logic, run the game while both turn <=20 and (not victory) are True.
+# If either are False (exceed moves, or someone wins) then the game is finished.
+while turn <= (maximumNumberOfMoves * 2) and (not victory) :
+    # Activate the correct turtle
+    if playerNumber == 1:
+        playerTurtle = turtleForPlayer1
+    else:
+        playerTurtle = turtleForPlayer2
+    # Run the player's turn, will alternate the active player each time
+    playerNumber, victory = playOneMove(turn, playerNumber, playerTurtle, arenaRadius)
 
     # incriment round counter
-    round += 1
+    turn += 1
 
-#
-# THE CODE FOR THE REST OF THE MAIN PROGRAM SHOULD GO ABOVE THIS BLOCK OF COMMENTS
-#
+# End of the game, so print a message 
+if victory:
+    print("Congratulations player" + str(playerNumber) + "! You won!")
+else:
+    print("The game is a draw.")
 
+# Exit the window when clicked, 
 print('Click on the arena to end the game')
 arena.exitonclick()
