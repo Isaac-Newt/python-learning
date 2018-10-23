@@ -177,7 +177,6 @@ def moveWouldTakeTurtleOutOfArena(direction, distance, subject, radius):
     if abs(newXLocation) > radius or abs(newYLocation) > radius:
         return False
     else:
-        print("True")
         return True
     
 # Decide if the player has won, based on distance between the turtles
