@@ -1,4 +1,4 @@
-# Isaac List - CS150 - October 19, 2018
+# Isaac List - CS150 - October 23, 2018
 #
 # Assignment 4 - Turtle War Game
 
@@ -160,7 +160,7 @@ def getUserDirection(playerTurtle):
 
 # Distance
 def getUserDistance():
-    distance = inputInt("How far should your turtle move?: ") 
+    distance = inputInt("How far should your turtle move?: ")
     return distance
 
 #
