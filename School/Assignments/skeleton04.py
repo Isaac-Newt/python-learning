@@ -11,9 +11,9 @@ import turtle
 import math
 import random
 
-# 
+#
 # Functions to deal with Inputs
-# 
+#
 
 # Integer input
 def inputInt(prompt) :
@@ -25,9 +25,9 @@ def inputFloat(prompt) :
     # Prompts for, reads, and returns a float value
     return float(input(prompt + ' (a float) '))
 
-# 
+#
 # Functions to do during Setup
-# 
+#
 
 # Drawing the arena boundary
 def drawArenaBoundary(arenaRadius) :
@@ -61,7 +61,7 @@ def arenaSetup():
 
     # Draw the boundary around the arena
     drawArenaBoundary(arenaRadius)
-    
+
     return arena
 
 # Turtles Setup
@@ -86,13 +86,13 @@ def turtlesSetup():
         random.randrange(- arenaRadius, arenaRadius + 1),
         random.randrange(- arenaRadius, arenaRadius + 1)
         )
-    
+
     # return turtle names, which will be set to variables in main program body
     return turtleForPlayer1, turtleForPlayer2
 
-# 
+#
 # Functions to do During a turn
-# 
+#
 
 # Determine x-coordinates of turtle if move is made
 def newXCoordinate(direction, distance, subjectTurtle) :
@@ -106,16 +106,16 @@ def newYCoordinate(direction, distance, subjectTurtle) :
     # to move in a given direction for a given distance
     return subjectTurtle.ycor() + distance * math.sin(math.radians(direction))
 
-# Get arenaRadius input 
+# Get arenaRadius input
 def getArenaRadiusInput():
     # Get custom arena size from user
     arenaRadius = inputInt('Enter the radius of the arena: ')
-    
+
     # If chosen value is invalid, ask again, keep asking until given good value
     while arenaRadius <= 0 :
         print('**** The arena radius must be > zero')
-        arenaRadius = inputInt("Enter the radius of the arena: ")    
-    
+        arenaRadius = inputInt("Enter the radius of the arena: ")
+
     # Return arenaRadius to be used in main program body
     return arenaRadius
 
@@ -130,9 +130,9 @@ def isInvalidDirection(candidate):
 # Get user inputs for the move, evaluate those inputs
 #
 
-# 
+#
 # Get the user's inputs
-# 
+#
 
 # Direction (north/east/south/west)
 def getUserDirection(playerTurtle):
@@ -154,36 +154,36 @@ def getUserDirection(playerTurtle):
     elif direction == "down":
         playerTurtle.setheading(270)
         direction = 270
-    
+
     # direction needs to be returned so it can be used in out of bounds function
     return direction
 
 # Distance
 def getUserDistance():
-    distance = inputInt("How far should your turtle move?: ") # still in Turtle units!!!
+    distance = inputInt("How far should your turtle move?: ") 
     return distance
 
-# 
+#
 # Functions that Evaluate the inputs and other conditions
-# 
+#
 
 # Decide if move will take turtle out of bounds
 def moveWouldTakeTurtleOutOfArena(direction, distance, subject, radius):
     # Define the potential coordinates
     newXLocation = newXCoordinate(direction, distance, subject)
     newYLocation = newYCoordinate(direction, distance, subject)
-    
+
     # Check potential coordinates, return if they are within arena or not
     if abs(newXLocation) > radius or abs(newYLocation) > radius:
         return False
     else:
         return True
-    
+
 # Decide if the player has won, based on distance between the turtles
 def hasThePlayerWon(distanceExpression):
     if distanceExpression:
         victory = True
-    else: 
+    else:
         victory = False
 
 # Decide what message to print, based on whether someone has won the game
@@ -196,10 +196,10 @@ def printFinalMessage(victory):
 # Move the turtle the user-chosen distance
 def moveTurtle(distance, subject):
     subject.forward(distance)
-    
-# 
+
+#
 # Main function to run one turn
-# 
+#
 
 # Function to play one move, given the move number,
 # arena size, and player details
@@ -209,17 +209,17 @@ def playOneMove(moveNumber, playerNumber, playerTurtle, arenaRadius):
         playerTurtle = turtleForPlayer1
         opponentTurtle = turtleForPlayer2
     else:
-        playerTurtle = turtleForPlayer2  
+        playerTurtle = turtleForPlayer2
         opponentTurtle = turtleForPlayer1
-        
+
     # Print the current player
     print("It is player ", playerNumber, "'s turn")
-    
+
     # Get user inputs
 
     # This will turn the turtle on its own
     direction = getUserDirection(playerTurtle)
-    
+
     # This will set distance equal to the return value of getUserDistance()
     distanceToTravel = getUserDistance()
 
@@ -227,12 +227,12 @@ def playOneMove(moveNumber, playerNumber, playerTurtle, arenaRadius):
     while not moveWouldTakeTurtleOutOfArena(direction, distanceToTravel, playerTurtle, arenaRadius):
         # Print a helpful message
         print("This will take your turtle out of bounds, please enter a new direction.")
-        
+
         # run the usual inputs
-        
+
         # This will turn the turtle on its own
         getUserDirection(playerTurtle)
-        
+
         # This will set distance equal to the return value of getUserDistance()
         distanceToTravel = getUserDistance()
 
@@ -241,32 +241,32 @@ def playOneMove(moveNumber, playerNumber, playerTurtle, arenaRadius):
 
     # Check whether player has won
     #
-    # Using the turtle.distance() function, determines the distance 
+    # Using the turtle.distance() function, determines the distance
     # between the player's turtle and their opponent's turtle
     hasThePlayerWon(playerTurtle.distance(opponentTurtle) <= winningDistanceUpperBound)
     if (playerTurtle.distance(opponentTurtle) <= winningDistanceUpperBound):
         victory = True
-    else: 
+    else:
         victory = False
 
     # Switch the user, except if a player has won
-    if victory: 
+    if victory:
         playerNumber = playerNumber
     elif playerNumber == 1:
         playerNumber = 2
     else:
         playerNumber = 1
-    
-    # Return playerNumber so the While loop knows to switch 
+
+    # Return playerNumber and victory, to determine next player, or if current player won
     return playerNumber, victory
 
 #
 # Actual program body.  No functions below here!
 #
 
-# 
+#
 # Setup the game
-# 
+#
 
 # Get custom arena size from user
 arenaRadius = getArenaRadiusInput()
@@ -302,9 +302,9 @@ victory = False
 # Start with pseudo-randomly chosen player, then alternates each turn
 playerNumber = playerMakingMove
 
-# 
+#
 # Play the game!
-# 
+#
 
 # Run the game for a max of 20 turns for each player, or until someone wins.
 
@@ -323,9 +323,9 @@ while turn <= (maximumNumberOfMoves * 2) and (not victory) :
     # incriment round counter
     turn += 1
 
-# End of the game, so print a message 
+# End of the game, so print a message
 printFinalMessage(victory)
 
-# Exit the window when clicked, 
+# Exit the window when clicked,
 print('Click on the arena to end the game')
 arena.exitonclick()
