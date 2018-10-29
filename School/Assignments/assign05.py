@@ -1,3 +1,8 @@
+# Isaac List - CS150 - October 28, 2018
+# 
+# Assignment 5 - Image Manipulation
+# This program includes several functions allowing for the manipulation of images.
+
 import image
 
 
@@ -114,6 +119,7 @@ def filterImage(original, redFactor, greenFactor, blueFactor) :
     # Return the filtered image
     return filtered
 
+# Rotated image function
 def rotateImageLeft(original) :
     # Create an empty image.
     # Width ==> Height, Height ==> Width
@@ -133,12 +139,29 @@ def rotateImageLeft(original) :
     # Return the rotated image
     return rotated
 
-
+# doubled image funciton
 def doubleImage(original) :
-    pass
-    ####
-    #### COMPLETE THE FUNCTION doubleImage
-    ####
+    # Create an empty image.
+    # Width ==> 2*W, Height ==> 2*H
+    doubled = image.EmptyImage(original.getWidth() * 2, original.getHeight() * 2)
+  
+    # For every x,y coordinated pixel
+    for x in range(original.getWidth()):
+        for y in range(original.getHeight()):
+            print(x, y)
+            originalPixel = original.getPixel(x, y)
+            
+            # Fill four pixels with the original pixel's value.  
+            # These pixels are defined by the coordinates:
+            # (2x, 2y)      (2x + 1, 2y)
+            # (2x, 2y + 1)  (2x + 1, 2y + 1)
+            doubled.setPixel(2 * x, 2 * y, originalPixel)
+            doubled.setPixel((2 * x) + 1, 2 * y, originalPixel)
+            doubled.setPixel(2 * x, (2 * y) + 1, originalPixel)
+            doubled.setPixel((2 * x) + 1, (2 * y) + 1, originalPixel)
+    
+    # Return the doubled image
+    return doubled
 
 
 currentImage = None
