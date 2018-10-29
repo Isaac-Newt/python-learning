@@ -10,8 +10,9 @@ def filterImage(original, redFactor, greenFactor, blueFactor):
             # Name the pixel to do specific manipulation
             modifiedPixel = original.getPixel(x,y)
             
-            # Modify the colors, but first check to see if result will be bigger
-            # than 255.  If negative, set value to 0 (shouldn't be negative)
+            # Modify the colors, but first check to see if result will be higher
+            # than 255.  If it is, set to 255.  
+            # If negative, set value to 0
             
             # Red
             if (modifiedPixel.getRed() * redFactor > 255):

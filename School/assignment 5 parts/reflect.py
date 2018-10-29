@@ -10,5 +10,5 @@ def reflectImage(original):
             # Invert across the y axis, so negative x, same y
             reflected.setPixel(original.getHeight() - 1 - x, y, original.getPixel(x,y))
             
-    # return the inverted image
-    return inverted
+    # return the reflected image
+    return reflected
