@@ -148,7 +148,6 @@ def doubleImage(original) :
     # For every x,y coordinated pixel
     for x in range(original.getWidth()):
         for y in range(original.getHeight()):
-            print(x, y)
             originalPixel = original.getPixel(x, y)
             
             # Fill four pixels with the original pixel's value.  
