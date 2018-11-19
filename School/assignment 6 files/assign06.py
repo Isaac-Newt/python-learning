@@ -1,6 +1,10 @@
 # Isaac List - CS150 - Assignment 6 - November 15, 2018
 
-# This program does something with a library of images or something
+# This program is a simple image library program.  
+# It allows the user to add or remove images from the library,
+# as well as displaying those images (either individually or 
+# all sequentially).  Finally, it can list the images in the
+# library, giving the index, the file name, and image title.
 
 import image
 
@@ -38,7 +42,9 @@ def isInvalidCommand(candidate):
 # Index validation for show command
 def indexNotInRange(candidate, fileList):
     # If candidate is out of range, return True
-    if candidate >= len(fileList):
+    # Out of range is considered to be any number
+    # not in the range from 0 to len(filelist)
+    if candidate >= len(fileList) or candidate < 0:
         return True
     else:
         return False
@@ -49,19 +55,19 @@ def indexNotInRange(candidate, fileList):
 
 # List
 def listImages(nameList, fileList):
-    # Lists the image index (an int), and the 
-    # object at that index in both lists
-    print("List")
+    # Lists the image index and the object at that index in both lists
     
     # Lists are the same length, so for number in the length of one of them
     for index in range(len(nameList)):
+        # Image number
         print(index, end = ' ')
+        # Image file name
         print(fileList[index] + ":", end = ' ')
+        # Image title (name)
         print(nameList[index])
     
 # Show All
 def showall(nameList, fileList):
-    print("show all")
     # Show each image in order, and leave up until clicked.
     # Then, exit the image and display the next one.
     for index in range(len(fileList)):
@@ -78,7 +84,6 @@ def showall(nameList, fileList):
 
 # Show
 def show(nameList, fileList):
-    print("show")
     # Get image choice
     indexToShow = int(input("Enter number of image to show: "))
     
@@ -98,9 +103,8 @@ def show(nameList, fileList):
     imageToShow.draw(window)
     window.exitonclick()
 
-# Add
+# Add and Image to the library (lists)
 def addImage(nameList, fileList):
-    print("add")
     # Get file name
     filename = input("Enter the file name of the image: ")
     name = input("Enter the image's name: ")
@@ -108,9 +112,8 @@ def addImage(nameList, fileList):
     nameList.append(name)
     fileList.append(filename)
 
-# Remove
+# Remove an image from the library by index
 def removeImage(nameList, fileList):
-    print("remove")
     # Get image index to remove, and remove from each list
     removeIndex = int(input("Enter number of image to remove: "))
     nameList.pop(removeIndex)
@@ -127,7 +130,7 @@ listOfImageFiles = []
 # Get a command
 command = getNewCommand()
 
-# While the program is running...
+# While the program is running (if "quit", then end)
 while command != "quit":
     
     # Validate the command
