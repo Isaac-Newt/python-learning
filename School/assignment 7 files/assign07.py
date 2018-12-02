@@ -1,9 +1,8 @@
 # Isaac List - CS150 - Assignment 7 - December 1, 2018
 
-#
-# This solution to Assignment makes use of a list of lists-of-two-elements to keep track
-# of the collection of images in the variable fileNamesAndTitles.   When there are
-# n images in the collection,
+# This solution to Assignment makes use of a list of lists-of-two-elements to 
+# keep track of the collection of images in the variable fileNamesAndTitles.   
+# When there are n images in the collection,
 #
 #     fileNamesAndTitles =
 #         [ [ imageFileNameString0, imageTitleString0 ],
@@ -11,11 +10,9 @@
 #             ... ,
 #             [ imageFileNameStringn-1, imageTitleStringn-1 ]
 #             ]
-#
 
-
+# Import necessary modules
 import image
-
 from simplefileio import *
 
 # My functions
@@ -37,9 +34,8 @@ def saveAlbum(currentAlbumList):
     # save (close) the file
     fileclose(newAlbumFile)
 
-# Loads a previously created list of image files and names 
-# from a file, while erasing the current loaded album.
-
+# After erasing the current loaded album, loads a previously created list of image
+# files and names from a file, adding them similar to as in the addImage function.
 def loadAlbum(currentAlbumList):
     # remove current images in currentAlbumLists
     del currentAlbumList[:]
