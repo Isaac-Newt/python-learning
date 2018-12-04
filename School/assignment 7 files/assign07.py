@@ -1,15 +1,15 @@
 # Isaac List - CS150 - Assignment 7 - December 1, 2018
 
-# This solution to Assignment makes use of a list of lists-of-two-elements to 
+# This solution to Assignment 6 makes use of a list of lists-of-two-elements to 
 # keep track of the collection of images in the variable fileNamesAndTitles.   
 # When there are n images in the collection,
 #
 #     fileNamesAndTitles =
 #         [ [ imageFileNameString0, imageTitleString0 ],
-#             [ imageFileNameString1, imageTitleString1 ],
-#             ... ,
-#             [ imageFileNameStringn-1, imageTitleStringn-1 ]
-#             ]
+#           [ imageFileNameString1, imageTitleString1 ],
+#           ... ,
+#           [ imageFileNameStringn-1, imageTitleStringn-1 ]
+#           ]
 
 # Import necessary modules
 import image
@@ -34,10 +34,10 @@ def saveAlbum(currentAlbumList):
     # save (close) the file
     fileclose(newAlbumFile)
 
-# After erasing the current loaded album, loads a previously created list of image
-# files and names from a file, adding them similar to as in the addImage function.
+# After erasing the current loaded album, loads a previously 
+# created album file, adding items as in the addImage function.
 def loadAlbum(currentAlbumList):
-    # remove current images in currentAlbumLists
+    # remove current images in currentAlbumList
     del currentAlbumList[:]
     
     # choose file name
@@ -46,15 +46,15 @@ def loadAlbum(currentAlbumList):
     # open the file (read mode)
     subjectAlbumFile = fileopen(chosenFileName, "r")
     
-    # read each line to get a filename or a title
-    # make every 2 lines into a 2-item list (name/title pair)
-    # add each pair to the list fileNamesAndTitles
+    # read each line, make every 2 lines into a 2-item list
+    # add each pair to the list currentAlbumList (fileNamesAndTitles)
     
+    # While the file is not finished
     fileIsNotFinished = True
     while fileIsNotFinished:
-        # file name
+        # get the file name
         fileName = fileinput(subjectAlbumFile)
-        # file title
+        # get the file title
         title = fileinput(subjectAlbumFile)
         
         # Check to see if end of file has been reached
