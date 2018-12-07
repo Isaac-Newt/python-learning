@@ -1,4 +1,4 @@
-# Isaac List - CS150 - Assignment 7 - December 1, 2018
+# Isaac List - CS150 - Assignment 7 - December 4, 2018
 
 # This solution to Assignment 6 makes use of a list of lists-of-two-elements to 
 # keep track of the collection of images in the variable fileNamesAndTitles.   
@@ -46,26 +46,30 @@ def loadAlbum(currentAlbumList):
     # open the file (read mode)
     subjectAlbumFile = fileopen(chosenFileName, "r")
     
-    # read each line, make every 2 lines into a 2-item list
-    # add each pair to the list currentAlbumList (fileNamesAndTitles)
-    
-    # While the file is not finished
-    fileIsNotFinished = True
-    while fileIsNotFinished:
-        # get the file name
-        fileName = fileinput(subjectAlbumFile)
-        # get the file title
-        title = fileinput(subjectAlbumFile)
+    # Check to see if file exists
+    if subjectAlbumFile == None:
+        print("Cannot open the file", chosenFileName)
+    else:
+        # read each line, make every 2 lines into a 2-item list
+        # add each pair to the list currentAlbumList (fileNamesAndTitles)
         
-        # Check to see if end of file has been reached
-        if fileName == None:
-            fileIsNotFinished = False
-        else:
-            # add mini list to list 
-            currentAlbumList.append([ fileName, title ])            
-    
-    # close the file
-    fileclose(subjectAlbumFile)
+        # While the file is not finished
+        fileIsNotFinished = True
+        while fileIsNotFinished:
+            # get the file name
+            fileName = fileinput(subjectAlbumFile)
+            # get the file title
+            title = fileinput(subjectAlbumFile)
+            
+            # Check to see if end of file has been reached
+            if fileName == None:
+                fileIsNotFinished = False
+            else:
+                # add mini list to list 
+                currentAlbumList.append([ fileName, title ])            
+        
+        # close the file
+        fileclose(subjectAlbumFile)
 
 # Pre-written functions
 
