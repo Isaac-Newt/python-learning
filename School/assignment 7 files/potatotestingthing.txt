@@ -1,4 +1,4 @@
-LutherImages/Olin.gif
-Olin
 LutherImages/Bell.gif
-Bell
+The Luther Bell
+LutherImages/Olin.gif
+Olin Hall
