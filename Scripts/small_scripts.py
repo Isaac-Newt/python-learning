@@ -20,7 +20,7 @@ for num in numbers:
 
 for num in numbers:
   print(num ** 2)
-  
+
 # # # # # # # # # #
 
 list_a = [3, 9, 17, 15, 19]
@@ -32,7 +32,7 @@ for a, b in zip(list_a, list_b):
     print(a)
   elif b > a:
     print(b)
-    
+
 # # # # # # # # # #
 
 def is_even(x):
@@ -40,7 +40,7 @@ def is_even(x):
     return True
   else:
     return False
-  
+
 # # # # # # # # # #
 
 def is_int(x):
@@ -48,7 +48,7 @@ def is_int(x):
     return True
   else:
     return False
-  
+
 # # # # # # # # # #
 
 def digit_sum(n):
@@ -66,24 +66,13 @@ def factorial(x):
     return 1
   else:
     return x * factorial(x-1)
-  
+
 # # # # # # # # # #
 
-def is_prime(x):
-  if x < 2:
-    return False
-  else:
-    for n in range(2, x-1):
-      if x % n == 0:
-        return False
-    return True
-  
-# # # # # # # # # # 
-
-score = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2, 
-         "f": 4, "i": 1, "h": 4, "k": 5, "j": 8, "m": 3, 
-         "l": 1, "o": 1, "n": 1, "q": 10, "p": 3, "s": 1, 
-         "r": 1, "u": 1, "t": 1, "w": 4, "v": 4, "y": 4, 
+score = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2,
+         "f": 4, "i": 1, "h": 4, "k": 5, "j": 8, "m": 3,
+         "l": 1, "o": 1, "n": 1, "q": 10, "p": 3, "s": 1,
+         "r": 1, "u": 1, "t": 1, "w": 4, "v": 4, "y": 4,
          "x": 8, "z": 10}
 
 def scrabble_score(word):
@@ -120,7 +109,7 @@ def product(list):
     total *= num
   return total
 
-# # # # # # # # # # 
+# # # # # # # # # #
 
 grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5]
 
@@ -180,22 +169,22 @@ def check_bit4(input):
 
 a = 0b10111011
 mask = 0b10000100
-desired = a | mask 
+desired = a | mask
 
 print(bin(desired))
 
-# # # # # # # # # # 
+# # # # # # # # # #
 
 a = 0b11101110
 mask = 0b11111111
 desired = a ^ mask
 print(bin(desired))
 
-# # # # # # # # # # 
+# # # # # # # # # #
 
 def flip_bit(number, n):
   mask = (0b1 << n - 1)
   result = number ^ mask
   return bin(result)
 
-# # # # # # # # # # 
+# # # # # # # # # #
