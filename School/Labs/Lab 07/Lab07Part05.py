@@ -1,8 +1,5 @@
-# Isaac List - CS150 - October 19, 2018
-# 
-# Lab 7 Part 3
-
 import image
+
 
 originalPicture = image.Image('bigredbear.gif')
 
@@ -15,15 +12,15 @@ originalWindow = \
 
 originalPicture.draw(originalWindow)
 
-redPicture = \
+dimPicture = \
     image.EmptyImage(
         originalPicture.getWidth(),
         originalPicture.getHeight()
         )
 
-redWindow = \
+dimWindow = \
     image.ImageWin(
-        'Big, Very Red Bear',
+        'Dim Big Red Bear',
         dimPicture.getWidth(),
         dimPicture.getHeight()
         )
@@ -31,15 +28,31 @@ redWindow = \
 for x in range(originalPicture.getWidth()) :
     for y in range(originalPicture.getHeight()) :
 
-        redPixel = originalPicture.getPixel(x, y)
+        dimPixel = originalPicture.getPixel(x, y)
 
-        redPixel.setRed(dimPixel.getRed())
+        dimPixel.setRed(dimPixel.getRed() // 4)
+        dimPixel.setGreen(dimPixel.getGreen() // 4)
+        dimPixel.setBlue(dimPixel.getBlue() // 4)
+
+        dimPicture.setPixel(x, y, dimPixel)
+
+dimPicture.draw(dimWindow)
+
+redPicture = image.EmptyImage(originalPicture.getWidth(), originalPicture.getHeight())
+
+redWindow = image.ImageWin("Red Red Bear",originalPicture.getWidth(), originalPicture.getHeight())
+
+for x in range(originalPicture.getWidth()):
+    for y in range(originalPicture.getHeight()):
+        redPixel = originalPicture.getPixel(x, y)
+        redPixel.setRed(redPixel.getRed())
         redPixel.setGreen(0)
         redPixel.setBlue(0)
-
-        redPicture.setPixel(x, y, dimPixel)
+        
+        redPicture.setPixel(x, y, redPixel)
 
 redPicture.draw(redWindow)
 
 originalWindow.exitonclick()
+dimWindow.exitonclick()
 redWindow.exitonclick()

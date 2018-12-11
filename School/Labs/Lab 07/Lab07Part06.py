@@ -1,16 +1,13 @@
 import image
 
-
-def duplicateImage(original) :
-
-    duplicate = image.EmptyImage(original.getWidth(), original.getHeight())
-
-    for x in range(original.getWidth()) :
-        for y in range(original.getHeight()) :
-
-            duplicate.setPixel(x, y, original.getPixel(x, y))
-
-    return duplicate
+def rotateImage(original):
+    rotated = image.EmptyImage(original.getWidth(), original.getHeight())
+    
+    for x in range(original.getWidth()):
+        for y in range(original.getHeight()):
+            rotated.setPixel(original.getWidth() - 1 - x, original.getHeight() - 1 - y, original.getPixel(x, y))
+            
+    return rotated
 
 
 originalPicture = image.Image('bigredbear.gif')
@@ -24,16 +21,16 @@ originalWindow = \
 
 originalPicture.draw(originalWindow)
 
-duplicatePicture = duplicateImage(originalPicture)
+rotatedPicture = rotateImage(originalPicture)
 
-duplicateWindow = \
+rotatedWindow = \
     image.ImageWin(
-        'Duplicate Big Red Bear',
-        duplicatePicture.getWidth(),
-        duplicatePicture.getHeight()
+        'Rotated Big Red Bear',
+        rotatedPicture.getWidth(),
+        rotatedPicture.getHeight()
         )
 
-duplicatePicture.draw(duplicateWindow)
+rotatedPicture.draw(rotatedWindow)
 
 originalWindow.exitonclick()
-duplicateWindow.exitonclick()
+rotatedWindow.exitonclick()
