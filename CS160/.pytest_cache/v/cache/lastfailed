@@ -1,12 +1,10 @@
 {
-  "tests/Exercises/fractions/test_fractions.py": true,
   "tests/exercises/fractions/test_fractions.py::TestClassFraction::test_add": true,
   "tests/exercises/fractions/test_fractions.py::TestClassFraction::test_add_error": true,
   "tests/exercises/fractions/test_fractions.py::TestClassFraction::test_eq": true,
   "tests/exercises/fractions/test_fractions.py::TestClassFraction::test_eq_error": true,
   "tests/exercises/fractions/test_fractions.py::TestClassFraction::test_gt": true,
   "tests/exercises/fractions/test_fractions.py::TestClassFraction::test_gt_error": true,
-  "tests/exercises/fractions/test_fractions.py::TestClassFraction::test_init": true,
   "tests/exercises/fractions/test_fractions.py::TestClassFraction::test_init_simplification": true,
   "tests/exercises/fractions/test_fractions.py::TestClassFraction::test_mult": true,
   "tests/exercises/fractions/test_fractions.py::TestClassFraction::test_mult_error": true,

@@ -27,47 +27,43 @@ class Fraction:
         """
         Defines fraction components
         """
-        if type(numerator) == int and type(denominator) == int:
+        if isinstance(numerator, int) and isinstance(denominator, int):
             self._num = numerator
             self._den = denominator
         else:
-            if type(numerator) != int:
+            if not isinstance(numerator, int):
                 raise TypeError("Numerator must be an integer number")
-            if type(denominator) != int:
+            if not isinstance(denominator, int):
                 raise TypeError("Denominator must be an integer number")
 
     def get_numerator(self) -> int:
         """Return fraction numerator"""
         return self._num
 
-    numerator = property(get_numerator) # use with self.numerator
+    numerator = property(get_numerator)  # use with self.numerator
 
     def get_denominator(self) -> int:
         """Return fraction denominator"""
         return self._den
 
-    denominator = property(get_denominator) # use with self.denominator
+    denominator = property(get_denominator)  # use with self.denominator
 
     def __str__(self) -> str:
         """
         Object as a string
 
-        To Do: Use numerator/denominator "properties" rather than self._x
         clean up gcd usage, it looks kinda like garbage right now tbh :(
         """
         greatest_common_denominator = gcd(self._num, self._den)
         numerator = self.numerator // greatest_common_denominator
         denominator = self.denominator // greatest_common_denominator
-        if numerator < denominator:
+        if numerator <= denominator:
             return f"{numerator}/{denominator}"
-        elif numerator == denominator:
-            return "1"
-        else: # i.e. numerator > denominator
+        if numerator > denominator:
             integer = numerator - denominator
             numerator = int(numerator - (integer * denominator))
             integer = str(integer)
             return f"{integer} {numerator}/{denominator}"
-
 
     def __repr__(self) -> str:
         """Object representation"""
@@ -79,7 +75,10 @@ class Fraction:
 
     def __eq__(self, other: object) -> bool:
         """Equality comparison"""
-        raise NotImplementedError
+        if self.numerator == other.numerator and self.denominator == other.denominator:
+            return True
+        else:
+            return False
 
     def __gt__(self, other: object) -> bool:
         """Greater than comparison"""
