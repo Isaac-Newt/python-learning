@@ -28,8 +28,10 @@ class Fraction:
         Defines fraction components
         """
         if isinstance(numerator, int) and isinstance(denominator, int):
-            self._num = numerator
-            self._den = denominator
+            # find greatest common denominator
+            greatest_common_denominator = gcd(numerator, denominator)
+            self._num = numerator // greatest_common_denominator
+            self._den = denominator // greatest_common_denominator
         else:
             if not isinstance(numerator, int):
                 raise TypeError("Numerator must be an integer number")
@@ -51,38 +53,38 @@ class Fraction:
     def __str__(self) -> str:
         """
         Object as a string
-
-        clean up gcd usage, it looks kinda like garbage right now tbh :(
         """
-        greatest_common_denominator = gcd(self._num, self._den)
-        numerator = self.numerator // greatest_common_denominator
-        denominator = self.denominator // greatest_common_denominator
-        if numerator <= denominator:
-            return f"{numerator}/{denominator}"
-        if numerator > denominator:
-            integer = numerator - denominator
-            numerator = int(numerator - (integer * denominator))
+        if self.numerator <= self.denominator:
+            return f"{self.numerator}/{self.denominator}"
+        if self.numerator > self.denominator:
+            integer = self.numerator - self.denominator
+            numerator = int(self.numerator - (integer * self.denominator))
             integer = str(integer)
-            return f"{integer} {numerator}/{denominator}"
+            return f"{integer} {numerator}/{self.denominator}"
 
     def __repr__(self) -> str:
         """Object representation"""
-        # I guess this is supposed to be akin to "Fraction(num, den)"?
-        greatest_common_denominator = gcd(self.numerator, self.denominator)
-        numerator = self.numerator // greatest_common_denominator
-        denominator = self.denominator // greatest_common_denominator
-        return f"Fraction({numerator}, {denominator})"
+        return f"Fraction({self.numerator}, {self.denominator})"
 
     def __eq__(self, other: object) -> bool:
         """Equality comparison"""
-        if self.numerator == other.numerator and self.denominator == other.denominator:
-            return True
-        else:
+        # equal if num1 * den2 == num2 * den1
+        if isinstance(other, Fraction):
+            if (self.numerator * other.denominator) == (
+                self.denominator * other.numerator
+            ):
+                return True
             return False
+        raise TypeError("Can only compare Fractions")
 
     def __gt__(self, other: object) -> bool:
         """Greater than comparison"""
-        raise NotImplementedError_den
+        if isinstance(other, Fraction):
+            # find common denominator, compare numerators
+            numerator1 = self.numerator * other.denominator
+            numerator2 = other.numerator * self.denominator
+            return numerator1 > numerator2
+        raise TypeError("Can only compare Fractions")
 
     def __ge__(self, other: object) -> bool:
         """Greater than or equal comparison"""
@@ -94,19 +96,42 @@ class Fraction:
 
     def __add__(self, other: object) -> object:
         """Add two fractions"""
-        raise NotImplementedError
+        # Find common denominator, add numerators
+        if isinstance(other, Fraction):
+            numerator1 = self.numerator * other.denominator
+            numerator2 = other.numerator * self.denominator
+            final_numerator = numerator1 + numerator2
+            final_denominator = self.denominator * other.denominator
+            return Fraction(final_numerator, final_denominator)
+        raise TypeError("Can only add two Fractions")
 
     def __sub__(self, other: object) -> object:
         """Subtract two fractions"""
-        raise NotImplementedError
+        if isinstance(other, Fraction):
+            numerator1 = self.numerator * other.denominator
+            numerator2 = other.numerator * self.denominator
+            final_numerator = numerator1 - numerator2
+            final_denominator = self.denominator * other.denominator
+            return Fraction(final_numerator, final_denominator)
+        raise TypeError("Can only subtract two Fractions")
 
     def __mul__(self, other: object) -> object:
         """Multiply two fractions"""
-        raise NotImplementedError
+        if isinstance(other, Fraction):
+            numerator = self.numerator * other.numerator
+            denominator = self.denominator * other.denominator
+            return Fraction(numerator, denominator)
+        raise TypeError("Can only multiply two Fractions")
 
     def __truediv__(self, other: object) -> object:
         """Divide two fractions"""
-        raise NotImplementedError
+        if isinstance(other, Fraction):
+            # Multiply by the recipricol
+            numerator2 = other.denominator
+            denominator2 = other.numerator
+            # Utilize multiplication function
+            return self * Fraction(numerator2, denominator2)
+        raise TypeError("Can only divide two Fractions")
 
 
 def main():
