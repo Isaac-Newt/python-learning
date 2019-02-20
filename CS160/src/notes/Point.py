@@ -14,10 +14,11 @@ class Point:
     This class provides methods for building 2D points, and performing
     operations with these points
 
-    x and y must be int's 
+    x and y must be int's
     """
     # __init__() takes "self" as well as any other desired parameters
     # "self" can technically be anything you want, but should use self
+
     def __init__(self, x: int, y: int):
         """Create a point"""
         if type(x) is not int:
