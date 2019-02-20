@@ -1,3 +1,5 @@
+# Isaac List - CS160 - Fractions Exercise - February 15, 2019
+
 #! python3.7
 """
 Implementation of the class Fraction
@@ -51,16 +53,15 @@ class Fraction:
     denominator = property(get_denominator)  # use with self.denominator
 
     def __str__(self) -> str:
-        """
-        Object as a string
-        """
+        """Object as a string"""
         if self.numerator <= self.denominator:
-            return f"{self.numerator}/{self.denominator}"
+            expression = f"{self.numerator}/{self.denominator}"
         if self.numerator > self.denominator:
             integer = self.numerator - self.denominator
             numerator = int(self.numerator - (integer * self.denominator))
             integer = str(integer)
-            return f"{integer} {numerator}/{self.denominator}"
+            expression = f"{integer} {numerator}/{self.denominator}"
+        return expression
 
     def __repr__(self) -> str:
         """Object representation"""
@@ -71,7 +72,7 @@ class Fraction:
         # equal if num1 * den2 == num2 * den1
         if isinstance(other, Fraction):
             if (self.numerator * other.denominator) == (
-                self.denominator * other.numerator
+                    self.denominator * other.numerator
             ):
                 return True
             return False

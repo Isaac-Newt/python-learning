@@ -11,6 +11,9 @@ class Point:
     """
     Class Point
 
+    This class provides methods for building 2D points, and performing
+    operations with these points
+
     x and y must be int's 
     """
     # __init__() takes "self" as well as any other desired parameters
@@ -111,10 +114,39 @@ class Point:
         return math.sqrt((self._x - other._x) ** 2 + (self._y - other._y) ** 2)
 
 
+class Point3D(Point):  # put class from which sub-class inherits in the ()'s
+    """
+    This class extends the Point class with 3D capabilities
+
+    It is a sub-class of the Point super class, and inherits from it
+    """
+
+    def __init__(self, x_init_value, y_init_value, z_init_value):
+        """Create a 3D Point"""
+        # Call __init__() of super class to build (x, y) of point
+        super().__init__(x_init_value, y_init_value)
+        self._z = z_init_value
+
+    @property
+    def z(self):
+        return self._z
+
+    def __str__(self):
+        """String representation of the Point3D Object"""
+        return f"({self.x}, {self.y}, {self.z})"
+
+
 def main():
     """
     The main function, currently runs a demo
     """
+
+    print("Point3D demo")
+    # p3 = Point3D（1， 2, 3）
+    # This will return a valid output as if called with
+    # Point() even if no new properties in Point3D
+    print(p3)
+
     print("Point demo")
 
     """Point Creation"""
