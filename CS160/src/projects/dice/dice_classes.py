@@ -1,3 +1,5 @@
+# Isaac List - CS160 - February 20, 2019 - Die Class project
+
 #!/usr/bin/env python3
 """
 Dice game(s) simulator
@@ -30,16 +32,16 @@ class Die:
     def __str__(self):
         """__str__ override"""
         # Print value of the dice
-        return str(self.value)
+        return str(self._value)
 
     def roll(self):
         """Roll the die"""
         # Random number 1-6
         self._value = random.choice(self._all_values)
-        return self.value
+        return self._value
 
 
-class FrozenDie(Die): # subclass of Die, once rolled, cannot change
+class FrozenDie(Die):  # subclass of Die, once rolled, cannot change
     # Every frozen die /is/ a die
     """A die that cannot be rolled"""
 
@@ -57,18 +59,17 @@ class FrozenDie(Die): # subclass of Die, once rolled, cannot change
     def frozen(self, new_value: bool) -> None:
         """Frozen property setter"""
         self._frozen = new_value
-        return self.frozen
 
     def roll(self):
         """Roll the die"""
         # Roll if not frozen, else return the same value
         if self._frozen is False:
             self._value = random.choice(self._all_values)
-        return self.value
 
 
-class Cup: # does not inherit from anything, simply uses Die, FrozenDie
+class Cup:  # does not inherit from anything, simply uses Die, FrozenDie
     """Class Cup"""
+
     # must have a sense of which dice is which
 
     def __init__(self, num_dice: int, num_sides: int = 6) -> None:
@@ -84,29 +85,27 @@ class Cup: # does not inherit from anything, simply uses Die, FrozenDie
     def __str__(self) -> str:
         """__str__ override"""
         # print nice output
-        list = []
-        for dice in self._dice:
-            list.append(dice.value)
-        return f"{list}"
+        list_of_values = []
+        # This is an example of calling the __iter__ function
+        for dice in self:
+            list_of_values.append(dice.value)
+        return f"{list_of_values}"
 
     def shake(self) -> None:
         """Shake a cup"""
         # roll all the dice in the "cup"
         # use a loop, iterate over objects in class cup
-        for dice in self._dice:
-            dice._value = dice.roll()
-        return self._dice
+        for dice in self:
+            dice.roll()
 
-    def add(self, die: object) -> None:
+    def add(self, die: Die) -> None:
         """Add a die to the cup"""
         # internally, cup is a list of class "Die"
         # In this method, append a new dice to the list
         self._dice.append(die)
-        return self._dice
 
     def remove(self, idx: int):
         """Remove a die from the cup"""
-        # Already implemented :)
         return self._dice.pop(idx)
 
     def roll(self, *args) -> None:
@@ -115,7 +114,7 @@ class Cup: # does not inherit from anything, simply uses Die, FrozenDie
         # i.e. C.roll(1, 2, 5), can be as many or as few as desired
         # Assuming dice[1] is the first die, not dice[0]
         for index in args:
-            if index < len(self._dice):
-                self._dice[index - 1]._value = self._dice[index - 1].roll()
-        print(self)
-        return self._dice
+            if 0 < index <= len(self._dice):
+                self._dice[index - 1].roll()
+        # Don't have to return self._dice, since lists are mutable, and changing it
+        # within the function will change it on the "outside" too.
