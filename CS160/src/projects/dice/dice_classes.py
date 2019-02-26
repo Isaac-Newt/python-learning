@@ -70,8 +70,6 @@ class FrozenDie(Die):  # subclass of Die, once rolled, cannot change
 class Cup:  # does not inherit from anything, simply uses Die, FrozenDie
     """Class Cup"""
 
-    # must have a sense of which dice is which
-
     def __init__(self, num_dice: int, num_sides: int = 6) -> None:
         """Class FrozenDie constructor"""
         # Takes "num_dice" number of dice, generates that many dice
@@ -79,7 +77,6 @@ class Cup:  # does not inherit from anything, simply uses Die, FrozenDie
 
     def __iter__(self):
         """Cup iterator"""
-        # already done :)
         return iter(self._dice)
 
     def __str__(self) -> str:

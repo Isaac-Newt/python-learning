@@ -1,12 +1,12 @@
 [
-  "tests/Projects/dice/test_dice.py::TestDiceMethods::test_die_get_value",
-  "tests/Projects/dice/test_dice.py::TestDiceMethods::test_die_set_value",
-  "tests/Projects/dice/test_dice.py::TestDiceMethods::test_die_str",
-  "tests/Projects/dice/test_dice.py::TestDiceMethods::test_die_roll",
-  "tests/Projects/dice/test_dice.py::TestDiceMethods::test_frozen_die_roll",
-  "tests/Projects/dice/test_dice.py::TestDiceMethods::test_cup_shake",
-  "tests/Projects/dice/test_dice.py::TestDiceMethods::test_cup_str",
-  "tests/Projects/dice/test_dice.py::TestDiceMethods::test_cup_add",
-  "tests/Projects/dice/test_dice.py::TestDiceMethods::test_cup_remove",
-  "tests/Projects/dice/test_dice.py::TestDiceMethods::test_cup_roll"
+  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_animal",
+  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_bird",
+  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_mammal",
+  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_parrot",
+  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_penguin",
+  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_canine",
+  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_feline",
+  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_dog",
+  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_housecat",
+  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_bobcat"
 ]
