@@ -1,12 +1,12 @@
 [
-  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_animal",
-  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_bird",
-  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_mammal",
-  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_parrot",
-  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_penguin",
-  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_canine",
-  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_feline",
-  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_dog",
-  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_housecat",
-  "tests/exercises/zoo/test_zoo.py::TestAnimalsMethods::test_bobcat"
+  "tests/projects/keyboard/test_keyboard.py::test_output[sample]",
+  "tests/projects/keyboard/test_keyboard.py::test_output[all_firsthalf]",
+  "tests/projects/keyboard/test_keyboard.py::test_output[all_secondhalf]",
+  "tests/projects/keyboard/test_keyboard.py::test_output[gen26]",
+  "tests/projects/keyboard/test_keyboard.py::test_output[gen50]",
+  "tests/projects/keyboard/test_keyboard.py::test_output[gen100]",
+  "tests/projects/keyboard/test_keyboard.py::test_output[gen1000]",
+  "tests/projects/keyboard/test_keyboard.py::test_output[gen2500]",
+  "tests/projects/keyboard/test_keyboard.py::test_output[gen5000]",
+  "tests/projects/keyboard/test_keyboard.py::test_output[gen10000]"
 ]

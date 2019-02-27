@@ -21,7 +21,7 @@ FILENAMES = (
     "gen1000",
     "gen2500",
     "gen5000",
-    "gen1000",
+    "gen10000",
 )
 
 @pytest.mark.timeout(TIME_LIMIT)

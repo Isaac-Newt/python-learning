@@ -1,1 +1,12 @@
-{}
+{
+  "tests/Projects/keyboard/test_keyboard.py::test_output[all_firsthalf]": true,
+  "tests/Projects/keyboard/test_keyboard.py::test_output[all_secondhalf]": true,
+  "tests/Projects/keyboard/test_keyboard.py::test_output[gen10000]": true,
+  "tests/Projects/keyboard/test_keyboard.py::test_output[gen10001]": true,
+  "tests/Projects/keyboard/test_keyboard.py::test_output[gen100]": true,
+  "tests/Projects/keyboard/test_keyboard.py::test_output[gen2500]": true,
+  "tests/Projects/keyboard/test_keyboard.py::test_output[gen26]": true,
+  "tests/Projects/keyboard/test_keyboard.py::test_output[gen5000]": true,
+  "tests/Projects/keyboard/test_keyboard.py::test_output[gen50]": true,
+  "tests/Projects/keyboard/test_keyboard.py::test_output[sample]": true
+}
