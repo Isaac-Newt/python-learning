@@ -76,13 +76,23 @@ class stack:
         return self.items[-1]
 ```
 
-### Try implementing stack as a dictionary:
+### Implementing stack as a dictionary:
 
 ```Python
 class Stack:
     def __init__(self):
         self.items = {}
-    def ...
+        self.top = 0
+    def is_empty(self):
+        return self.items == {}
+    def size(self):
+        return len(self.items)
+    def push(self):
+        return 
+    def pop(self):
+        return 
+    def peek(self):
+        return 
 ```
 
 ### Stack applications:
