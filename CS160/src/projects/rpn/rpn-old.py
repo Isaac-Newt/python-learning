@@ -1,9 +1,12 @@
+# .isnumeric()
+
 #!/usr/bin/env python3
 """
 Reverse Polish Notation
 
 Isaac List - CS160
-March 7, 2019
+
+March 6, 2019
 """
 
 from pythonds3.basic import Stack
@@ -26,24 +29,24 @@ class TokenError(Exception):
 
 
 def postfix_eval(postfix_expr: str) -> int:
-    """Evaluate postfix expression"""
+    """Evaluate a postfix expression"""
     exp_stack = Stack()
     charlist = postfix_expr.split()
+
     # Evaluate expression using a stack
     for char in charlist:
-        if char.isnumeric():
+        print(char)
+        if char in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]:
             exp_stack.push(int(char))
-        elif char in ["+", "-", "*", "/", "%", "**", "//"]:
+        elif char in ["+", "-", "*", "/"]:
             operator = char
             try:
                 operand2 = exp_stack.pop()
                 operand1 = exp_stack.pop()
-            except:
+            except IndexError:
                 raise StackError("Stack is empty")
             answer = do_math(operator, operand1, operand2)
             exp_stack.push(answer)
-        elif char == "=":
-            pass
         else:
             raise TokenError(f"Unknown token: {char}")
 
@@ -51,51 +54,34 @@ def postfix_eval(postfix_expr: str) -> int:
     try:
         if exp_stack.size() == 1:
             return exp_stack.pop()
-        elif exp_stack.size() > 1:
-            raise StackError("Stack is not empty")
         else:
-            raise StackError("Stack is empty")
+            raise StackError("Stack is not empty")
     except IndexError:
         raise StackError("Stack is empty")
 
-
 def do_math(op: str, op1: int, op2: int) -> int:
-    """process arithmetic operations"""
-    if op in ["+", "-", "*", "/", "%", "**", "//"] and isinstance(op1 + op2, int):
-        if op == "+":
-            answer = op1 + op2
-        elif op == "-":
-            answer = op1 - op2
-        elif op == "*":
-            answer = op1 * op2
-        elif op == "/":
-            answer = op1 / op2
-        elif op == "%":
-            answer = op1 % op2
-        elif op == "**":
-            answer = op1 ** op2
-        elif op == "//":
-            answer = op1 // op2
-    else:
-        raise SyntaxError("invalid syntax")
+    """Evaluate a mathematical operation"""
+    if op == "*":
+        answer = op1 * op2
+    elif op == "/":
+        answer = op1 / op2
+    elif op == "+":
+        answer = op1 + op2
+    elif op == "-":
+        answer = op1 - op2
     return answer
 
-
 def rpn_calc(filename: str) -> int:
-    """Read lines from the file and pass them to the postfix_eval"""
-    input_file = open(filename, "r")
-    line = input_file.readline().strip()
-    checksum = 0
+    # TODO: Read lines from the file and pass them to the postfix_eval
+    try:
+        file = open(filename, "r")
+    except:
+        raise ValueError("File does not exist")
     while line != "":
-        try:
-            checksum += postfix_eval(line)
-        except:
-            print("Invalid Expression")
-        line = input_file.readline().strip()
-        print(checksum)
-    input_file.close()
-    return checksum
-
+        print(line)
+        answer = postfix_eval(line)
+        print(answer)
+        
 
 def main():
     """Main function"""

@@ -85,14 +85,6 @@ def par_checker_file(filename):
 def base_converter(dec_num, base):
     """Convert a decimal number to any base"""
 
-    #
-    # !!!NOTE!!!
-    #
-    # You need to implement the try/except thing here,
-    #
-    # Even though the test doesn't check for it !!!
-    #
-
     # if base in [2, 8, 16]
     digits = "0123456789ABCDEF"
 
@@ -114,30 +106,32 @@ def rpn_calc(postfix_expr):
     """Evaluate a postfix expression"""
     exp_stack = Stack()
     charlist = postfix_expr.split()
-    # Evaluate expression using a stack
 
+    # Evaluate expression using a stack
     for char in charlist:
         print(char)
-        try:
-            if char in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]:
-                exp_stack.push(int(char))
-            elif char in ["+", "-", "*", "/"]:
-                operator = char
-                try:
-                    operand2 = exp_stack.pop()
-                    operand1 = exp_stack.pop()
-                except:
-                    raise StackError
-                answer = do_math(operator, operand1, operand2)
-                exp_stack.push(answer)
-        except:
-            raise TokenError
+        if char in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]:
+            exp_stack.push(int(char))
+        elif char in ["+", "-", "*", "/"]:
+            operator = char
+            try:
+                operand2 = exp_stack.pop()
+                operand1 = exp_stack.pop()
+            except IndexError:
+                raise StackError("Stack is empty")
+            answer = do_math(operator, operand1, operand2)
+            exp_stack.push(answer)
+        else:
+            raise TokenError(f"Unknown token: {char}")
 
     # Return the answer (last thing in stack)
     try:
-        return exp_stack.pop()
-    except:
-        raise StackError
+        if exp_stack.size() == 1:
+            return exp_stack.pop()
+        else:
+            raise StackError("Stack is not empty")
+    except IndexError:
+        raise StackError("Stack is empty")
 
 
 # Use with rpn_calc()

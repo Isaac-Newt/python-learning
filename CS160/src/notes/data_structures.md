@@ -11,7 +11,7 @@
 - Cannot access just any element, must be from top of stack
 - Can add to the top of the stack, not just anywhere you want
 
-``` 
+```
 main() calls
     print() calls
         hello() calls
@@ -45,18 +45,18 @@ main |
 ## Stacks
 - Create empty stack:
     - ```stack()```
-- Add element: 
+- Add element:
     - ```stack.push()```
     - Generally append to end of "list", return nothing
-- Remove element: 
-    - ```stack.pop()``` 
+- Remove element:
+    - ```stack.pop()```
     - Pop from end of the "list", return the element popped
-- Look at top element: 
-    - ```stack.peek()``` 
+- Look at top element:
+    - ```stack.peek()```
     - Should return the last value in the "list"
-- Check if empty (True or False): 
+- Check if empty (True or False):
     - ```stack.is_empty()```
-- Get the length/size: 
+- Get the length/size:
     - ```stack.size()```
 
 ### Implementing stack with lists in python:
@@ -82,17 +82,21 @@ class stack:
 class Stack:
     def __init__(self):
         self.items = {}
-        self.top = 0
+        self.top = 0 # Acts as an index
     def is_empty(self):
         return self.items == {}
     def size(self):
         return len(self.items)
-    def push(self):
-        return 
+    def push(self, item):
+        self.items[self.top] = item
+        self.top += 1 # update to the new top
     def pop(self):
-        return 
+        removed_item = self.items.pop([self.top - 1])
+        self.top -= 1
+        return removed_item
     def peek(self):
-        return 
+        if is_empty
+        return self.items[self.top - 1]
 ```
 
 ### Stack applications:
@@ -105,7 +109,7 @@ class Stack:
 
 1 + 2 * 3 = 7
 
-or 
+or
 
 1 + 2 * 3 = 9
 
@@ -113,7 +117,7 @@ or
 
 ### Prefix: + 1 * 2 3
 
-### Postfix: 1 2 3 * + 
+### Postfix: 1 2 3 * +
 
 ## Implement Postfix notation with a stack: --> chapter 3 in textbook
 
@@ -137,3 +141,65 @@ or
 
 Answer is the only element in the stack
 - If more than one element in stack, expression was invalid
+
+# Linked-List
+
+## A collection of nodes that can be interlinked, rather than a framed, ordered structure
+
+### Characteristics:
+- Python list
+- Relative (not absolute) position
+- No specific order
+- Basic operations
+
+## Python example
+
+```Python
+
+class Node:
+    def __init__(self, data):
+        self._data = data
+        self._next = None
+
+    def get_data(self):
+        return self._data
+    def set_data(self, new_data):
+        self._data = new_data
+    data = property(get_data, set_data)
+
+    @property
+    def next(self):
+        return self._next
+    @next.setter
+    def next(self, new_next)
+        self.next = new_next
+
+    def __str__(self):
+        return str(self._data)
+
+class LinkedList:
+    def __init__(self):
+        pass
+    def size(self):
+        pass
+    def is_empty(self):
+        pass
+    def search(self, item):
+        Go through items in the list (iterate)
+        O(n) in Big-O notation
+    def index(self, item):
+        return the index of item
+    def __remove__(self, item):
+        remove item from the list
+        May have to iterate through entire list
+
+class Differ_between_UL_and_OL(LinkedList):
+    def __add__(self, item):
+        change ._next of previous item
+    def append(self, item):
+        add new item to end of list
+    def pop(self):
+        remove last item in the list
+    def pop(self, index):
+        remove item at index in the list
+```

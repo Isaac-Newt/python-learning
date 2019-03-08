@@ -20,6 +20,7 @@ Complete the following programming project and submit your source code (as a sin
 
 1. Calculate and print **checksum** - sum of all valid results.
 
+
 1. Add your name and the assignment number as a comment to the source file.
 
 1. Use exception handling `try..except` in order to catch errors.

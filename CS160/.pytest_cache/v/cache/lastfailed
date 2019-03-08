@@ -9,8 +9,5 @@
   "tests/Projects/keyboard/test_keyboard.py::test_output[gen5000]": true,
   "tests/Projects/keyboard/test_keyboard.py::test_output[gen50]": true,
   "tests/Projects/keyboard/test_keyboard.py::test_output[sample]": true,
-  "tests/exercises/stacks/test_stacks.py::test_rpn_calc_stack_err[3 2 1 + - *-Stack is empty]": true,
-  "tests/exercises/stacks/test_stacks.py::test_rpn_calc_stack_err[3 2 1 +-Stack is not empty]": true,
-  "tests/exercises/stacks/test_stacks.py::test_rpn_calc_token_err[3 2 **-Unknown token-**]": true,
-  "tests/exercises/stacks/test_stacks.py::test_rpn_calc_token_err[a b +-Unknown token-a]": true
+  "tests/projects/rpn/test_rpn.py::test_checksum[rpn_input_2.txt-8118]": true
 }
