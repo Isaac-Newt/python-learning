@@ -102,6 +102,9 @@ class OrderedList:
         else:
             new_node.set_next(current)
             previous.set_next(new_node)
+        
+        # Update the count of items in the list
+        self._count += 1
 
 
     def pop(self, position: int = None):
@@ -138,4 +141,12 @@ class OrderedList:
 
     def index(self, value: typing.Any) -> int:
         """Return position of an item in the list"""
-        raise NotImplementedError
+        idx = 0
+        current = self._head
+        while current:
+            if current.data == value:
+                return idx
+            current = current.next
+            idx += 1
+        # Convention to return -1 if item not found
+        return -1
