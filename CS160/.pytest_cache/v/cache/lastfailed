@@ -9,13 +9,5 @@
   "tests/Projects/keyboard/test_keyboard.py::test_output[gen5000]": true,
   "tests/Projects/keyboard/test_keyboard.py::test_output[gen50]": true,
   "tests/Projects/keyboard/test_keyboard.py::test_output[sample]": true,
-  "tests/exercises/orderedlists/test_orderedlists.py::TestAndGradeOrderedListMethods::test_getitem[a_list0-0-0]": true,
-  "tests/exercises/orderedlists/test_orderedlists.py::TestAndGradeOrderedListMethods::test_getitem[a_list1-2-3]": true,
-  "tests/exercises/orderedlists/test_orderedlists.py::TestAndGradeOrderedListMethods::test_getitem[a_list2-0-a]": true,
-  "tests/exercises/orderedlists/test_orderedlists.py::TestAndGradeOrderedListMethods::test_getitem[a_list3-100-8]": true,
-  "tests/exercises/orderedlists/test_orderedlists.py::TestAndGradeOrderedListMethods::test_pop[a_list0-0-0]": true,
-  "tests/exercises/orderedlists/test_orderedlists.py::TestAndGradeOrderedListMethods::test_pop[a_list1-2-3]": true,
-  "tests/exercises/orderedlists/test_orderedlists.py::TestAndGradeOrderedListMethods::test_pop[a_list2-0-a]": true,
-  "tests/exercises/orderedlists/test_orderedlists.py::TestAndGradeOrderedListMethods::test_pop[a_list3-100-8]": true,
   "tests/projects/rpn/test_rpn.py::test_checksum[rpn_input_2.txt-8118]": true
 }

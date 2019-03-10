@@ -50,7 +50,23 @@ class OrderedList:
 
     def __getitem__(self, position: int):
         """Get item by its position"""
-        raise NotImplementedError
+        if not self._head:
+            raise Exception("Cannot search an empty list")
+        if position == None:
+            position = self._count
+        if position < 0:
+            raise ValueError("Negative")
+        
+        # Find the desired item given a position
+        current = self._head
+        previous = None
+        current_index = 0
+        while current.next and current_index < position:
+            previous = current
+            current = current.next
+            current_index += 1
+        result = current.data
+        return result
 
     def __len__(self) -> int:
         """Get list size"""
@@ -116,7 +132,32 @@ class OrderedList:
         Raise ValueError if the list is empty
         Raise IndexError if the provided position is negative        
         """
-        raise NotImplementedError
+        if not self._head:
+            raise Exception("Cannot pop from an empty list")
+        if position == None:
+            position = self._count
+        if position < 0:
+            raise ValueError("Negative")
+        
+        # Find the desired item given a position
+        current = self._head
+        previous = None
+        current_index = 0
+        while current.next and current_index < position:
+            previous = current
+            current = current.next
+            current_index += 1
+
+        # Remove the item by removing references to it
+        result = current.data
+        if previous:
+            previous.next = current.next
+        else:
+            self._head = current.next
+        self._count -= 1
+
+        # Return the item that was popped
+        return result
 
     def append(self, value: typing.Any) -> None:
         """Add a new item to the end of the list"""
