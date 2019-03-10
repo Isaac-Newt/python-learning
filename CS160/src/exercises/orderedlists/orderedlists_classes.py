@@ -75,13 +75,41 @@ class OrderedList:
 
     def add(self, value: typing.Any) -> None:
         """Add a new item to the list"""
-        raise NotImplementedError
+        # Start at fist item in the list
+        current = self._head
+        previous = None
+        stop_looking = False
+        # If new node is "greater" than previous item, add it
+        # If end of list is reached, append the item
+        while current != None and not stop_looking:
+            if current.get_data() > value:
+                stop_looking = True
+            else:
+                previous = current
+                current = current.get_next()
+        
+        # Create a new node with the data "value"
+        new_node = Node(value)
+
+        # If being put at the beginning of the list,
+        # Make first item "next" and point head to new_node
+        if previous == None:
+            new_node.set_next(self._head)
+            self._head = new_node
+        # If being inserted somewhere in the middle or end,
+        # Insert behind the current item, pointing new_node
+        # to the current, and "previous" to new_node
+        else:
+            new_node.set_next(current)
+            previous.set_next(new_node)
+
 
     def pop(self, position: int = None):
         """
         Remove at item (last one by default) and get its value
 
-        Remove the last element if the provided position is greater than the length of the list
+        Remove the last element if the provided position is 
+        greater than the length of the list
         Raise ValueError if the list is empty
         Raise IndexError if the provided position is negative        
         """
@@ -89,11 +117,13 @@ class OrderedList:
 
     def append(self, value: typing.Any) -> None:
         """Add a new item to the end of the list"""
-        raise NotImplementedError
+        # Add the item, since that's what ya gotta do
+        self.add(value)
 
     def insert(self, position: int, value: typing.Any) -> None:
         """Insert a new item into the list"""
-        raise NotImplementedError
+        # Add the item, since that's what ya gotta do
+        self.add(value)
 
     def search(self, value: typing.Any) -> bool:
         """Search for an item in the list"""
