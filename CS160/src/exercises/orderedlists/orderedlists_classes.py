@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Ordered List classes"""
+"""
+Ordered List classes
+
+Isaac List - CS160
+March 11, 2019
+"""
 
 import random
 import typing
