@@ -32,33 +32,41 @@ class Address:
         return equal
 
     def get_street(self):
+        """Get Street"""
         return self._street
 
     def set_street(self, value: str):
+        """Set Street"""
         self._street = value
 
     street = property(get_street, set_street)
 
     def get_city(self):
+        """Get City"""
         return self._city
 
     def set_city(self, value: str):
+        """Set City"""
         self._city = value
 
     city = property(get_city, set_city)
 
     def get_state(self):
+        """Get State"""
         return self._state
 
     def set_state(self, value: str):
+        """Set State"""
         self._state = value
 
     state = property(get_state, set_state)
 
     def get_zip(self):
+        """Get Zip"""
         return self._zip
 
     def set_zip(self, value: str):
+        """Set Zip"""
         self._zip = value
 
     zip = property(get_zip, set_zip)
@@ -78,25 +86,31 @@ class Customer:
         self._address = address_init
 
     def get_name(self):
+        """Get Name"""
         return self._name
 
     def set_name(self, value: str):
+        """Set Name"""
         self._name = value
 
     name = property(get_name, set_name)
 
     def get_dob(self):
+        """Get DOB"""
         return self._dob
 
     def set_dob(self, value: str):
+        """Set DOB"""
         self._dob = value
 
     dob = property(get_dob, set_dob)
 
     def get_address(self):
+        """Get Address"""
         return self._address
 
     def set_address(self, value: object):
+        """Set Address"""
         self.move(value)
 
     address = property(get_address, set_address)
@@ -120,19 +134,23 @@ class Account(ABC):
         self._balance = balance_init
 
     def get_owner(self):
+        """Get Owner"""
         return self._owner
 
     def set_owner(self, value: object):
+        """Set Owner"""
         self._owner = value
 
     owner = property(get_owner, set_owner)
 
     def get_balance(self):
+        """Get Balance"""
         return self._balance
 
     def set_balance(self, value: float):
+        """Set Balance"""
         self._balance = value
-    
+
     balance = property(get_balance, set_balance)
 
     def deposit(self, amount: float):
@@ -161,12 +179,10 @@ class CheckingAccount(Account):
         self._fee = fee_init
 
     def get_fee(self):
+        """Get Fee"""
         return self._fee
 
-    def set_fee(self, value: float):
-        self._fee = value
-
-    fee = property(get_fee, set_fee)
+    fee = property(get_fee)
 
     def process_check(self, amount: float):
         """Process a check"""
@@ -179,7 +195,7 @@ class CheckingAccount(Account):
         """__str__"""
         return f"Checking account\nOwner: {self.owner}\nBalance: {self.balance:.2f}"
 
-"Must deposit positive amount"
+
 class SavingsAccount(Account):
     """CheckingAccount class"""
 
@@ -187,12 +203,13 @@ class SavingsAccount(Account):
         self, owner_init: object, interest_rate_init: float, balance_init: float = 0
     ):
         """Constructor"""
-        raise NotImplementedError
+        super().__init__(owner_init, balance_init)
+        self._annual_interest_rate = interest_rate_init
 
     def yield_interest(self):
         """Yield annual interest"""
-        raise NotImplementedError
+        self.balance += self._annual_interest_rate / 100 * self.balance
 
     def __str__(self):
         """__str__"""
-        raise NotImplementedError
+        return f"Savings account\nOwner: {self.owner}\nBalance: {self.balance:.2f}"
