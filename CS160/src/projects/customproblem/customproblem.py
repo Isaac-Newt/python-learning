@@ -10,12 +10,13 @@ from abc import ABC, abstractmethod
 
 # Country has a...
 class Language:
-    """Define how to greet someone in a language [Name]"""
+    """Define how to say things in a language"""
 
-    def __init__(self, Name: str, Greeting: str):
+    def __init__(self, Name: str, Greeting: str, Phrase: str):
         """__init__"""
         self._name = Name
         self._greeting = Greeting
+        self._other_phrase = Phrase
 
     def get_name(self):
         """Name Getter"""
@@ -28,6 +29,12 @@ class Language:
         return self._greeting
 
     greeting = property(get_greeting)
+
+    def get_other_phrase(self):
+        """Phrase Getter"""
+        return self._other_phrase
+
+    phrase = property(get_other_phrase)
 
 
 class Country:
@@ -55,7 +62,7 @@ class Country:
     language = property(get_language)
 
 
-class Nationality(ABC):
+class Resident(ABC):
     """
     Base class, extended by American and German
 
@@ -87,42 +94,51 @@ class Nationality(ABC):
     def __eq__(self, other):
         """Equal if from same country"""
         return self.country == other.country
+    
+    def say_hello(self):
+        return f"{self.name} says {self.country.language.greeting}!"
 
 
-class American(Nationality):
-    """An American Citizen"""
+class Tourist(Resident):
+    """
+    A Tourist
+    
+    Extends Resident with methods ask_for_directions, travel
+    """
 
-    def __init__(self, Persons_Name: str, Persons_Country: object, State: str):
+    def __init__(self, Persons_Name: str, Persons_Country: object, Destination: str):
         """__init__"""
         super().__init__(Persons_Name, Persons_Country)
-        self._state = State
+        self._destination = Destination
 
-    def get_state(self):
+    def get_destination(self):
         """Getter"""
-        return self._state
+        return self._destination
 
-    def set_state(self, value: str):
+    def set_destination(self, value: str):
         """Setter"""
-        self._state = value
+        self._destination = value
 
-    state = property(get_state, set_state)
+    destination = property(get_destination, set_destination)
 
     def __str__(self):
         """__str__"""
         return f"{self.country.language.greeting}, {self.name} is from \
-                {self.country}, and live in {self.state}"
+                {self.country}, and is going to {self.destination}"
 
     def __eq__(self, other):
-        """Same if live in same state"""
-        return self.state == other.state
+        """__eq"""
 
-    def move(self, new_state: str):
-        """Change State"""
-        self.state = new_state
+    def ask_for_directions(self):
+        return f"Can you give me directions to {self.destination}?"
+
+    def travel(self, new_destination: str):
+        """Change Destination"""
+        self.destination = new_state
 
 
-class German(Nationality):
-    """A German Person"""
+class Local(Resident):
+    """A Local Person"""
 
     def __init__(self, Persons_Name: str, Persons_Country: object, Oktoberfest: bool):
         """__init__"""

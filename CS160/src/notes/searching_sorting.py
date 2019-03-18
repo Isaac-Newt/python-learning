@@ -18,3 +18,4 @@ def search(lst, item):
                 first = midpoint + 1
 
     return found
+
