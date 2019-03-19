@@ -28,7 +28,7 @@ class TestCustomProblemMethods:
         assert german.greeting == "Hallo"
         french = Language("French", "Bonjour", "Merci")
         assert french.thanks == "Merci"
-        assert french.__str__() == "In French, people say Bonjour"
+        assert french.__str__() == "In French, people say Bonjour."
 
     def test_Country(self):
         """Testing Country"""
@@ -40,8 +40,6 @@ class TestCustomProblemMethods:
     def test_Resident(self):
         """
         Testing Resident
-        
-        Scream and cry, IDK how to do this
         """
         pass
 
@@ -51,10 +49,8 @@ class TestCustomProblemMethods:
         america = Country("America", english)
         american_tourist = Tourist("Dwayne", america, "Berlin")
         assert american_tourist.destination == "Berlin"
-        assert american_tourist.__str__() == \
-            "Hello, Dwayne is from America"
-        assert american_tourist.ask_for_directions == "Can you give me \
-            directions to Berlin? Thanks!"
+        assert american_tourist.__str__() == "Hello, Dwayne is from America, and is going to Berlin"
+        assert american_tourist.ask_for_directions() == "Can you give me directions to Berlin? Thanks!"
         american_tourist.destination = "Oslo"
         assert american_tourist.destination == "Oslo"
 
@@ -64,9 +60,9 @@ class TestCustomProblemMethods:
         china = Country("China", chinese)
         chinese_local = Local("李爱克", china, True)
         assert chinese_local.name == "李爱克"
-        assert chinese_local.offer_directions == \
+        assert chinese_local.offer_directions() == \
             "I can give you directions"
-        assert chinese_local.say_hello == "李爱克 says 你好"
+        assert chinese_local.say_hello() == "李爱克 says 你好!"
 
     def test_f(self):
         """Testing something"""

@@ -131,8 +131,7 @@ class Tourist(Resident):
 
     def __str__(self):
         """__str__"""
-        return f"{self.country.language.greeting}, {self.name} is from \
-                {self.country}, and is going to {self.destination}"
+        return f"{self.country.language.greeting}, {self.name} is from {self.country.name}, and is going to {self.destination}"
 
     def __eq__(self, other):
         """
@@ -146,8 +145,7 @@ class Tourist(Resident):
         return eq
 
     def ask_for_directions(self):
-        return f"Can you give me directions to {self.destination}? \
-            {self.country.language.thanks}!"
+        return f"Can you give me directions to {self.destination}? {self.country.language.thanks}!"
 
     def travel(self, new_destination: str):
         """Change Destination"""
@@ -160,7 +158,7 @@ class Local(Resident):
     def __init__(self, Persons_Name: str, Persons_Country: object, Helpful: bool):
         """__init__"""
         super().__init__(Persons_Name, Persons_Country)
-        self._helpful
+        self._helpful = Helpful
 
     def get_helpful(self):
         return self._helpful
@@ -175,7 +173,7 @@ class Local(Resident):
     def offer_directions(self):
         """Offer directions if helpful"""
         if self.helpful:
-            string = f"I can give you directions"
+            string = "I can give you directions"
         else:
-            string = f"I can't help you"
+            string = "I can't help you"
         return string

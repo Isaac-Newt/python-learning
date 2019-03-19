@@ -1,14 +1,12 @@
 [
-  "tests/projects/bank/test_bank_checking.py::TestCheckingAccount::test_checking_account[owner0-15-100]",
-  "tests/projects/bank/test_bank_checking.py::TestCheckingAccount::test_checking_account[owner1-20-25]",
-  "tests/projects/bank/test_bank_checking.py::TestCheckingAccount::test_account_deposit[owner0-15-100]",
-  "tests/projects/bank/test_bank_checking.py::TestCheckingAccount::test_account_deposit[owner1-20-25]",
-  "tests/projects/bank/test_bank_checking.py::TestCheckingAccount::test_account_deposit_error[owner0-15-100]",
-  "tests/projects/bank/test_bank_checking.py::TestCheckingAccount::test_account_deposit_error[owner1-20-25]",
-  "tests/projects/bank/test_bank_checking.py::TestCheckingAccount::test_account_close[owner0-15-100]",
-  "tests/projects/bank/test_bank_checking.py::TestCheckingAccount::test_account_close[owner1-20-25]",
-  "tests/projects/bank/test_bank_checking.py::TestCheckingAccount::test_checking_process_check[owner0-15-100]",
-  "tests/projects/bank/test_bank_checking.py::TestCheckingAccount::test_checking_process_check[owner1-20-25]",
-  "tests/projects/bank/test_bank_checking.py::TestCheckingAccount::test_checking_str[owner0-15-100]",
-  "tests/projects/bank/test_bank_checking.py::TestCheckingAccount::test_checking_str[owner1-20-25]"
+  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Language",
+  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Country",
+  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Resident",
+  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Tourist",
+  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Local",
+  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_f",
+  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_g",
+  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_h",
+  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_i",
+  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_j"
 ]
