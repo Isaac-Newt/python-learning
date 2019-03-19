@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 Isaac List - CS160
-March 16, 2019
+March 18, 2019
 
-customproblem classes
+Classes for Residents
 """
 
 from abc import ABC, abstractmethod
@@ -12,11 +12,11 @@ from abc import ABC, abstractmethod
 class Language:
     """Define how to say things in a language"""
 
-    def __init__(self, Name: str, Greeting: str, Phrase: str):
+    def __init__(self, Name: str, Greeting: str, Thanks: str):
         """__init__"""
         self._name = Name
         self._greeting = Greeting
-        self._other_phrase = Phrase
+        self._thanks = Thanks
 
     def get_name(self):
         """Name Getter"""
@@ -30,11 +30,11 @@ class Language:
 
     greeting = property(get_greeting)
 
-    def get_other_phrase(self):
-        """Phrase Getter"""
-        return self._other_phrase
+    def get_thanks(self):
+        """Thanks Getter"""
+        return self._thanks
 
-    phrase = property(get_other_phrase)
+    thanks = property(get_thanks)
 
 
 class Country:
@@ -127,10 +127,19 @@ class Tourist(Resident):
                 {self.country}, and is going to {self.destination}"
 
     def __eq__(self, other):
-        """__eq"""
+        """
+        __eq__
+        Equal if from the same country and going to the same place
+        """
+        eq = False
+        if self.country == other.country:
+            if self.destination == other.destination:
+                eq = True
+        return eq
 
     def ask_for_directions(self):
-        return f"Can you give me directions to {self.destination}?"
+        return f"Can you give me directions to {self.destination}? \
+            {self.country.language.thanks}!"
 
     def travel(self, new_destination: str):
         """Change Destination"""
@@ -140,23 +149,25 @@ class Tourist(Resident):
 class Local(Resident):
     """A Local Person"""
 
-    def __init__(self, Persons_Name: str, Persons_Country: object, Oktoberfest: bool):
+    def __init__(self, Persons_Name: str, Persons_Country: object, Helpful: bool):
         """__init__"""
         super().__init__(Persons_Name, Persons_Country)
-        self._attends_oktoberfest = Oktoberfest
+        self._helpful
 
-    def get_att_okt(self):
-        """Getter"""
-        return self._attends_oktoberfest
+    def get_helpful(self):
+        return self._helpful
 
-    oktoberfest = property(get_att_okt)
+    helpful = property(get_helpful)
 
     def __str__(self):
         """__str__"""
-        if self.oktoberfest:
-            string = f"{self.country.language.greeting}, {self.name} is from \
-                {self.country}, and attends Oktoberfest"
+        return f"{self.country.language.greeting}, {self.name} \
+            is from {self.country}"
+
+    def offer_directions(self):
+        """Offer directions if helpful"""
+        if self.helpful:
+            string = f"I can give you directions"
         else:
-            string = f"{self.country.language.greeting}, {self.name} is from \
-                {self.country}, and does not attend Oktoberfest"
+            string = f"I can't help you"
         return string
