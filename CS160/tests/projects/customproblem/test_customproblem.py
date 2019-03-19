@@ -41,7 +41,15 @@ class TestCustomProblemMethods:
         """
         Testing Resident
         """
-        pass
+        with pytest.raises(TypeError) as excinfo:
+            language = Language("language", "foo", "bar")
+            country = Country("country", language)
+            _ = Resident("_", country)  # pylint: disable=abstract-class-instantiated
+        exception_message = excinfo.value.args[0]
+        assert (
+            exception_message
+            == "Can't instantiate abstract class Resident with abstract methods __str__"
+        )
 
     def test_Tourist(self):
         """Testing Tourist"""
@@ -63,26 +71,6 @@ class TestCustomProblemMethods:
         assert chinese_local.offer_directions() == \
             "I can give you directions"
         assert chinese_local.say_hello() == "李爱克 says 你好!"
-
-    def test_f(self):
-        """Testing something"""
-        pass
-
-    def test_g(self):
-        """Testing something"""
-        pass
-
-    def test_h(self):
-        """Testing something"""
-        pass
-
-    def test_i(self):
-        """Testing something"""
-        pass
-
-    def test_j(self):
-        """Testing something"""
-        pass
 
 
 if __name__ == "__main__":

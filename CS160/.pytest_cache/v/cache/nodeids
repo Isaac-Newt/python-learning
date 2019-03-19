@@ -3,10 +3,5 @@
   "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Country",
   "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Resident",
   "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Tourist",
-  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Local",
-  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_f",
-  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_g",
-  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_h",
-  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_i",
-  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_j"
+  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Local"
 ]
