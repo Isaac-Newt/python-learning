@@ -24,6 +24,14 @@ class Language:
 
     name = property(get_name)
 
+    def __eq__(self, other):
+        """__eq__"""
+        return self.name == other.name
+
+    def __str__(self):
+        """__str__"""
+        return f"In {self.name}, people say {self.greeting}."
+
     def get_greeting(self):
         """Greeting Getter"""
         return self._greeting
