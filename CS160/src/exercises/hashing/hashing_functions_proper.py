@@ -25,12 +25,9 @@ def hash_mid_sqr(key: int, size: int) -> int:
     """Find hash using mid-square method"""
     square = key * key
 
-    square = str(square)
-
     # If square is an odd number of digits long
     if len(square) % 2 != 0:
-        # Add a leading 0
-        square = "0" + str(square)
+        # Pretend to add a leading 0
 
     value = int(find_middle_two(square))
 
