@@ -13,6 +13,7 @@ def hash_remainder(key: int, size: int) -> int:
 
 
 def find_middle_two(string: str) -> str:
+    """Recursive implementation"""
     if len(string) == 2:
         value = string
     else:
@@ -52,17 +53,16 @@ def hash_folding(key: int, size: int) -> int:
     str_key = str(key)
     str_key = str_key.replace("-", "")
 
-    sum = 0
+    total = 0
     # 2-digit chunks
     while len(str_key) > 2:
         key = str_key[:2]
-        sum += int(key)
+        total += int(key)
         str_key = str_key[2:]
     # Add the last piece
-    sum += int(str_key)
-    print(sum)
+    total += int(str_key)
 
-    return sum % size
+    return total % size
 
 
 def hash_str(key: str, size: int) -> int:
