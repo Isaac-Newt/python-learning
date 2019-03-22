@@ -21,6 +21,8 @@ def find_middle_two(string: str) -> str:
     return value
 
 
+# converting to string is ok for now, but try to find
+# A mathematical formula that would do the same thing
 def hash_mid_sqr(key: int, size: int) -> int:
     """Find hash using mid-square method"""
     square = key * key
@@ -34,24 +36,18 @@ def hash_mid_sqr(key: int, size: int) -> int:
 
     value = int(find_middle_two(square))
 
-    # # If square is 2 digits long
-    # if len(square) == 2:
-    #     value = int(square)
-
-    # # If square is longer than two digits
-    # else:
-    #     # Find two middle digits
-    #     while len(square) > 2:
-    #         square = square[1:-1]
-    #     value = int(square)
-
     return value % size
 
 
 def hash_folding(key: int, size: int) -> int:
     """Find hash using folding method"""
     str_key = str(key)
-    str_key = str_key.replace("-", "")
+    new_str_key = ""
+    for char in str_key:
+        if char.isdigit():
+            new_str_key = new_str_key + char
+
+    str_key = new_str_key
 
     total = 0
     # 2-digit chunks
@@ -71,10 +67,18 @@ def hash_str(key: str, size: int) -> int:
     # Add the integer value of each character
     for char in key:
         total += ord(char)
-    
+
     return total % size
 
 
 def hash_str_weighted(key: str, size: int) -> int:
     """Find string hash using character positions as weights"""
-    raise NotImplementedError
+    total = 0
+    #
+    multiplier = 0
+    for char in key:
+        add = ord(char) * multiplier
+        total += add
+        multiplier += 1
+
+    return total % size
