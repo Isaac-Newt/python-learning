@@ -9,8 +9,6 @@
   "tests/Projects/keyboard/test_keyboard.py::test_output[gen5000]": true,
   "tests/Projects/keyboard/test_keyboard.py::test_output[gen50]": true,
   "tests/Projects/keyboard/test_keyboard.py::test_output[sample]": true,
-  "tests/exercises/hashing/test_hashing.py::test_hash_str[keys0-16-expected0]": true,
-  "tests/exercises/hashing/test_hashing.py::test_hash_str[keys1-11-expected1]": true,
   "tests/exercises/hashing/test_hashing.py::test_hash_str_weighted[keys0-16-expected0]": true,
   "tests/exercises/hashing/test_hashing.py::test_hash_str_weighted[keys1-11-expected1]": true,
   "tests/projects/rpn/test_rpn.py::test_checksum[rpn_input_2.txt-8118]": true
