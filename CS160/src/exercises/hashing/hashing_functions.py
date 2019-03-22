@@ -11,35 +11,58 @@ def hash_remainder(key: int, size: int) -> int:
     """Find hash using remainder"""
     return key % size
 
+
+def find_middle_two(string: str) -> str:
+    if len(string) == 2:
+        value = string
+    else:
+        value = find_middle_two(string[1:-1])
+    return value
+
+
 def hash_mid_sqr(key: int, size: int) -> int:
     """Find hash using mid-square method"""
     square = key * key
 
     square = str(square)
 
-    # If square is an odd number of digits long,
-    # Make even with a leading 0
+    # If square is an odd number of digits long
     if len(square) % 2 != 0:
         # Add a leading 0
         square = "0" + str(square)
 
-    # If square is 2 digits long
-    if len(square) == 2:
-        value = int(square)
+    value = int(find_middle_two(square))
 
-    # If square is longer than two digits
-    else:
-        # Find two middle digits
-        while len(square) > 2:
-            square = square[1:-1]
-        value = int(square)
-    
+    # # If square is 2 digits long
+    # if len(square) == 2:
+    #     value = int(square)
+
+    # # If square is longer than two digits
+    # else:
+    #     # Find two middle digits
+    #     while len(square) > 2:
+    #         square = square[1:-1]
+    #     value = int(square)
+
     return value % size
 
 
 def hash_folding(key: int, size: int) -> int:
     """Find hash using folding method"""
-    raise NotImplementedError
+    str_key = str(key)
+    str_key = str_key.replace("-", "")
+
+    sum = 0
+    # 2-digit chunks
+    while len(str_key) > 2:
+        key = str_key[:2]
+        sum += int(key)
+        str_key = str_key[2:]
+    # Add the last piece
+    sum += int(str_key)
+    print(sum)
+
+    return sum % size
 
 
 def hash_str(key: str, size: int) -> int:
@@ -50,4 +73,3 @@ def hash_str(key: str, size: int) -> int:
 def hash_str_weighted(key: str, size: int) -> int:
     """Find string hash using character positions as weights"""
     raise NotImplementedError
-
