@@ -1,7 +1,12 @@
 [
-  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Language",
-  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Country",
-  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Resident",
-  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Tourist",
-  "tests/projects/customproblem/test_customproblem.py::TestCustomProblemMethods::test_Local"
+  "tests/exercises/hashing/test_hashing.py::test_hash_remainder[keys0-16-expected0]",
+  "tests/exercises/hashing/test_hashing.py::test_hash_remainder[keys1-11-expected1]",
+  "tests/exercises/hashing/test_hashing.py::test_hash_hash_mid_sqr[keys0-16-expected0]",
+  "tests/exercises/hashing/test_hashing.py::test_hash_hash_mid_sqr[keys1-11-expected1]",
+  "tests/exercises/hashing/test_hashing.py::test_hash_folding[keys0-16-expected0]",
+  "tests/exercises/hashing/test_hashing.py::test_hash_folding[keys1-11-expected1]",
+  "tests/exercises/hashing/test_hashing.py::test_hash_str[keys0-16-expected0]",
+  "tests/exercises/hashing/test_hashing.py::test_hash_str[keys1-11-expected1]",
+  "tests/exercises/hashing/test_hashing.py::test_hash_str_weighted[keys0-16-expected0]",
+  "tests/exercises/hashing/test_hashing.py::test_hash_str_weighted[keys1-11-expected1]"
 ]

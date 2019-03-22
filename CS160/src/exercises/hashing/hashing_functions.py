@@ -4,12 +4,26 @@
 
 def hash_remainder(key: int, size: int) -> int:
     """Find hash using remainder"""
-    raise NotImplementedError
+    return key % size
 
 
 def hash_mid_sqr(key: int, size: int) -> int:
     """Find hash using mid-square method"""
-    raise NotImplementedError
+    square = key * key
+    if len(str(square)) == 2:
+        value = square
+    elif len(str(square)) % 2 == 0:
+        # Find two middle digits
+        value = 1
+    elif len(str(square)) % 2 != 0:
+        # Add a leading 0
+        square = "0" + str(square)
+        square = int(square)
+        print("square: ",square)
+        # Find two middle digits
+        value = 1
+    
+    return value % size
 
 
 def hash_folding(key: int, size: int) -> int:
