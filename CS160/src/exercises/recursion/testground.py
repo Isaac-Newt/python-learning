@@ -1,19 +1,18 @@
-spaces_count = 0
-levels = 5
-star_count = levels
+"""Testing"""
+def rec_upsidedown_triangle(levels, count):
+    """Upside Down Triangle"""
+    stars = "* " * count
+    print(f"{stars:^{levels * 2}}")
+    if count > 1:
+        rec_upsidedown_triangle(levels, count - 1)
 
-for count in range(levels):
-    stars = "*" * (2 * star_count - 1)
-    spaces = " " * spaces_count
-    print(spaces + stars + spaces)
-    star_count -= 1
-    spaces_count += 1
+def rec_upsideup_triangle(levels, count):
+    """Right Side Up Triangle"""
+    stars = "* " * (levels - count)
+    print(f"{stars:^{levels * 2}}")
+    if count > 0:
+        rec_upsideup_triangle(levels, count - 1)
 
-star_count = 3
-spaces_count = ((2 * levels) - star_count) // 2
-for count in range(levels - 1):
-    stars = "*" * star_count
-    spaces = " " * spaces_count
-    print(spaces + stars + spaces)
-    star_count += 2
-    spaces_count -= 1
+
+rec_upsidedown_triangle(7, 7)
+rec_upsideup_triangle(7, 6)
