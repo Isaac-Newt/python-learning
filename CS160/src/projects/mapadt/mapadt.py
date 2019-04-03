@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Implementation of the Map ADT as HashTable"""
+"""
+Implementation of the Map ADT as HashTable
+
+Isaac List - CS160
+April 1, 2019
+"""
 
 
 class HashTable:
@@ -19,7 +24,11 @@ class HashTable:
 
     def __len__(self):
         """__len__"""
-        raise NotImplementedError
+        count = 0
+        for item in self.keys:
+            if item not None:
+                count += 1
+        return count
 
     def __contains__(self, key):
         """__contains__"""
@@ -27,7 +36,11 @@ class HashTable:
 
     def __str__(self):
         """__str__"""
-        raise NotImplementedError
+        str_list = []
+        for index in range(len(self.keys)):
+            str_list.append(f"{self.keys[index]}: {self.values[index]}")
+        full_string = "{" + str_list.join(,) + "}"
+        return full_string
 
     def _hash(self, key: int, size: int):
         """Simple hash function"""
