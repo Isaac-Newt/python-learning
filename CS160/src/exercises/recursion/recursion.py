@@ -15,12 +15,11 @@ def gcd(a_num: int, b_num: int) -> int:
     - gcd of a & b = gcd of b & a%b
     - gcd of a & 0 = a
     """
-    if b_num not 0:
-        a_num = b_num
-        b_num = (a_num % b_num)
-        gcd(a_num, b_num)
-    
-    return a_num
+    if b_num != 0:
+        remainder = (a_num % b_num)
+        gcd(b_num, remainder)
+    else:
+        return a_num
 
 
 def hourglass_ite(levels: int) -> None:
