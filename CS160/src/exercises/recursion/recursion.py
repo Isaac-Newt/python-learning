@@ -8,8 +8,19 @@ April 1, 2019
 
 
 def gcd(a_num: int, b_num: int) -> int:
-    """Recursive GCD finder"""
-    raise NotImplementedError
+    """
+    Recursive GCD finder
+
+    Using Euclid's Algorithm
+    - gcd of a & b = gcd of b & a%b
+    - gcd of a & 0 = a
+    """
+    if b_num not 0:
+        a_num = b_num
+        b_num = (a_num % b_num)
+        gcd(a_num, b_num)
+    
+    return a_num
 
 
 def hourglass_ite(levels: int) -> None:
