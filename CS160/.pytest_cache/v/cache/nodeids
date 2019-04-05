@@ -1,12 +1,15 @@
 [
-  "tests/exercises/hashing/test_hashing.py::test_hash_remainder[keys0-16-expected0]",
-  "tests/exercises/hashing/test_hashing.py::test_hash_remainder[keys1-11-expected1]",
-  "tests/exercises/hashing/test_hashing.py::test_hash_hash_mid_sqr[keys0-16-expected0]",
-  "tests/exercises/hashing/test_hashing.py::test_hash_hash_mid_sqr[keys1-11-expected1]",
-  "tests/exercises/hashing/test_hashing.py::test_hash_folding[keys0-16-expected0]",
-  "tests/exercises/hashing/test_hashing.py::test_hash_folding[keys1-11-expected1]",
-  "tests/exercises/hashing/test_hashing.py::test_hash_str[keys0-16-expected0]",
-  "tests/exercises/hashing/test_hashing.py::test_hash_str[keys1-11-expected1]",
-  "tests/exercises/hashing/test_hashing.py::test_hash_str_weighted[keys0-16-expected0]",
-  "tests/exercises/hashing/test_hashing.py::test_hash_str_weighted[keys1-11-expected1]"
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_init",
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_len",
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_getter",
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_setter",
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_updater",
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_setter_error",
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_value_none",
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_key_found",
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_key_not_found",
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_str",
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_keys",
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_values",
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_items"
 ]

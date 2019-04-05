@@ -15,12 +15,11 @@ def gcd(a_num: int, b_num: int) -> int:
     - gcd of a & b = gcd of b & a%b
     - gcd of a & 0 = a
     """
-    if b_num != 0:
-        remainder = (a_num % b_num)
-        gcd(b_num, remainder)
-    else:
+    if b_num == 0:
         return a_num
-
+    else:
+        remainder = (a_num % b_num)
+        return gcd(b_num, remainder)
 
 def hourglass_ite(levels: int) -> None:
     """Iterative hourglass"""
@@ -79,10 +78,13 @@ def main():
     hourglass_ite(5)
     print()
     hourglass_rec(5, 0)
+    print()
     diamond_ite(5)
     print()
     diamond_rec(5, 0)
-
+    print()
+    print("GCD of 100 and 12: ")
+    print(gcd(100, 12))
 
 if __name__ == "__main__":
     main()

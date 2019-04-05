@@ -9,5 +9,15 @@
   "tests/Projects/keyboard/test_keyboard.py::test_output[gen5000]": true,
   "tests/Projects/keyboard/test_keyboard.py::test_output[gen50]": true,
   "tests/Projects/keyboard/test_keyboard.py::test_output[sample]": true,
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_items": true,
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_key_found": true,
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_key_not_found": true,
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_keys": true,
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_setter": true,
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_setter_error": true,
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_str": true,
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_updater": true,
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_value_none": true,
+  "tests/projects/mapadt/test_mapadt.py::TestMap::test_values": true,
   "tests/projects/rpn/test_rpn.py::test_checksum[rpn_input_2.txt-8118]": true
 }
