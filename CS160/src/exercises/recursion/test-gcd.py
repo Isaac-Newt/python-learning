@@ -7,7 +7,7 @@ def gcd(a_num: int, b_num: int) -> int:
     - gcd of a & 0 = a
     """
     if b_num == 0:
-        return a_num
+        print(a_num)
     else:
         rem = (a_num % b_num)
         return gcd(b_num, rem)
