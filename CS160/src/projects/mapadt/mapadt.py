@@ -3,11 +3,12 @@
 Implementation of the Map ADT as HashTable
 
 Isaac List - CS160
-April 1, 2019
+April 8, 2019
 """
 
 
 class HashTable:
+    """A class demonstrating the construction of a Map ADT"""
     def __init__(self, size_init: int = 16):
         """Constructor"""
         self._size = size_init
@@ -20,7 +21,7 @@ class HashTable:
 
     def __setitem__(self, key: int, value):
         """__setitem__"""
-        if self.__len__() == 16:
+        if self.__len__() == self._size:
             raise Exception("Hash Table is full")
         self.put(key, value)
 
@@ -28,7 +29,7 @@ class HashTable:
         """__len__"""
         count = 0
         for item in self._keys:
-            if item != None:
+            if item is not None:
                 count += 1
         return count
 
@@ -43,7 +44,8 @@ class HashTable:
         """__str__"""
         str_list = []
         for index in range(len(self._keys)):
-            str_list.append(f"{self._keys[index]}: {self._values[index]}")
+            # key: 'value'
+            str_list.append(f"{self._keys[index]}: '{self._values[index]}'")
         full_string = "{" + ", ".join(str_list) + "}"
         return full_string
 
@@ -51,26 +53,34 @@ class HashTable:
         """Simple hash function"""
         return key % size
 
-    def _rehash(self, old_hash: int, size: int, step: int = 1):
+    def _rehash(self, old_hash: int, size: int, step):
         """Simple or quadratic rehash"""
         return (old_hash + step) % size
 
     def put(self, key: int, value):
         """Add or update an item"""
-        hashvalue = self._hash(key, len(self._keys))
+        hashvalue = self._hash(key, self._size)
 
-        if self._keys[hashvalue] == None:
+        if self._keys[hashvalue] is None:
             self._keys[hashvalue] = key
             self._values[hashvalue] = value
         else:
             if self._keys[hashvalue] == key:
+                # replace existing data because same key
                 self._values[hashvalue] = value
             else:
-                next_key_slot = self._rehash(hashvalue, len(self._keys))
-                while self._keys[next_key_slot] != None and self._keys[next_key_slot] != key:
-                    next_key_slot = self._rehash(next_key_slot, len(self._keys))
-
-                if self._keys[next_key_slot] == None:
+                next_key_slot = self._rehash(hashvalue, self._size, 1)
+                while (
+                        self._keys[next_key_slot] is not None
+                        and self._keys[next_key_slot] != key
+                ):
+                    step = 1
+                    next_key_slot = self._rehash(
+                        next_key_slot, len(self._keys), (step ** 2)
+                    )
+                    step += 1
+                # If either the slot is open or it is the same key
+                if self._keys[next_key_slot] is None:
                     self._keys[next_key_slot] = key
                     self._values[next_key_slot] = value
                 else:
@@ -78,19 +88,19 @@ class HashTable:
 
     def get(self, key: int):
         """Retrieve an item"""
-        starting_slot = self._hash(key, len(self._keys))
+        starting_slot = self._hash(key, self._size)
 
         value = None
         stop = False
         found = False
-        position = starting_slot
+        position = self._hash(key, self._size)
 
-        while self._keys[position] != None and not found and not stop:
+        while self._keys[position] is not None and not found and not stop:
             if self._keys[position] == key:
                 found = True
                 value = self._values[position]
             else:
-                position = self._rehash(position, len(self._keys))
+                position = self._rehash(position, self._size, 1)
                 if position == starting_slot:
                     stop = True
 
@@ -107,7 +117,7 @@ class HashTable:
     def items(self):
         """Return all items"""
         items_list = []
-        for index in range(len(keys)):
+        for index in range(len(self._keys)):
             item = (self._keys[index], self._values[index])
+            items_list.append(item)
         return items_list
-

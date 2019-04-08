@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/home/isaac/.pyenv/versions/3.7.2/bin/python",
+    "python.pythonPath": "/home/isaac/.pyenv/versions/3.7.3/bin/python",
     "python.unitTest.pyTestArgs": [
         "data"
     ],
