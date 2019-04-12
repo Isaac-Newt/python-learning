@@ -1,6 +1,6 @@
 <i>Isaac List - CS160 
 
-April 10, 2019
+April 10, 12, 2019
 
 Tree data structure</i>
 
@@ -18,6 +18,7 @@ Tree data structure</i>
 - Operating systems
 - Networking
 - Databases
+- Morse Code Decoder
 
 ## Examples
 - DOM (html)
@@ -43,7 +44,7 @@ Tree data structure</i>
 
 ## <i>!!! Never right before left !!!</i>
 
-- Preorder Method
+- Preorder Method (root left right)
     - Visit root node first
     - recursive preorder traversal of left subtree
     - recursive preorder traversal of right subtree
@@ -57,15 +58,53 @@ Tree data structure</i>
             preorder(tree.get_child_right())
     ```
 
-- Inorder
+- Inorder (left root right)
 
     ```python
     def inorder(self):
+    """Python example of an inorder tree traversal"""
         print(self.root)
         if self.child_left:
             self.child_left.inorder()
         if self.child_right:
             self.child_right.inorder()
+    ```
+
+- Postorder (left right root)
+
+    ```python
+    def postorder(self):
+    """Python example of a postorder tree traversal"""
+        if tree:
+            postorder(tree.get_child_left())
+            postorder(tree.get_child_right())
+            print(tree.get_root_val())
+    ```
+
+## Counting items in a Tree
+
+### Counting by traversing (essentially)
+
+```python
+def count(self):
+"""Counting items in a tree"""
+    count = 1 + count(tree.get_child_left()) + count(tree.get_child_right())
+    return count
+```
+
+### Get the height of the tree
+```python
+def get_height(self):
+"""
+Find height of the tree
+finding the height of subtrees recursively
+Max of height of sub trees plus 1 (root)
+"""
+    count = 1 + get_height(tree.get_child_left()) + \
+    get_height(tree.get_child_right())
+    return count
+```
+
 
 # Implementation
 
