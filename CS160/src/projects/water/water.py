@@ -24,7 +24,11 @@ class State:
 
     def __eq__(self, other: object):
         """__eq__"""
-        if self.
+        equal = False
+        if self._jug_1_level == other._jug_1_level:
+            if self._jug_2_level == other._jug_2_level:
+                equal = True
+        return equal
 
     def __str__(self):
         """__str__"""
@@ -81,7 +85,8 @@ class State:
 
 def search(start_state: object, goal: object, moves_lst: list):
     """Find a sequence of states"""
-    raise NotImplementedError
+    moves.append(start)
+
 
 
 def main():
