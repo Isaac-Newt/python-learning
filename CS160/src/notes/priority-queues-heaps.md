@@ -48,9 +48,65 @@ April 12, 2019
 ### Python Heap Queue Module
 
 ```python
+# import
 import heapq
+
+# Create a heap (essentially a sorted list TBH)
 list = [3, 5, 2, 6, 7, 7, 3, 6, 10, 5]
-heapq.heapify(list) --> [2, 5, 3, 6, 5, 7, 3, 6, 10, 7]
+heapq.heapify(list) # --> [2, 5, 3, 6, 5, 7, 3, 6, 10, 7]
+
+# Methods
+heapq.heappush(list, 1)
+heapq.heappop(list)
+```
+```python
+# Manual Heap Implementation
+class BinHeap:
+    def __init__(self):
+        # Textbook initializes this with [0], and ignores the 0
+        # We will not do that in class, simply use 0-indexed list
+        # Like civilized people :)
+        self.heap = []
+        self.size = 0
+
+    def sift_up(self, cur_idx):
+        # New item must "sift up", i.e. swap with its parent if
+        # item is smaller (is a log n operation, which is good)
+        while (cur_idx - 1) // 2 >= 0:
+            parent_idx = (cur_idx - 1) // 2
+            if self.heap[cur_idx] < self.heap[parent_idx]:
+                self.swap(cur_idx, parent_idx)
+            cur_idx = parent_idx
+    
+    def insert(self, item):
+        self.heap.append(item)
+        self.size += 1
+        self.perc_up(self.size - 1)
+
+    def perc_down(self, )
+        while 2 * cur_idx + 1 <= self.size:
+            min_child_idx = self.get_min_child(cur_idx)
+            if self.heap[cur_idx] > self.heap[min_child_idx]:
+                self.swap(cur_idx, min_child_idx)
+            else:
+                return
+            cur_idx = min_child_idx
+
+    def delete(self):
+        res = self.heap[0]
+        self.heap[0] = self.heap[self.size - 1]
+        self.size -= 1
+        self.heap.pop()
+        self.perc_down(0)
+        return res
+
+    def heapify(self, not_a_heap):
+        self.heap = [] + not_a_heap[:]
+        self.size = len(not_a_heap)
+        cur_idx = self.size // 2 - 1
+        while cur_idx >= 0:
+            self.perc_down(cur_idx)
+            cur_idx += 1
 ```
 
 - Minimum heap (smallest item on top recursively
