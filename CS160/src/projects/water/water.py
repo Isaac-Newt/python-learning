@@ -100,6 +100,7 @@ def search(start_state: object, goal: object, moves_lst: list):
         pass
     else:
         search(new_state, goal, moves_lst)
+        return
 
     # Fill Jug 2
     
@@ -114,6 +115,7 @@ def search(start_state: object, goal: object, moves_lst: list):
         pass
     else:
         search(new_state, goal, moves_lst)
+        return
 
     # Empty Jug 1
     
@@ -128,6 +130,7 @@ def search(start_state: object, goal: object, moves_lst: list):
         pass
     else:
         search(new_state, goal, moves_lst)
+        return
 
     # Empty Jug 2
     
@@ -142,6 +145,7 @@ def search(start_state: object, goal: object, moves_lst: list):
         pass
     else:
         search(new_state, goal, moves_lst)
+        return
 
     # Pour jug 1 into jug 2
     
@@ -156,6 +160,7 @@ def search(start_state: object, goal: object, moves_lst: list):
         pass
     else:
         search(new_state, goal, moves_lst)
+        return
 
     # Pour jug 2 into jug 1
     
@@ -170,6 +175,7 @@ def search(start_state: object, goal: object, moves_lst: list):
         pass
     else:
         search(new_state, goal, moves_lst)
+        return
 
 def main():
     """Main function"""
