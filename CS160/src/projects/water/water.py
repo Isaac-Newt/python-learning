@@ -3,7 +3,7 @@
 Water jugs project
 
 Isaac List - CS160
-April 16, 2019
+April 17, 2019
 """
 
 
@@ -34,7 +34,7 @@ class State:
         """__str__"""
         string_1 = f"Jug 1 has {self._jug_1_level} gallons"
         string_2 = f"Jug 2 has {self._jug_2_level} gallons"
-        string_3 = f"Alltogether, {self._jug_1_level + self._jug_2_level} gallons"
+        string_3 = f"Altogether, {self._jug_1_level + self._jug_2_level} gallons"
         return f"{string_1}, {string_2}. {string_3}.\n"
 
     def clone(self):
