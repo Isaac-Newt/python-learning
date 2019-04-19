@@ -1,15 +1,4 @@
 [
-  "tests/projects/mapadt/test_mapadt.py::TestMap::test_init",
-  "tests/projects/mapadt/test_mapadt.py::TestMap::test_len",
-  "tests/projects/mapadt/test_mapadt.py::TestMap::test_getter",
-  "tests/projects/mapadt/test_mapadt.py::TestMap::test_setter",
-  "tests/projects/mapadt/test_mapadt.py::TestMap::test_updater",
-  "tests/projects/mapadt/test_mapadt.py::TestMap::test_setter_error",
-  "tests/projects/mapadt/test_mapadt.py::TestMap::test_value_none",
-  "tests/projects/mapadt/test_mapadt.py::TestMap::test_key_found",
-  "tests/projects/mapadt/test_mapadt.py::TestMap::test_key_not_found",
-  "tests/projects/mapadt/test_mapadt.py::TestMap::test_str",
-  "tests/projects/mapadt/test_mapadt.py::TestMap::test_keys",
-  "tests/projects/mapadt/test_mapadt.py::TestMap::test_values",
-  "tests/projects/mapadt/test_mapadt.py::TestMap::test_items"
+  "tests/exercises/trees/test_trees.py::TestBinaryTreeMethods::test_clockwise_ref",
+  "tests/exercises/trees/test_trees.py::TestBinaryTreeMethods::test_clockwise_lst"
 ]
