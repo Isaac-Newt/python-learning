@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Limited size max Binary Heap implementation"""
+"""
+Isaac List - CS160
+April 26, 2019
+
+Limited size max Binary Heap implementation
+"""
 
 
 class BinaryHeapMax:
@@ -13,15 +18,29 @@ class BinaryHeapMax:
 
     def perc_up(self, cur_idx):
         """Moving a node up"""
-        raise NotImplementedError
+        while (cur_idx - 1) // 2 >= 0:
+            parent_idx = (cur_idx -1) //2
+            if self.heap[cur_idx] > self.heap[parent_idx]:
+                self.swap(cur_idx, parent_idx)
+            else:
+                return
+            cur_idx = parent_idx
 
     def perc_down(self, cur_idx):
         """Moving a node down"""
-        raise NotImplementedError
+        while 2 * cur_idx + 1 <= self.size:
+            max_child_idx = self.get_max_child(cur_idx)
+            if self.heap[cur_idx] < self.heap[max_child_idx]:
+                self.swap(cur_idx, max_child_idx)
+            else:
+                return
+            cur_idx = max_child_idx
 
     def insert(self, item):
         """Adding a new item"""
-        raise NotImplementedError
+        self.heap.append(item)
+        self.size += 1
+        self.perc_up(self.size - 1)
 
     def heapify(self, not_a_heap):
         """Turning a list into a heap"""
