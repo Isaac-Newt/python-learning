@@ -83,7 +83,7 @@ class BinHeap:
         self.size += 1
         self.perc_up(self.size - 1)
 
-    def perc_down(self, )
+    def perc_down(self, cur_idx)
         while 2 * cur_idx + 1 <= self.size:
             min_child_idx = self.get_min_child(cur_idx)
             if self.heap[cur_idx] > self.heap[min_child_idx]:
