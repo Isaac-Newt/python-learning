@@ -1,0 +1,8 @@
+Isaac List
+CS160 - April 19, 2019
+
+3. Pre-Order: (root left right) [a, b, d, c, e, f]
+
+4. In-Order: (left root right) [b, d, a, e, c, f]
+
+5. Post-Order: (left right root) [d, b, e, f, c, a]

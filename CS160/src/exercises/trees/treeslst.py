@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Tree building exercise"""
+"""
+Isaac List - CS160
+April 19, 2019
+
+Tree building exercise
+"""
 
 
 def BinaryTree(r):
