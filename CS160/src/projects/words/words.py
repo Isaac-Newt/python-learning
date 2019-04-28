@@ -76,7 +76,11 @@ def read_file(filename: str) -> dict:
 
 def distance(word1: str, word2: str) -> int:
     '''Differences between words'''
-    raise NotImplementedError
+    distance = 0
+    for idx in range(len(word1)):
+        if word1[idx] != word2[idx]:
+            distance += 1
+    return distance
 
 
 def diff_by_one_all(word, all_words, used_words):
