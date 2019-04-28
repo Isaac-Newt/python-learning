@@ -1,4 +1,9 @@
-'''Build a ladder of words using stacks and queues'''
+'''
+Isaac List - CS160 
+April 28, 2019
+
+Build a ladder of words using stacks and queues
+'''
 #!/usr/bin/env python3
 
 WORDS_OF_3 = set()
@@ -52,7 +57,21 @@ class Queue:
 
 def read_file(filename: str) -> dict:
     '''Read a file into 3 sets'''
-    raise NotImplementedError
+    # Open File in read mode
+    input_file = open(filename, "r")
+    # Read the lines, sort into proper sets
+    line = input_file.readline()
+    while line != "":
+        if len(line) == 3:
+            WORDS_OF_3.add(line)
+        elif len(line) == 4:
+            WORDS_OF_4.add(line)
+        elif len(line) == 5:
+            WORDS_OF_5.add(line)
+        line = input_file.readline()
+    # Return a dictionary
+    word_length_dictionary = {3: WORDS_OF_3, 4: WORDS_OF_4, 5: WORDS_OF_5}
+    return word_length_dictionary
 
 
 def distance(word1: str, word2: str) -> int:
