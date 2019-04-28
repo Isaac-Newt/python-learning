@@ -1,4 +1,4 @@
 [
-  "tests/exercises/trees/test_trees.py::TestBinaryTreeMethods::test_clockwise_ref",
-  "tests/exercises/trees/test_trees.py::TestBinaryTreeMethods::test_clockwise_lst"
+  "tests/exercises/heaps/test_heaps.py::TestBinaryHeapMethods::test_len",
+  "tests/exercises/heaps/test_heaps.py::TestBinaryHeapMethods::test_str"
 ]
