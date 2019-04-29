@@ -85,7 +85,12 @@ def distance(word1: str, word2: str) -> int:
 
 def diff_by_one_all(word, all_words, used_words):
     '''Find all words that differ by 1 letter'''
-    raise NotImplementedError
+    candidates = []
+    for candidate in all_words:
+        if candidate not in used_words and distance(word, candidate) == 1:
+            candidates.append(candidate)
+    return candidates
+
 
 def main():
     '''Main function'''
@@ -107,10 +112,59 @@ def main():
     
     print("Let's turn '%s' into '%s'" % (word_start, word_stop))
     # TODO: Implement the algorithm
+
+    # Create a Queue, each node will be a stack
+    ladder_queue = Queue()
+
+    # Create the stacks, and add to the queue
+    words_used = []
+    list_of_close_words = diff_by_one_all(word_start, words_to_use, [])
+
+    for close_word in list_of_close_words:
+        # Build stack with starting word and next step
+        new_stack = Stack()
+        new_stack.push(word_start)
+        new_stack.push(close_word)
+        # Add close word to the list of used words
+        words_used.append(close_word)
+        # Add the stack to the queue
+        ladder_queue.enqueue(new_stack)
+
+    # For each stack, find 1-away words of top item, 
+    # clone and add close words, then append the bigger stack.
+    #
+    # If the target word is added, then set found to True
+    while not found or len(words_used) < len(words_to_use):
+        current_ladder = ladder_queue.dequeue()
+        # Find 1-away words of top word
+        top_word = current_ladder.peek()
+        close_words = diff_by_one_all(top_word, words_to_use, words_used)
+        # Clone stack, add word, and enqueue the new stack
+        for close_word in close_words:
+            if close_word == word_stop:
+                found = True
+            new_clone_stack = current_ladder.clone()
+            new_clone_stack.push(close_word)
+            # Add close word to the list of used words
+            words_used.append(close_word)
+            # If found, then print the stack, otherwise continue
+            if found:
+               # print the stack
+               stack_to_print = new_clone_stack
+            else:
+                # Add the stack to the queue
+                ladder_queue.enqueue(new_clone_stack)
     
     if found:
         print('Ladder found!')
-        # TODO: Print the ladder
+        # print(stack_to_print)
+        count = stack_to_print.size()
+        list_of_words = []
+        while count >= 0:
+            word = stack_to_print.pop()
+            list_of_words.append(word)
+            count -= 1
+        prit(list_of_words)
     else:
         print('Ladder not found')
 
