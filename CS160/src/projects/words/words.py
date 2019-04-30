@@ -33,7 +33,10 @@ class Stack:
         return self.items[-1]
     def clone(self):
         '''Cloning a stack'''
-        raise NotImplementedError
+        cloned_stack = Stack()
+        for item in self.items:
+            cloned_stack.push(item)
+        return cloned_stack
 
 
 class Queue:
@@ -60,7 +63,7 @@ def read_file(filename: str) -> dict:
     # Open File in read mode
     input_file = open(filename, "r")
     # Read the lines, sort into proper sets
-    line = input_file.readline()
+    line = input_file.readline().strip()
     while line != "":
         if len(line) == 3:
             WORDS_OF_3.add(line)
@@ -68,7 +71,7 @@ def read_file(filename: str) -> dict:
             WORDS_OF_4.add(line)
         elif len(line) == 5:
             WORDS_OF_5.add(line)
-        line = input_file.readline()
+        line = input_file.readline().strip()
     # Return a dictionary
     word_length_dictionary = {3: WORDS_OF_3, 4: WORDS_OF_4, 5: WORDS_OF_5}
     return word_length_dictionary
@@ -111,14 +114,13 @@ def main():
         raise Exception('You have to use words of the same length (3, 4, or 5 letters)')
     
     print("Let's turn '%s' into '%s'" % (word_start, word_stop))
-    # TODO: Implement the algorithm
 
     # Create a Queue, each node will be a stack
     ladder_queue = Queue()
 
     # Create the stacks, and add to the queue
     words_used = []
-    list_of_close_words = diff_by_one_all(word_start, words_to_use, [])
+    list_of_close_words = diff_by_one_all(word_start, words_to_use, words_used)
 
     for close_word in list_of_close_words:
         # Build stack with starting word and next step
@@ -129,31 +131,34 @@ def main():
         words_used.append(close_word)
         # Add the stack to the queue
         ladder_queue.enqueue(new_stack)
-
     # For each stack, find 1-away words of top item, 
     # clone and add close words, then append the bigger stack.
     #
     # If the target word is added, then set found to True
-    while not found or len(words_used) < len(words_to_use):
+    while not found and len(words_used) < len(words_to_use):
         current_ladder = ladder_queue.dequeue()
         # Find 1-away words of top word
         top_word = current_ladder.peek()
         close_words = diff_by_one_all(top_word, words_to_use, words_used)
         # Clone stack, add word, and enqueue the new stack
-        for close_word in close_words:
-            if close_word == word_stop:
+        count = 0
+        while count < len(close_words) and not found:
+            if close_words[count] == word_stop:
                 found = True
             new_clone_stack = current_ladder.clone()
-            new_clone_stack.push(close_word)
+            new_clone_stack.push(close_words[count])
             # Add close word to the list of used words
-            words_used.append(close_word)
+            words_used.append(close_words[count])
             # If found, then print the stack, otherwise continue
             if found:
                # print the stack
                stack_to_print = new_clone_stack
+               print(stack_to_print.items)
             else:
                 # Add the stack to the queue
                 ladder_queue.enqueue(new_clone_stack)
+                print(ladder_queue.size())
+            count += 1
     
     if found:
         print('Ladder found!')
@@ -164,7 +169,7 @@ def main():
             word = stack_to_print.pop()
             list_of_words.append(word)
             count -= 1
-        prit(list_of_words)
+        print(list_of_words)
     else:
         print('Ladder not found')
 
