@@ -157,7 +157,7 @@ def main():
             else:
                 # Add the stack to the queue
                 ladder_queue.enqueue(new_clone_stack)
-                print(ladder_queue.size())
+                # print(ladder_queue.size())
             count += 1
     
     if found:
@@ -165,11 +165,11 @@ def main():
         # print(stack_to_print)
         count = stack_to_print.size()
         list_of_words = []
-        while count >= 0:
+        while count > 0:
             word = stack_to_print.pop()
-            list_of_words.append(word)
+            list_of_words.insert(0, word)
             count -= 1
-        print(list_of_words)
+        # print(list_of_words)
     else:
         print('Ladder not found')
 
