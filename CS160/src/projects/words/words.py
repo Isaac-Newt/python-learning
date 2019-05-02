@@ -119,7 +119,7 @@ def main():
     ladder_queue = Queue()
 
     # Create the stacks, and add to the queue
-    words_used = []
+    words_used = {} # Using dict for speed purposes
     list_of_close_words = diff_by_one_all(word_start, words_to_use, words_used)
 
     for close_word in list_of_close_words:
@@ -128,7 +128,7 @@ def main():
         new_stack.push(word_start)
         new_stack.push(close_word)
         # Add close word to the list of used words
-        words_used.append(close_word)
+        words_used[close_word] = None
         # Add the stack to the queue
         ladder_queue.enqueue(new_stack)
     # For each stack, find 1-away words of top item, 
@@ -148,16 +148,14 @@ def main():
             new_clone_stack = current_ladder.clone()
             new_clone_stack.push(close_words[count])
             # Add close word to the list of used words
-            words_used.append(close_words[count])
+            words_used[close_words[count]] = None
             # If found, then print the stack, otherwise continue
             if found:
                # print the stack
                stack_to_print = new_clone_stack
-               print(stack_to_print.items)
             else:
                 # Add the stack to the queue
                 ladder_queue.enqueue(new_clone_stack)
-                # print(ladder_queue.size())
             count += 1
     
     if found:
@@ -169,7 +167,7 @@ def main():
             word = stack_to_print.pop()
             list_of_words.insert(0, word)
             count -= 1
-        # print(list_of_words)
+        print(list_of_words)
     else:
         print('Ladder not found')
 
