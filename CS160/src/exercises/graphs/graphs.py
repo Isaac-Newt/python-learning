@@ -156,11 +156,24 @@ class Graph:
 
     def hub(self):
         """Find a Vertex with the most outgoing edges"""
-        raise NotImplementedError
+        current_hub = None
+        current_hub_value = 0
+        for key in self.vertices:
+            vertex = self.vertices[key]
+            if len(vertex._neighbors) > current_hub_value:
+                current_hub_value = len(vertex._neighbors)
+                current_hub = key
+        return current_hub
 
     def size(self):
         """Find the number of edges in a Graph"""
-        raise NotImplementedError
+        number_of_edges = 0
+        for key in self.vertices:
+            print(self.vertices[key]._neighbors)
+            for link in self.vertices[key]._neighbors:
+                number_of_edges += 1
+        # Divide by 2 to only count each connection once, not twice
+        return number_of_edges // 2
 
     def dijkstra(self, start: Vertex) -> None:
         """Dijkstra's shortest path algorithm"""

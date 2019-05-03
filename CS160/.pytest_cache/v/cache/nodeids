@@ -1,4 +1,7 @@
 [
-  "tests/exercises/heaps/test_heaps.py::TestBinaryHeapMethods::test_len",
-  "tests/exercises/heaps/test_heaps.py::TestBinaryHeapMethods::test_str"
+  "tests/exercises/graphs/test_graphs.py::TestGraphMethods::test_dijkstra_t",
+  "tests/exercises/graphs/test_graphs.py::TestGraphMethods::test_dijkstra_x",
+  "tests/exercises/graphs/test_graphs.py::TestGraphMethods::test_len",
+  "tests/exercises/graphs/test_graphs.py::TestGraphMethods::test_size",
+  "tests/exercises/graphs/test_graphs.py::TestGraphMethods::test_hub"
 ]
