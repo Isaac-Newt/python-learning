@@ -1,6 +1,6 @@
 '''
 Isaac List - CS160 
-April 28, 2019
+May 2, 2019
 
 Build a ladder of words using stacks and queues
 '''
