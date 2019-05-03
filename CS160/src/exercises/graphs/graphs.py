@@ -152,7 +152,7 @@ class Graph:
 
     def __len__(self):
         """Graph's size"""
-        raise NotImplementedError
+        return len(self.vertices)
 
     def hub(self):
         """Find a Vertex with the most outgoing edges"""
