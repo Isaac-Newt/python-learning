@@ -1,0 +1,784 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Account	../src/projects/bank/bank_classes.py	/^class Account(ABC):$/;"	kind:class	line:127
+Address	../src/projects/bank/bank_classes.py	/^class Address:$/;"	kind:class	line:12
+Animal	../src/exercises/zoo/zoo_classes.py	/^class Animal(ABC):$/;"	kind:class	line:11
+Animal	../src/notes/inheritance_demo.py	/^class Animal(ABC):$/;"	kind:class	line:13
+BST	../src/notes/binary_search_tree_generic_implementation.py	/^class BST:$/;"	kind:class	line:3
+BinaryHeapMax	../src/exercises/heaps/heaps.py	/^class BinaryHeapMax:$/;"	kind:class	line:10
+BinaryTree	../src/exercises/trees/trees.py	/^class BinaryTree:$/;"	kind:class	line:10
+BinaryTree	../src/exercises/trees/treeslst.py	/^def BinaryTree(r):$/;"	kind:function	line:10
+BinaryTree	../src/notes/trees/BinaryTree.py	/^class BinaryTree:$/;"	kind:class	line:1
+BinaryTree.py	../src/notes/trees/BinaryTree.py	1;"	kind:file	line:1
+Bird	../src/exercises/zoo/zoo_classes.py	/^class Bird(Animal):$/;"	kind:class	line:31
+BobCat	../src/exercises/zoo/zoo_classes.py	/^class BobCat(Feline):$/;"	kind:class	line:138
+Canine	../src/exercises/zoo/zoo_classes.py	/^class Canine(Mammal):$/;"	kind:class	line:95
+CheckingAccount	../src/projects/bank/bank_classes.py	/^class CheckingAccount(Account):$/;"	kind:class	line:173
+Coder	../src/projects/morse/morse.py	/^class Coder:$/;"	kind:class	line:9
+Country	../src/projects/customproblem/customproblem.py	/^class Country:$/;"	kind:class	line:48
+Cup	../src/projects/dice/dice_classes.py	/^class Cup:  # does not inherit from anything, simply uses Die, FrozenDie$/;"	kind:class	line:70
+Customer	../src/projects/bank/bank_classes.py	/^class Customer:$/;"	kind:class	line:79
+Deer	../src/notes/inheritance_demo.py	/^class Deer(Animal):$/;"	kind:class	line:36
+Die	../src/projects/dice/dice_classes.py	/^class Die:$/;"	kind:class	line:14
+Dog	../src/exercises/zoo/zoo_classes.py	/^class Dog(Canine):$/;"	kind:class	line:116
+FILENAMES	../tests/projects/keyboard/test_keyboard.py	/^FILENAMES = ($/;"	kind:variable	line:14
+Feline	../src/exercises/zoo/zoo_classes.py	/^class Feline(Mammal):$/;"	kind:class	line:104
+Fraction	../src/exercises/fractions/fractions.py	/^class Fraction:$/;"	kind:class	line:20
+FridayError	../src/notes/args_demo.py	/^class FridayError(Exception):$/;"	kind:class	line:12
+FrozenDie	../src/projects/dice/dice_classes.py	/^class FrozenDie(Die):  # subclass of Die, once rolled, cannot change$/;"	kind:class	line:44
+Graph	../src/exercises/graphs/graphs.py	/^class Graph:$/;"	kind:class	line:111
+HashTable	../src/projects/mapadt/map-textbook-version.py	/^class HashTable:$/;"	kind:class	line:1
+HashTable	../src/projects/mapadt/mapadt.py	/^class HashTable:$/;"	kind:class	line:10
+HouseCat	../src/exercises/zoo/zoo_classes.py	/^class HouseCat(Feline):$/;"	kind:class	line:130
+JUG_1_MAX	../src/projects/water/water.py	/^JUG_1_MAX = 5$/;"	kind:variable	line:10
+JUG_2_MAX	../src/projects/water/water.py	/^JUG_2_MAX = 3$/;"	kind:variable	line:11
+LOW	../src/projects/keyboard/keyboard.py	/^LOW = {"z": 0, "x": 1, "c": 2, "v": 3, "b": 4, "n": 5, "m": 6}$/;"	kind:variable	line:14
+Language	../src/projects/customproblem/customproblem.py	/^class Language:$/;"	kind:class	line:12
+Language	../src/projects/customproblem/fun.py	/^class Language:$/;"	kind:class	line:1
+LegError	../src/notes/inheritance_demo.py	/^class LegError(Exception):$/;"	kind:class	line:8
+LinkedList	../src/notes/linkedlists.py	/^class LinkedList:$/;"	kind:class	line:26
+Local	../src/projects/customproblem/customproblem.py	/^class Local(Resident):$/;"	kind:class	line:155
+MID	../src/projects/keyboard/keyboard.py	/^MID = {"a": 0, "s": 1, "d": 2, "f": 3, "g": 4, "h": 5, "j": 6, "k": 7, "l": 8}$/;"	kind:variable	line:12
+Mammal	../src/exercises/zoo/zoo_classes.py	/^class Mammal(Animal):$/;"	kind:class	line:50
+Node	../src/exercises/orderedlists/orderedlists_classes.py	/^class Node:$/;"	kind:class	line:15
+Node	../src/notes/linkedlists.py	/^class Node:$/;"	kind:class	line:1
+OrderedList	../src/exercises/orderedlists/orderedlists_classes.py	/^class OrderedList:$/;"	kind:class	line:48
+Parrot	../src/exercises/zoo/zoo_classes.py	/^class Parrot(Bird):$/;"	kind:class	line:66
+Penguin	../src/exercises/zoo/zoo_classes.py	/^class Penguin(Bird):$/;"	kind:class	line:83
+Point	../src/notes/Point.py	/^class Point:$/;"	kind:class	line:7
+Point.py	../src/notes/Point.py	1;"	kind:file	line:1
+Point3D	../src/notes/Point.py	/^class Point3D(Point):  # put class from which sub-class inherits in the ()'s$/;"	kind:class	line:118
+Queue	../src/projects/words/words.py	/^class Queue:$/;"	kind:class	line:42
+Resident	../src/projects/customproblem/customproblem.py	/^class Resident(ABC):$/;"	kind:class	line:73
+SavingsAccount	../src/projects/bank/bank_classes.py	/^class SavingsAccount(Account):$/;"	kind:class	line:199
+Snake	../src/notes/inheritance_demo.py	/^class Snake(Animal):$/;"	kind:class	line:47
+Stack	../src/projects/words/testing.py	/^class Stack:$/;"	kind:class	line:1
+Stack	../src/projects/words/words.py	/^class Stack:$/;"	kind:class	line:14
+StackError	../src/exercises/stacks/stacks.py	/^class StackError(Exception):$/;"	kind:class	line:7
+StackError	../src/projects/rpn/rpn-old.py	/^class StackError(Exception):$/;"	kind:class	line:15
+StackError	../src/projects/rpn/rpn.py	/^class StackError(Exception):$/;"	kind:class	line:12
+State	../src/projects/water/water.py	/^class State:$/;"	kind:class	line:14
+StringSearch.py	../src/projects/stringsearch/StringSearch.py	1;"	kind:file	line:1
+TIME_LIMIT	../tests/projects/keyboard/test_keyboard.py	/^TIME_LIMIT = 4$/;"	kind:variable	line:12
+TOP	../src/projects/keyboard/keyboard.py	/^TOP = {"q": 0, "w": 1, "e": 2, "r": 3, "t": 4, "y": 5, "u": 6, "i": 7, "o": 8, "p": 9}$/;"	kind:variable	line:10
+TestAccount	../tests/projects/bank/test_bank_account.py	/^class TestAccount:$/;"	kind:class	line:11
+TestAddress	../tests/projects/bank/test_bank_address.py	/^class TestAddress:$/;"	kind:class	line:20
+TestAndGradeOrderedListMethods	../tests/exercises/orderedlists/test_orderedlists.py	/^class TestAndGradeOrderedListMethods:$/;"	kind:class	line:12
+TestAnimalsMethods	../tests/exercises/zoo/test_zoo.py	/^class TestAnimalsMethods:$/;"	kind:class	line:22
+TestBinaryHeapMethods	../tests/exercises/heaps/test_heaps.py	/^class TestBinaryHeapMethods:$/;"	kind:class	line:12
+TestBinaryTreeMethods	../tests/exercises/trees/test_trees.py	/^class TestBinaryTreeMethods:$/;"	kind:class	line:14
+TestCheckingAccount	../tests/projects/bank/test_bank_checking.py	/^class TestCheckingAccount:$/;"	kind:class	line:24
+TestClassFraction	../tests/exercises/fractions/test_fractions.py	/^class TestClassFraction:$/;"	kind:class	line:12
+TestCustomProblemMethods	../tests/projects/customproblem/test_customproblem.py	/^class TestCustomProblemMethods:$/;"	kind:class	line:17
+TestCustomer	../tests/projects/bank/test_bank_customer.py	/^class TestCustomer:$/;"	kind:class	line:24
+TestDiceMethods	../tests/projects/dice/test_dice.py	/^class TestDiceMethods:$/;"	kind:class	line:13
+TestGraphMethods	../tests/exercises/graphs/test_graphs.py	/^class TestGraphMethods:$/;"	kind:class	line:12
+TestMap	../tests/projects/mapadt/test_mapadt.py	/^class TestMap:$/;"	kind:class	line:12
+TestMorseMethods	../tests/projects/morse/test_morse.py	/^class TestMorseMethods:$/;"	kind:class	line:12
+TestSavingsAccount	../tests/projects/bank/test_bank_savings.py	/^class TestSavingsAccount:$/;"	kind:class	line:27
+TokenError	../src/exercises/stacks/stacks.py	/^class TokenError(Exception):$/;"	kind:class	line:14
+TokenError	../src/projects/rpn/rpn-old.py	/^class TokenError(Exception):$/;"	kind:class	line:23
+TokenError	../src/projects/rpn/rpn.py	/^class TokenError(Exception):$/;"	kind:class	line:20
+Tourist	../src/projects/customproblem/customproblem.py	/^class Tourist(Resident):$/;"	kind:class	line:110
+Vertex	../src/exercises/graphs/graphs.py	/^class Vertex:$/;"	kind:class	line:9
+WORDS_OF_3	../src/projects/words/words.py	/^WORDS_OF_3 = set()$/;"	kind:variable	line:9
+WORDS_OF_4	../src/projects/words/words.py	/^WORDS_OF_4 = set()$/;"	kind:variable	line:10
+WORDS_OF_5	../src/projects/words/words.py	/^WORDS_OF_5 = set()$/;"	kind:variable	line:11
+__add__	../src/exercises/fractions/fractions.py	/^    def __add__(self, other: object) -> object:$/;"	kind:member	line:98
+__all__	../src/exercises/fractions/__init__.py	/^__all__ = ["gcd", "Fraction"]$/;"	kind:variable	line:7
+__all__	../src/exercises/graphs/__init__.py	/^__all__ = ['Graph', 'Vertex']$/;"	kind:variable	line:9
+__all__	../src/exercises/hashing/__init__.py	/^__all__ = [$/;"	kind:variable	line:14
+__all__	../src/exercises/heaps/__init__.py	/^__all__ = ["BinaryHeapMax"]/;"	kind:variable	line:8
+__all__	../src/exercises/orderedlists/__init__.py	/^__all__ = ["Node", "OrderedList"]$/;"	kind:variable	line:8
+__all__	../src/exercises/stacks/__init__.py	/^__all__ = [$/;"	kind:variable	line:16
+__all__	../src/exercises/trees/__init__.py	/^__all__ = ["BinaryTree", "preorder", "inorder", "postorder", "clockwise"]$/;"	kind:variable	line:10
+__all__	../src/exercises/zoo/__init__.py	/^__all__ = [$/;"	kind:variable	line:19
+__all__	../src/projects/bank/__init__.py	/^__all__ = ["Address", "Customer", "Account", "CheckingAccount", "SavingsAccount"]$/;"	kind:variable	line:8
+__all__	../src/projects/customproblem/__init__.py	/^__all__ = ["Language", "Country", "Resident", "Tourist", "Local"]/;"	kind:variable	line:7
+__all__	../src/projects/dice/__init__.py	/^__all__ = ["Cup", "Die", "FrozenDie"]$/;"	kind:variable	line:8
+__all__	../src/projects/keyboard/__init__.py	/^__all__ = ["spell_check"]$/;"	kind:variable	line:8
+__all__	../src/projects/mapadt/__init__.py	/^__all__ = ['HashTable']$/;"	kind:variable	line:8
+__all__	../src/projects/morse/__init__.py	/^__all__ = ['Coder']$/;"	kind:variable	line:8
+__all__	../src/projects/rpn/__init__.py	/^__all__ = ["do_math", "postfix_eval", "rpn_calc", "StackError", "TokenError"]$/;"	kind:variable	line:8
+__all__	../src/projects/water/__init__.py	/^__all__ = ['State', 'search']$/;"	kind:variable	line:8
+__all__	../src/projects/words/__init__.py	/^__all__ = ['read_file', 'distance', 'diff_by_one_all']$/;"	kind:variable	line:8
+__contains__	../src/exercises/graphs/graphs.py	/^    def __contains__(self, key: str):$/;"	kind:member	line:145
+__contains__	../src/projects/mapadt/mapadt.py	/^    def __contains__(self, key):$/;"	kind:member	line:36
+__eq__	../src/exercises/fractions/fractions.py	/^    def __eq__(self, other: object) -> bool:$/;"	kind:member	line:70
+__eq__	../src/notes/Point.py	/^    def __eq__(self, other):$/;"	kind:member	line:87
+__eq__	../src/projects/bank/bank_classes.py	/^    def __eq__(self, other: object):$/;"	kind:member	line:24
+__eq__	../src/projects/customproblem/customproblem.py	/^    def __eq__(self, other):$/;"	kind:member	line:102
+__eq__	../src/projects/customproblem/customproblem.py	/^    def __eq__(self, other):$/;"	kind:member	line:136
+__eq__	../src/projects/customproblem/customproblem.py	/^    def __eq__(self, other):$/;"	kind:member	line:27
+__eq__	../src/projects/customproblem/fun.py	/^    def __eq__(self, other):$/;"	kind:member	line:16
+__eq__	../src/projects/water/water.py	/^    def __eq__(self, other: object):$/;"	kind:member	line:25
+__ge__	../src/exercises/fractions/fractions.py	/^    def __ge__(self, other: object) -> bool:$/;"	kind:member	line:90
+__getitem__	../src/exercises/orderedlists/orderedlists_classes.py	/^    def __getitem__(self, position: int):$/;"	kind:member	line:56
+__getitem__	../src/projects/mapadt/map-textbook-version.py	/^    def __getitem__(self,key):$/;"	kind:member	line:52
+__getitem__	../src/projects/mapadt/mapadt.py	/^    def __getitem__(self, key: int):$/;"	kind:member	line:18
+__gt__	../src/exercises/fractions/fractions.py	/^    def __gt__(self, other: object) -> bool:$/;"	kind:member	line:81
+__init__	../src/exercises/fractions/fractions.py	/^    def __init__(self, numerator: int, denominator: int):$/;"	kind:member	line:28
+__init__	../src/exercises/graphs/graphs.py	/^    def __init__(self):$/;"	kind:member	line:114
+__init__	../src/exercises/graphs/graphs.py	/^    def __init__(self, key):$/;"	kind:member	line:12
+__init__	../src/exercises/heaps/heaps.py	/^    def __init__(self, limit: int = 0):$/;"	kind:member	line:13
+__init__	../src/exercises/orderedlists/orderedlists_classes.py	/^    def __init__(self):$/;"	kind:member	line:51
+__init__	../src/exercises/orderedlists/orderedlists_classes.py	/^    def __init__(self, init_data: typing.Any):$/;"	kind:member	line:18
+__init__	../src/exercises/stacks/stacks.py	/^    def __init__(self, *args, **kwargs):$/;"	kind:member	line:10
+__init__	../src/exercises/stacks/stacks.py	/^    def __init__(self, *args, **kwargs):$/;"	kind:member	line:17
+__init__	../src/exercises/trees/trees.py	/^    def __init__(self, key):$/;"	kind:member	line:13
+__init__	../src/exercises/zoo/zoo_classes.py	/^    def __init__(self, age_, color_, habitat_):$/;"	kind:member	line:141
+__init__	../src/exercises/zoo/zoo_classes.py	/^    def __init__(self, age_init, color_init):$/;"	kind:member	line:119
+__init__	../src/exercises/zoo/zoo_classes.py	/^    def __init__(self, age_init, color_init):$/;"	kind:member	line:133
+__init__	../src/exercises/zoo/zoo_classes.py	/^    def __init__(self, age_init, color_init):$/;"	kind:member	line:86
+__init__	../src/exercises/zoo/zoo_classes.py	/^    def __init__(self, age_init, color_init, talking_init):$/;"	kind:member	line:69
+__init__	../src/exercises/zoo/zoo_classes.py	/^    def __init__(self, spec_init, age_init, color_init):$/;"	kind:member	line:15
+__init__	../src/exercises/zoo/zoo_classes.py	/^    def __init__(self, spec_init, age_init, color_init, flying_init):$/;"	kind:member	line:35
+__init__	../src/exercises/zoo/zoo_classes.py	/^    def __init__(self, spec_init, age_init, color_init, habitat_init):$/;"	kind:member	line:108
+__init__	../src/exercises/zoo/zoo_classes.py	/^    def __init__(self, spec_init, age_init, color_init, habitat_init):$/;"	kind:member	line:54
+__init__	../src/exercises/zoo/zoo_classes.py	/^    def __init__(self, spec_init, age_init, color_init, habitat_init):$/;"	kind:member	line:99
+__init__	../src/notes/Point.py	/^    def __init__(self, x: int, y: int):$/;"	kind:member	line:22
+__init__	../src/notes/Point.py	/^    def __init__(self, x_init_value, y_init_value, z_init_value):$/;"	kind:member	line:125
+__init__	../src/notes/args_demo.py	/^    def __init__(self, *args, **kwargs):$/;"	kind:member	line:13
+__init__	../src/notes/binary_search_tree_generic_implementation.py	/^    def __init__(self):$/;"	kind:member	line:4
+__init__	../src/notes/inheritance_demo.py	/^    def __init__(self)$/;"	kind:member	line:48
+__init__	../src/notes/inheritance_demo.py	/^    def __init__(self):$/;"	kind:member	line:37
+__init__	../src/notes/inheritance_demo.py	/^    def __init__(self, *args, **kwargs):$/;"	kind:member	line:9
+__init__	../src/notes/inheritance_demo.py	/^    def __init__(self, legs_init_value):$/;"	kind:member	line:17
+__init__	../src/notes/linkedlists.py	/^    def __init__(self):$/;"	kind:member	line:27
+__init__	../src/notes/linkedlists.py	/^    def __init__(self, init_value):$/;"	kind:member	line:2
+__init__	../src/notes/trees/BinaryTree.py	/^    def __init__(self, key):$/;"	kind:member	line:4
+__init__	../src/projects/bank/bank_classes.py	/^    def __init__($/;"	kind:member	line:15
+__init__	../src/projects/bank/bank_classes.py	/^    def __init__($/;"	kind:member	line:202
+__init__	../src/projects/bank/bank_classes.py	/^    def __init__(self, name_init: str, dob_init: str, address_init: object):$/;"	kind:member	line:82
+__init__	../src/projects/bank/bank_classes.py	/^    def __init__(self, owner_init: object, balance_init: float = 0):$/;"	kind:member	line:131
+__init__	../src/projects/bank/bank_classes.py	/^    def __init__(self, owner_init: object, fee_init: float, balance_init: float = 0):$/;"	kind:member	line:176
+__init__	../src/projects/customproblem/customproblem.py	/^    def __init__(self, Country_Name: str, Country_Language: object):$/;"	kind:member	line:55
+__init__	../src/projects/customproblem/customproblem.py	/^    def __init__(self, Name: str, Greeting: str, Thanks: str):$/;"	kind:member	line:15
+__init__	../src/projects/customproblem/customproblem.py	/^    def __init__(self, Persons_Name: str, Persons_Country: object):$/;"	kind:member	line:80
+__init__	../src/projects/customproblem/customproblem.py	/^    def __init__(self, Persons_Name: str, Persons_Country: object, Destination: str):$/;"	kind:member	line:117
+__init__	../src/projects/customproblem/customproblem.py	/^    def __init__(self, Persons_Name: str, Persons_Country: object, Helpful: bool):$/;"	kind:member	line:158
+__init__	../src/projects/customproblem/fun.py	/^    def __init__(self, Name: str, Greeting: str, Thanks: str):$/;"	kind:member	line:4
+__init__	../src/projects/dice/dice_classes.py	/^    def __init__(self, num_dice: int, num_sides: int = 6) -> None:$/;"	kind:member	line:73
+__init__	../src/projects/dice/dice_classes.py	/^    def __init__(self, possible_values: Sequence) -> None:$/;"	kind:member	line:17
+__init__	../src/projects/dice/dice_classes.py	/^    def __init__(self, possible_values: Sequence) -> None:$/;"	kind:member	line:48
+__init__	../src/projects/mapadt/map-textbook-version.py	/^    def __init__(self):$/;"	kind:member	line:2
+__init__	../src/projects/mapadt/mapadt.py	/^    def __init__(self, size_init: int = 16):$/;"	kind:member	line:12
+__init__	../src/projects/morse/morse.py	/^    def __init__(self, file_in: str):$/;"	kind:member	line:12
+__init__	../src/projects/rpn/rpn-old.py	/^    def __init__(self, *args, **kwargs):$/;"	kind:member	line:18
+__init__	../src/projects/rpn/rpn-old.py	/^    def __init__(self, *args, **kwargs):$/;"	kind:member	line:26
+__init__	../src/projects/rpn/rpn.py	/^    def __init__(self, *args, **kwargs):$/;"	kind:member	line:15
+__init__	../src/projects/rpn/rpn.py	/^    def __init__(self, *args, **kwargs):$/;"	kind:member	line:23
+__init__	../src/projects/water/water.py	/^    def __init__(self, jug_1: int, jug_2: int):$/;"	kind:member	line:17
+__init__	../src/projects/words/testing.py	/^    def __init__(self):$/;"	kind:member	line:3
+__init__	../src/projects/words/words.py	/^    def __init__(self):$/;"	kind:member	line:16
+__init__	../src/projects/words/words.py	/^    def __init__(self):$/;"	kind:member	line:44
+__init__.py	../src/exercises/fractions/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/exercises/graphs/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/exercises/hashing/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/exercises/heaps/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/exercises/orderedlists/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/exercises/stacks/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/exercises/trees/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/exercises/zoo/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/projects/bank/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/projects/customproblem/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/projects/dice/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/projects/keyboard/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/projects/mapadt/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/projects/morse/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/projects/rpn/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/projects/water/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/projects/words/__init__.py	1;"	kind:file	line:1
+__iter__	../src/exercises/graphs/graphs.py	/^    def __iter__(self):$/;"	kind:member	line:149
+__iter__	../src/notes/binary_search_tree_generic_implementation.py	/^    def __iter__(self):$/;"	kind:member	line:11
+__iter__	../src/projects/dice/dice_classes.py	/^    def __iter__(self):$/;"	kind:member	line:78
+__len__	../src/exercises/graphs/graphs.py	/^    def __len__(self):$/;"	kind:member	line:153
+__len__	../src/exercises/heaps/heaps.py	/^    def __len__(self):$/;"	kind:member	line:69
+__len__	../src/exercises/orderedlists/orderedlists_classes.py	/^    def __len__(self) -> int:$/;"	kind:member	line:76
+__len__	../src/notes/binary_search_tree_generic_implementation.py	/^    def __len__(self):$/;"	kind:member	line:8
+__len__	../src/notes/linkedlists.py	/^    def __len__(self) -> int:$/;"	kind:member	line:33
+__len__	../src/projects/mapadt/mapadt.py	/^    def __len__(self):$/;"	kind:member	line:28
+__lt__	../src/exercises/graphs/graphs.py	/^    def __lt__(self, other):$/;"	kind:member	line:107
+__lt__	../src/notes/Point.py	/^    def __lt__(self, other):$/;"	kind:member	line:104
+__mul__	../src/exercises/fractions/fractions.py	/^    def __mul__(self, other: object) -> object:$/;"	kind:member	line:119
+__repr__	../src/exercises/fractions/fractions.py	/^    def __repr__(self) -> str:$/;"	kind:member	line:66
+__repr__	../src/notes/Point.py	/^    def __repr__(self):$/;"	kind:member	line:81
+__setitem__	../src/projects/mapadt/map-textbook-version.py	/^    def __setitem__(self,key,data):$/;"	kind:member	line:55
+__setitem__	../src/projects/mapadt/mapadt.py	/^    def __setitem__(self, key: int, value):$/;"	kind:member	line:22
+__str__	../src/exercises/fractions/fractions.py	/^    def __str__(self) -> str:$/;"	kind:member	line:55
+__str__	../src/exercises/graphs/graphs.py	/^    def __str__(self):$/;"	kind:member	line:98
+__str__	../src/exercises/heaps/heaps.py	/^    def __str__(self):$/;"	kind:member	line:73
+__str__	../src/exercises/orderedlists/orderedlists_classes.py	/^    def __str__(self) -> str:$/;"	kind:member	line:43
+__str__	../src/exercises/orderedlists/orderedlists_classes.py	/^    def __str__(self) -> str:$/;"	kind:member	line:80
+__str__	../src/exercises/zoo/zoo_classes.py	/^    def __str__(self):$/;"	kind:member	line:146
+__str__	../src/exercises/zoo/zoo_classes.py	/^    def __str__(self):$/;"	kind:member	line:26
+__str__	../src/exercises/zoo/zoo_classes.py	/^    def __str__(self):$/;"	kind:member	line:42
+__str__	../src/notes/Point.py	/^    def __str__(self):$/;"	kind:member	line:135
+__str__	../src/notes/Point.py	/^    def __str__(self):$/;"	kind:member	line:75
+__str__	../src/notes/inheritance_demo.py	/^    def __str__(self):$/;"	kind:member	line:20
+__str__	../src/notes/inheritance_demo.py	/^    def __str__(self):$/;"	kind:member	line:40
+__str__	../src/notes/inheritance_demo.py	/^    def __str__(self):$/;"	kind:member	line:51
+__str__	../src/notes/linkedlists.py	/^    def __str__(self) -> str:$/;"	kind:member	line:38
+__str__	../src/notes/linkedlists.py	/^    def __str__(self):$/;"	kind:member	line:22
+__str__	../src/projects/bank/bank_classes.py	/^    def __str__(self):$/;"	kind:member	line:122
+__str__	../src/projects/bank/bank_classes.py	/^    def __str__(self):$/;"	kind:member	line:168
+__str__	../src/projects/bank/bank_classes.py	/^    def __str__(self):$/;"	kind:member	line:194
+__str__	../src/projects/bank/bank_classes.py	/^    def __str__(self):$/;"	kind:member	line:213
+__str__	../src/projects/bank/bank_classes.py	/^    def __str__(self):$/;"	kind:member	line:74
+__str__	../src/projects/customproblem/customproblem.py	/^    def __str__(self):$/;"	kind:member	line:132
+__str__	../src/projects/customproblem/customproblem.py	/^    def __str__(self):$/;"	kind:member	line:168
+__str__	../src/projects/customproblem/customproblem.py	/^    def __str__(self):$/;"	kind:member	line:31
+__str__	../src/projects/customproblem/customproblem.py	/^    def __str__(self):$/;"	kind:member	line:98
+__str__	../src/projects/dice/dice_classes.py	/^    def __str__(self) -> str:$/;"	kind:member	line:82
+__str__	../src/projects/dice/dice_classes.py	/^    def __str__(self):$/;"	kind:member	line:32
+__str__	../src/projects/mapadt/mapadt.py	/^    def __str__(self):$/;"	kind:member	line:43
+__str__	../src/projects/water/water.py	/^    def __str__(self):$/;"	kind:member	line:33
+__sub__	../src/exercises/fractions/fractions.py	/^    def __sub__(self, other: object) -> object:$/;"	kind:member	line:109
+__truediv__	../src/exercises/fractions/fractions.py	/^    def __truediv__(self, other: object) -> object:$/;"	kind:member	line:127
+_hash	../src/projects/mapadt/mapadt.py	/^    def _hash(self, key: int, size: int):$/;"	kind:member	line:52
+_rehash	../src/projects/mapadt/mapadt.py	/^    def _rehash(self, old_hash: int, size: int, step):$/;"	kind:member	line:56
+a	../src/notes/heap.py	/^a = [1, 15, 22, 25, 100, 30, 13, 4, 3]$/;"	kind:variable	line:5
+a_to_a	../data/projects/keyboard/testing.py	/^a_to_a = find_distance("a", "a")$/;"	kind:variable	line:36
+add	../src/exercises/orderedlists/orderedlists_classes.py	/^    def add(self, value: typing.Any) -> None:$/;"	kind:member	line:97
+add	../src/notes/linkedlists.py	/^    def add(self, new_node: object) -> None:$/;"	kind:member	line:70
+add	../src/projects/dice/dice_classes.py	/^    def add(self, die: Die) -> None:$/;"	kind:member	line:98
+add_edge	../src/exercises/graphs/graphs.py	/^    def add_edge(self, from_vertex: str, to_vertex: str, weight=0):$/;"	kind:member	line:124
+add_vertex	../src/exercises/graphs/graphs.py	/^    def add_vertex(self, key: str):$/;"	kind:member	line:119
+address	../src/projects/bank/bank_classes.py	/^    address = property(get_address, set_address)$/;"	kind:variable	line:116
+address_attributes	../tests/projects/bank/test_bank_address.py	/^address_attributes = "street, city, state, zip_code"$/;"	kind:variable	line:11
+addresses	../tests/projects/bank/test_bank_address.py	/^addresses = [$/;"	kind:variable	line:12
+addresses	../tests/projects/bank/test_bank_checking.py	/^addresses = [$/;"	kind:variable	line:11
+addresses	../tests/projects/bank/test_bank_customer.py	/^addresses = [$/;"	kind:variable	line:11
+addresses	../tests/projects/bank/test_bank_savings.py	/^addresses = [$/;"	kind:variable	line:11
+all_neighbors	../src/exercises/graphs/graphs.py	/^    all_neighbors = property(get_all_neighbors)$/;"	kind:variable	line:42
+append	../src/exercises/orderedlists/orderedlists_classes.py	/^    def append(self, value: typing.Any) -> None:$/;"	kind:member	line:167
+append	../src/notes/linkedlists.py	/^    def append(self, new_node: object) -> None:  # Expect object (Node)$/;"	kind:member	line:110
+args_demo	../src/notes/args_demo.py	/^def args_demo(*args):$/;"	kind:function	line:17
+args_demo.py	../src/notes/args_demo.py	1;"	kind:file	line:1
+ask_for_directions	../src/projects/customproblem/customproblem.py	/^    def ask_for_directions(self):$/;"	kind:member	line:147
+balance	../src/projects/bank/bank_classes.py	/^    balance = property(get_balance, set_balance)$/;"	kind:variable	line:154
+bank_classes.py	../src/projects/bank/bank_classes.py	1;"	kind:file	line:1
+base_converter	../src/exercises/stacks/stacks.py	/^def base_converter(dec_num, base):$/;"	kind:function	line:85
+binary_search_tree_generic_implementation.py	../src/notes/binary_search_tree_generic_implementation.py	1;"	kind:file	line:1
+build_tree_lst	../src/exercises/trees/treeslst.py	/^def build_tree_lst() -> list:$/;"	kind:function	line:57
+build_tree_oop	../src/exercises/trees/trees.py	/^def build_tree_oop() -> object:$/;"	kind:function	line:69
+chk_account_attributes	../tests/projects/bank/test_bank_checking.py	/^chk_account_attributes = "owner, fee, balance"$/;"	kind:variable	line:20
+chk_accounts	../tests/projects/bank/test_bank_checking.py	/^chk_accounts = [(Customer(*customers[0]), 15, 100), (Customer(*customers[1]), 20, 25)]$/;"	kind:variable	line:21
+city	../src/projects/bank/bank_classes.py	/^    city = property(get_city, set_city)$/;"	kind:variable	line:52
+clockwise	../src/exercises/trees/trees.py	/^    def clockwise(self):$/;"	kind:member	line:60
+clockwise	../src/exercises/trees/treeslst.py	/^def clockwise(root):$/;"	kind:function	line:48
+clone	../src/projects/water/water.py	/^    def clone(self):$/;"	kind:member	line:40
+clone	../src/projects/words/testing.py	/^    def clone(self):$/;"	kind:member	line:21
+clone	../src/projects/words/words.py	/^    def clone(self):$/;"	kind:member	line:34
+close	../src/projects/bank/bank_classes.py	/^    def close(self):$/;"	kind:member	line:163
+color	../src/exercises/graphs/graphs.py	/^    color = property(get_color, set_color)$/;"	kind:variable	line:72
+country	../src/projects/customproblem/customproblem.py	/^    country = property(get_country)$/;"	kind:variable	line:95
+customer_attributes	../tests/projects/bank/test_bank_checking.py	/^customer_attributes = "name, dob, address"$/;"	kind:variable	line:15
+customer_attributes	../tests/projects/bank/test_bank_customer.py	/^customer_attributes = "name, dob, address"$/;"	kind:variable	line:15
+customer_attributes	../tests/projects/bank/test_bank_savings.py	/^customer_attributes = "name, dob, address"$/;"	kind:variable	line:15
+customers	../tests/projects/bank/test_bank_checking.py	/^customers = [$/;"	kind:variable	line:16
+customers	../tests/projects/bank/test_bank_customer.py	/^customers = [$/;"	kind:variable	line:16
+customers	../tests/projects/bank/test_bank_savings.py	/^customers = [$/;"	kind:variable	line:16
+customproblem.py	../src/projects/customproblem/customproblem.py	1;"	kind:file	line:1
+d	../src/projects/words/testing1.py	/^d = {}$/;"	kind:variable	line:2
+data	../src/exercises/orderedlists/orderedlists_classes.py	/^    data = property(get_data, set_data)$/;"	kind:variable	line:31
+data	../src/notes/linkedlists.py	/^    data = property(get_data, set_data)$/;"	kind:variable	line:12
+death-by-dictionary.py	../data/projects/keyboard/death-by-dictionary.py	1;"	kind:file	line:1
+decode	../src/projects/morse/morse.py	/^    def decode(self, code: str):$/;"	kind:member	line:36
+delete	../src/notes/binary_search_tree_generic_implementation.py	/^    def delete(self, key):$/;"	kind:member	line:21
+demo	../src/notes/args_demo.py	/^def demo(name, *args, **kwargs):$/;"	kind:function	line:40
+denominator	../src/exercises/fractions/fractions.py	/^    denominator = property(get_denominator)  # use with self.denominator$/;"	kind:variable	line:53
+deposit	../src/projects/bank/bank_classes.py	/^    def deposit(self, amount: float):$/;"	kind:member	line:156
+dequeue	../src/projects/words/words.py	/^    def dequeue(self):$/;"	kind:member	line:53
+destination	../src/projects/customproblem/customproblem.py	/^    destination = property(get_destination, set_destination)$/;"	kind:variable	line:130
+diamond_ite	../src/exercises/recursion/recursion.py	/^def diamond_ite(levels: int) -> None:$/;"	kind:function	line:39
+diamond_rec	../src/exercises/recursion/recursion.py	/^def diamond_rec(levels: int, counter: int) -> None:$/;"	kind:function	line:65
+dice.py	../src/projects/dice/dice.py	1;"	kind:file	line:1
+dice_classes.py	../src/projects/dice/dice_classes.py	1;"	kind:file	line:1
+diff_by_one_all	../src/projects/words/words.py	/^def diff_by_one_all(word, all_words, used_words):$/;"	kind:function	line:89
+dijkstra	../src/exercises/graphs/graphs.py	/^    def dijkstra(self, start: Vertex) -> None:$/;"	kind:member	line:178
+discovered	../src/exercises/graphs/graphs.py	/^    discovered = property(get_discovery, set_discovery)$/;"	kind:variable	line:82
+distance	../src/exercises/graphs/graphs.py	/^    distance = property(get_distance, set_distance)$/;"	kind:variable	line:52
+distance	../src/notes/Point.py	/^    def distance(self, other):$/;"	kind:member	line:112
+distance	../src/projects/words/words.py	/^def distance(word1: str, word2: str) -> int:$/;"	kind:function	line:80
+distances	../data/projects/keyboard/death-by-dictionary.py	/^distances = {$/;"	kind:variable	line:3
+do_math	../src/exercises/stacks/stacks.py	/^def do_math(op, op1, op2):$/;"	kind:function	line:138
+do_math	../src/projects/rpn/rpn-old.py	/^def do_math(op: str, op1: int, op2: int) -> int:$/;"	kind:function	line:62
+do_math	../src/projects/rpn/rpn.py	/^def do_math(op: str, op1: int, op2: int) -> int:$/;"	kind:function	line:62
+dob	../src/projects/bank/bank_classes.py	/^    dob = property(get_dob, set_dob)$/;"	kind:variable	line:106
+eat	../src/notes/inheritance_demo.py	/^    def eat(self):$/;"	kind:member	line:32
+eat	../src/notes/inheritance_demo.py	/^    def eat(self):$/;"	kind:member	line:43
+eat	../src/notes/inheritance_demo.py	/^    def eat(self):$/;"	kind:member	line:57
+empty_jug_1	../src/projects/water/water.py	/^    def empty_jug_1(self):$/;"	kind:member	line:52
+empty_jug_2	../src/projects/water/water.py	/^    def empty_jug_2(self):$/;"	kind:member	line:56
+encode	../src/projects/morse/morse.py	/^    def encode(self, msg: str):$/;"	kind:member	line:32
+enqueue	../src/projects/words/words.py	/^    def enqueue(self, item):$/;"	kind:member	line:50
+exercise1-ugly.py	../src/projects/stringsearch/extraneous/exercise1-ugly.py	1;"	kind:file	line:1
+exercise1.py	../src/projects/stringsearch/extraneous/exercise1.py	1;"	kind:file	line:1
+fee	../src/projects/bank/bank_classes.py	/^    fee = property(get_fee)$/;"	kind:variable	line:185
+fill_jug_1	../src/projects/water/water.py	/^    def fill_jug_1(self):$/;"	kind:member	line:44
+fill_jug_2	../src/projects/water/water.py	/^    def fill_jug_2(self):$/;"	kind:member	line:48
+findFirstNonRepeat	../src/projects/stringsearch/StringSearch.py	/^def findFirstNonRepeat(string):$/;"	kind:function	line:11
+findFirstNonRepeat	../src/projects/stringsearch/extraneous/exercise1-ugly.py	/^def findFirstNonRepeat(string):$/;"	kind:function	line:1
+findFirstNonRepeat	../src/projects/stringsearch/extraneous/exercise1.py	/^def findFirstNonRepeat(string):$/;"	kind:function	line:12
+find_distance	../data/projects/keyboard/testing.py	/^def find_distance(character_1: str, character_2: str):$/;"	kind:function	line:7
+find_distance	../src/projects/keyboard/keyboard.py	/^def find_distance(char_1: str, char_2: str):$/;"	kind:function	line:17
+find_middle_two	../src/exercises/hashing/hashing_functions.py	/^def find_middle_two(string: str) -> str:$/;"	kind:function	line:15
+find_middle_two	../src/exercises/hashing/hashing_functions_proper.py	/^def find_middle_two(string: str) -> str:$/;"	kind:function	line:15
+find_path	../src/projects/morse/morse.py	/^    def find_path(self, tree: object, letter: str, path: str):$/;"	kind:member	line:28
+finished	../src/exercises/graphs/graphs.py	/^    finished = property(get_finish, set_finish)$/;"	kind:variable	line:92
+follow_and_insert	../src/projects/morse/morse.py	/^    def follow_and_insert(self, code_str: str, letter: str):$/;"	kind:member	line:20
+follow_and_retrieve	../src/projects/morse/morse.py	/^    def follow_and_retrieve(self, code_str: str):$/;"	kind:member	line:24
+fractions.py	../src/exercises/fractions/fractions.py	1;"	kind:file	line:1
+frozen	../src/projects/dice/dice_classes.py	/^    def frozen(self) -> bool:$/;"	kind:member	line:54
+frozen	../src/projects/dice/dice_classes.py	/^    def frozen(self, new_value: bool) -> None:$/;"	kind:member	line:59
+fun.py	../src/projects/customproblem/fun.py	1;"	kind:file	line:1
+g_to_m	../data/projects/keyboard/testing.py	/^g_to_m = find_distance("g", "m")$/;"	kind:variable	line:45
+gcd	../src/exercises/fractions/fractions.py	/^def gcd(num_a: int, num_b: int) -> int:$/;"	kind:function	line:9
+gcd	../src/exercises/recursion/recursion.py	/^def gcd(a_num: int, b_num: int) -> int:$/;"	kind:function	line:10
+gcd	../src/exercises/recursion/test-gcd.py	/^def gcd(a_num: int, b_num: int) -> int:$/;"	kind:function	line:1
+get	../src/projects/mapadt/map-textbook-version.py	/^    def get(self,key):$/;"	kind:member	line:34
+get	../src/projects/mapadt/mapadt.py	/^    def get(self, key: int):$/;"	kind:member	line:89
+get_address	../src/projects/bank/bank_classes.py	/^    def get_address(self):$/;"	kind:member	line:108
+get_all_neighbors	../src/exercises/graphs/graphs.py	/^    def get_all_neighbors(self):$/;"	kind:member	line:38
+get_balance	../src/projects/bank/bank_classes.py	/^    def get_balance(self):$/;"	kind:member	line:146
+get_child_left	../src/exercises/trees/trees.py	/^    def get_child_left(self):$/;"	kind:member	line:26
+get_child_left	../src/exercises/trees/treeslst.py	/^def get_child_left(root):$/;"	kind:function	line:40
+get_child_left	../src/notes/trees/BinaryTree.py	/^    def get_child_left(self):$/;"	kind:member	line:17
+get_child_right	../src/exercises/trees/trees.py	/^    def get_child_right(self):$/;"	kind:member	line:34
+get_child_right	../src/exercises/trees/treeslst.py	/^def get_child_right(root):$/;"	kind:function	line:44
+get_child_right	../src/notes/trees/BinaryTree.py	/^    def get_child_right(self):$/;"	kind:member	line:25
+get_city	../src/projects/bank/bank_classes.py	/^    def get_city(self):$/;"	kind:member	line:44
+get_color	../src/exercises/graphs/graphs.py	/^    def get_color(self):$/;"	kind:member	line:64
+get_country	../src/projects/customproblem/customproblem.py	/^    def get_country(self):$/;"	kind:member	line:91
+get_data	../src/exercises/orderedlists/orderedlists_classes.py	/^    def get_data(self):$/;"	kind:member	line:23
+get_data	../src/notes/linkedlists.py	/^    def get_data(self):$/;"	kind:member	line:6
+get_denominator	../src/exercises/fractions/fractions.py	/^    def get_denominator(self) -> int:$/;"	kind:member	line:49
+get_destination	../src/projects/customproblem/customproblem.py	/^    def get_destination(self):$/;"	kind:member	line:122
+get_discovery	../src/exercises/graphs/graphs.py	/^    def get_discovery(self):$/;"	kind:member	line:74
+get_distance	../src/exercises/graphs/graphs.py	/^    def get_distance(self):$/;"	kind:member	line:44
+get_dob	../src/projects/bank/bank_classes.py	/^    def get_dob(self):$/;"	kind:member	line:98
+get_fee	../src/projects/bank/bank_classes.py	/^    def get_fee(self):$/;"	kind:member	line:181
+get_finish	../src/exercises/graphs/graphs.py	/^    def get_finish(self):$/;"	kind:member	line:84
+get_greeting	../src/projects/customproblem/customproblem.py	/^    def get_greeting(self):$/;"	kind:member	line:35
+get_greeting	../src/projects/customproblem/fun.py	/^    def get_greeting(self):$/;"	kind:member	line:20
+get_helpful	../src/projects/customproblem/customproblem.py	/^    def get_helpful(self):$/;"	kind:member	line:163
+get_key	../src/exercises/graphs/graphs.py	/^    def get_key(self):$/;"	kind:member	line:22
+get_language	../src/projects/customproblem/customproblem.py	/^    def get_language(self):$/;"	kind:member	line:66
+get_max_child	../src/exercises/heaps/heaps.py	/^    def get_max_child(self, parent_idx):$/;"	kind:member	line:60
+get_name	../src/projects/bank/bank_classes.py	/^    def get_name(self):$/;"	kind:member	line:88
+get_name	../src/projects/customproblem/customproblem.py	/^    def get_name(self):$/;"	kind:member	line:21
+get_name	../src/projects/customproblem/customproblem.py	/^    def get_name(self):$/;"	kind:member	line:60
+get_name	../src/projects/customproblem/customproblem.py	/^    def get_name(self):$/;"	kind:member	line:85
+get_name	../src/projects/customproblem/fun.py	/^    def get_name(self):$/;"	kind:member	line:10
+get_neighbor	../src/exercises/graphs/graphs.py	/^    def get_neighbor(self, other: str):$/;"	kind:member	line:28
+get_next	../src/exercises/orderedlists/orderedlists_classes.py	/^    def get_next(self):$/;"	kind:member	line:33
+get_numerator	../src/exercises/fractions/fractions.py	/^    def get_numerator(self) -> int:$/;"	kind:member	line:43
+get_owner	../src/projects/bank/bank_classes.py	/^    def get_owner(self):$/;"	kind:member	line:136
+get_previous	../src/exercises/graphs/graphs.py	/^    def get_previous(self):$/;"	kind:member	line:54
+get_root_val	../src/exercises/trees/trees.py	/^    def get_root_val(self):$/;"	kind:member	line:18
+get_root_val	../src/exercises/trees/treeslst.py	/^def get_root_val(root):$/;"	kind:function	line:32
+get_root_val	../src/notes/trees/BinaryTree.py	/^    def get_root_val(self):$/;"	kind:member	line:9
+get_state	../src/projects/bank/bank_classes.py	/^    def get_state(self):$/;"	kind:member	line:54
+get_street	../src/projects/bank/bank_classes.py	/^    def get_street(self):$/;"	kind:member	line:34
+get_thanks	../src/projects/customproblem/customproblem.py	/^    def get_thanks(self):$/;"	kind:member	line:41
+get_thanks	../src/projects/customproblem/fun.py	/^    def get_thanks(self):$/;"	kind:member	line:26
+get_vertex	../src/exercises/graphs/graphs.py	/^    def get_vertex(self, key: str):$/;"	kind:member	line:132
+get_vertices	../src/exercises/graphs/graphs.py	/^    def get_vertices(self):$/;"	kind:member	line:136
+get_weight	../src/exercises/graphs/graphs.py	/^    def get_weight(self, other):$/;"	kind:member	line:94
+get_x	../src/notes/Point.py	/^    def get_x(self):$/;"	kind:member	line:39
+get_zip	../src/projects/bank/bank_classes.py	/^    def get_zip(self):$/;"	kind:member	line:64
+graphs.py	../src/exercises/graphs/graphs.py	1;"	kind:file	line:1
+greeting	../src/projects/customproblem/customproblem.py	/^    greeting = property(get_greeting)$/;"	kind:variable	line:39
+greeting	../src/projects/customproblem/fun.py	/^    greeting = property(get_greeting)$/;"	kind:variable	line:24
+grow_a_limb	../src/notes/inheritance_demo.py	/^    def grow_a_limb(self):$/;"	kind:member	line:23
+grow_a_limb	../src/notes/inheritance_demo.py	/^    def grow_a_limb(self):$/;"	kind:member	line:54
+hash_folding	../src/exercises/hashing/hashing_functions.py	/^def hash_folding(key: int, size: int) -> int:$/;"	kind:function	line:40
+hash_folding	../src/exercises/hashing/hashing_functions_proper.py	/^def hash_folding(key: int, size: int) -> int:$/;"	kind:function	line:37
+hash_mid_sqr	../src/exercises/hashing/hashing_functions.py	/^def hash_mid_sqr(key: int, size: int) -> int:$/;"	kind:function	line:24
+hash_mid_sqr	../src/exercises/hashing/hashing_functions_proper.py	/^def hash_mid_sqr(key: int, size: int) -> int:$/;"	kind:function	line:24
+hash_remainder	../src/exercises/hashing/hashing_functions.py	/^def hash_remainder(key: int, size: int) -> int:$/;"	kind:function	line:10
+hash_remainder	../src/exercises/hashing/hashing_functions_proper.py	/^def hash_remainder(key: int, size: int) -> int:$/;"	kind:function	line:10
+hash_str	../src/exercises/hashing/hashing_functions.py	/^def hash_str(key: str, size: int) -> int:$/;"	kind:function	line:62
+hash_str	../src/exercises/hashing/hashing_functions_proper.py	/^def hash_str(key: str, size: int) -> int:$/;"	kind:function	line:59
+hash_str_weighted	../src/exercises/hashing/hashing_functions.py	/^def hash_str_weighted(key: str, size: int) -> int:$/;"	kind:function	line:72
+hash_str_weighted	../src/exercises/hashing/hashing_functions_proper.py	/^def hash_str_weighted(key: str, size: int) -> int:$/;"	kind:function	line:69
+hashfunction	../src/projects/mapadt/map-textbook-version.py	/^    def hashfunction(self, key, size):$/;"	kind:member	line:28
+hashing.py	../src/notes/hashing.py	1;"	kind:file	line:1
+hashing_functions.py	../src/exercises/hashing/hashing_functions.py	1;"	kind:file	line:1
+hashing_functions_proper.py	../src/exercises/hashing/hashing_functions_proper.py	1;"	kind:file	line:1
+hashing_main.py	../hashing_main.py	1;"	kind:file	line:1
+hashing_main.py	../src/exercises/hashing/hashing_main.py	1;"	kind:file	line:1
+heap.py	../src/notes/heap.py	1;"	kind:file	line:1
+heapify	../src/exercises/heaps/heaps.py	/^    def heapify(self, not_a_heap):$/;"	kind:member	line:51
+heaps.py	../src/exercises/heaps/heaps.py	1;"	kind:file	line:1
+helpful	../src/projects/customproblem/customproblem.py	/^    helpful = property(get_helpful)$/;"	kind:variable	line:166
+hourglass_ite	../src/exercises/recursion/recursion.py	/^def hourglass_ite(levels: int) -> None:$/;"	kind:function	line:24
+hourglass_rec	../src/exercises/recursion/recursion.py	/^def hourglass_rec(levels: int, counter: int) -> None:$/;"	kind:function	line:54
+hub	../src/exercises/graphs/graphs.py	/^    def hub(self):$/;"	kind:member	line:157
+index	../src/exercises/orderedlists/orderedlists_classes.py	/^    def index(self, value: typing.Any) -> int:$/;"	kind:member	line:188
+index	../src/notes/linkedlists.py	/^    def index(self, value) -> int:$/;"	kind:member	line:87
+inheritance_demo.py	../src/notes/inheritance_demo.py	1;"	kind:file	line:1
+inorder	../src/notes/trees/BinaryTree.py	/^    def inorder(self):$/;"	kind:member	line:59
+insert	../src/exercises/heaps/heaps.py	/^    def insert(self, item):$/;"	kind:member	line:39
+insert	../src/exercises/orderedlists/orderedlists_classes.py	/^    def insert(self, position: int, value: typing.Any) -> None:$/;"	kind:member	line:172
+insert	../src/notes/linkedlists.py	/^    def insert(self, pos: int, new_node: object) -> None:$/;"	kind:member	line:133
+insert_child_left	../src/exercises/trees/treeslst.py	/^def insert_child_left(root, new_branch):$/;"	kind:function	line:14
+insert_child_right	../src/exercises/trees/treeslst.py	/^def insert_child_right(root, new_branch):$/;"	kind:function	line:23
+insert_left	../src/exercises/trees/trees.py	/^    def insert_left(self, new_node):$/;"	kind:member	line:46
+insert_left	../src/notes/trees/BinaryTree.py	/^    def insert_left(self, new_node):$/;"	kind:member	line:37
+insert_right	../src/exercises/trees/trees.py	/^    def insert_right(self, new_node):$/;"	kind:member	line:53
+insert_right	../src/notes/trees/BinaryTree.py	/^    def insert_right(self, new_node):$/;"	kind:member	line:44
+is_empty	../src/exercises/orderedlists/orderedlists_classes.py	/^    def is_empty(self) -> bool:$/;"	kind:member	line:89
+is_empty	../src/notes/linkedlists.py	/^    def is_empty(self) -> bool:$/;"	kind:member	line:58
+is_empty	../src/projects/words/testing.py	/^    def is_empty(self):$/;"	kind:member	line:6
+is_empty	../src/projects/words/words.py	/^    def is_empty(self):$/;"	kind:member	line:19
+is_empty	../src/projects/words/words.py	/^    def is_empty(self):$/;"	kind:member	line:47
+is_leaf	../src/exercises/trees/trees.py	/^    def is_leaf(self):$/;"	kind:member	line:42
+is_leaf	../src/notes/trees/BinaryTree.py	/^    def is_leaf(self):$/;"	kind:member	line:33
+items	../src/projects/mapadt/mapadt.py	/^    def items(self):$/;"	kind:member	line:117
+j_to_q	../data/projects/keyboard/testing.py	/^j_to_q = find_distance("j", "q")$/;"	kind:variable	line:41
+key	../src/exercises/graphs/graphs.py	/^    key = property(get_key)$/;"	kind:variable	line:26
+keyboard.py	../src/projects/keyboard/keyboard.py	1;"	kind:file	line:1
+keys	../src/projects/mapadt/mapadt.py	/^    def keys(self):$/;"	kind:member	line:109
+keyword_args_demo	../src/notes/args_demo.py	/^def keyword_args_demo(**kwargs):$/;"	kind:function	line:27
+l	../src/projects/words/testing1.py	/^l = []$/;"	kind:variable	line:1
+language	../src/projects/customproblem/customproblem.py	/^    language = property(get_language)$/;"	kind:variable	line:70
+linkedlists.py	../src/notes/linkedlists.py	1;"	kind:file	line:1
+low_distances_to_z	../data/projects/keyboard/testing.py	/^low_distances_to_z = {"z": 0, "x": 1, "c": 2, "v": 3, "b": 4, "n": 5, "m": 6}$/;"	kind:variable	line:5
+m_to_g	../data/projects/keyboard/testing.py	/^m_to_g = find_distance("m", "g")$/;"	kind:variable	line:44
+main	../hashing_main.py	/^def main():$/;"	kind:function	line:15
+main	../src/exercises/fractions/fractions.py	/^def main():$/;"	kind:function	line:138
+main	../src/exercises/hashing/hashing_main.py	/^def main():$/;"	kind:function	line:15
+main	../src/exercises/orderedlists/orderedlists_main.py	/^def main():$/;"	kind:function	line:24
+main	../src/exercises/recursion/recursion.py	/^def main():$/;"	kind:function	line:76
+main	../src/exercises/zoo/zoo_main.py	/^def main():$/;"	kind:function	line:14
+main	../src/notes/Point.py	/^def main():$/;"	kind:function	line:140
+main	../src/notes/args_demo.py	/^def main(argv):$/;"	kind:function	line:49
+main	../src/notes/linkedlists.py	/^def main():$/;"	kind:function	line:177
+main	../src/projects/customproblem/fun.py	/^def main():$/;"	kind:function	line:32
+main	../src/projects/dice/dice.py	/^def main():$/;"	kind:function	line:12
+main	../src/projects/keyboard/keyboard.py	/^def main():$/;"	kind:function	line:87
+main	../src/projects/morse/morse.py	/^def main():$/;"	kind:function	line:41
+main	../src/projects/rpn/rpn-old.py	/^def main():$/;"	kind:function	line:86
+main	../src/projects/rpn/rpn.py	/^def main():$/;"	kind:function	line:100
+main	../src/projects/water/water.py	/^def main():$/;"	kind:function	line:180
+main	../src/projects/words/words.py	/^def main():$/;"	kind:function	line:98
+map-textbook-version.py	../src/projects/mapadt/map-textbook-version.py	1;"	kind:file	line:1
+mapadt.py	../src/projects/mapadt/mapadt.py	1;"	kind:file	line:1
+mid_distances_to_a	../data/projects/keyboard/testing.py	/^mid_distances_to_a = {"a": 0, "s": 1, "d": 2, "f": 3, "g": 4, "h": 5, "j": 6, "k": 7, "l": 8}$/;"	kind:variable	line:3
+morse.py	../src/projects/morse/morse.py	1;"	kind:file	line:1
+move	../src/projects/bank/bank_classes.py	/^    def move(self, new_address: object):$/;"	kind:member	line:118
+name	../src/exercises/graphs/__init__.py	/^name = "graphs"$/;"	kind:variable	line:4
+name	../src/exercises/heaps/__init__.py	/^name = "heaps"$/;"	kind:variable	line:4
+name	../src/projects/bank/bank_classes.py	/^    name = property(get_name, set_name)$/;"	kind:variable	line:96
+name	../src/projects/customproblem/customproblem.py	/^    name = property(get_name)$/;"	kind:variable	line:25
+name	../src/projects/customproblem/customproblem.py	/^    name = property(get_name)$/;"	kind:variable	line:64
+name	../src/projects/customproblem/customproblem.py	/^    name = property(get_name)$/;"	kind:variable	line:89
+name	../src/projects/customproblem/fun.py	/^    name = property(get_name)$/;"	kind:variable	line:14
+name	../src/projects/mapadt/__init__.py	/^name = "mapadt"$/;"	kind:variable	line:4
+name	../src/projects/morse/__init__.py	/^name = "morse"$/;"	kind:variable	line:4
+name	../src/projects/water/__init__.py	/^name = "water"$/;"	kind:variable	line:4
+name	../src/projects/words/__init__.py	/^name = "words"$/;"	kind:variable	line:4
+neighbor	../src/exercises/graphs/graphs.py	/^    neighbor = property(get_neighbor, set_neighbor)$/;"	kind:variable	line:36
+next	../src/exercises/orderedlists/orderedlists_classes.py	/^    next = property(get_next, set_next)$/;"	kind:variable	line:41
+next	../src/notes/linkedlists.py	/^    def next(self):$/;"	kind:member	line:15
+next	../src/notes/linkedlists.py	/^    def next(self, new_next):$/;"	kind:member	line:19
+numerator	../src/exercises/fractions/fractions.py	/^    numerator = property(get_numerator)  # use with self.numerator$/;"	kind:variable	line:47
+offer_directions	../src/projects/customproblem/customproblem.py	/^    def offer_directions(self):$/;"	kind:member	line:173
+orderedlists_classes.py	../src/exercises/orderedlists/orderedlists_classes.py	1;"	kind:file	line:1
+orderedlists_main.py	../src/exercises/orderedlists/orderedlists_main.py	1;"	kind:file	line:1
+owner	../src/projects/bank/bank_classes.py	/^    owner = property(get_owner, set_owner)$/;"	kind:variable	line:144
+p_to_z	../data/projects/keyboard/testing.py	/^p_to_z = find_distance("p", "z")$/;"	kind:variable	line:65
+par_checker	../src/exercises/stacks/stacks.py	/^def par_checker(line):$/;"	kind:function	line:34
+par_checker_ext	../src/exercises/stacks/stacks.py	/^def par_checker_ext(line):$/;"	kind:function	line:52
+par_checker_file	../src/exercises/stacks/stacks.py	/^def par_checker_file(filename):$/;"	kind:function	line:70
+peek	../src/projects/words/testing.py	/^    def peek(self):$/;"	kind:member	line:18
+peek	../src/projects/words/words.py	/^    def peek(self):$/;"	kind:member	line:31
+perc_down	../src/exercises/heaps/heaps.py	/^    def perc_down(self, cur_idx):$/;"	kind:member	line:29
+perc_up	../src/exercises/heaps/heaps.py	/^    def perc_up(self, cur_idx):$/;"	kind:member	line:19
+pop	../src/exercises/orderedlists/orderedlists_classes.py	/^    def pop(self, position: int = None):$/;"	kind:member	line:131
+pop	../src/notes/linkedlists.py	/^    def pop(self, idx = None):$/;"	kind:member	line:154
+pop	../src/projects/words/testing.py	/^    def pop(self):$/;"	kind:member	line:15
+pop	../src/projects/words/words.py	/^    def pop(self):$/;"	kind:member	line:28
+postfix_eval	../src/projects/rpn/rpn-old.py	/^def postfix_eval(postfix_expr: str) -> int:$/;"	kind:function	line:31
+postfix_eval	../src/projects/rpn/rpn.py	/^def postfix_eval(postfix_expr: str) -> int:$/;"	kind:function	line:28
+postorder	../src/notes/trees/BinaryTree.py	/^    def postorder(self):$/;"	kind:member	line:67
+pour_jug_1_to_jug_2	../src/projects/water/water.py	/^    def pour_jug_1_to_jug_2(self):$/;"	kind:member	line:60
+pour_jug_2_to_jug_1	../src/projects/water/water.py	/^    def pour_jug_2_to_jug_1(self):$/;"	kind:member	line:73
+preorder	../src/notes/trees/BinaryTree.py	/^    def preorder(self):$/;"	kind:member	line:51
+previous	../src/exercises/graphs/graphs.py	/^    previous = property(get_previous, set_previous)$/;"	kind:variable	line:62
+print_list_status	../src/exercises/orderedlists/orderedlists_main.py	/^def print_list_status(lst):$/;"	kind:function	line:9
+process_check	../src/projects/bank/bank_classes.py	/^    def process_check(self, amount: float):$/;"	kind:member	line:187
+push	../src/projects/words/testing.py	/^    def push(self, item):$/;"	kind:member	line:12
+push	../src/projects/words/words.py	/^    def push(self, item):$/;"	kind:member	line:25
+put	../src/notes/binary_search_tree_generic_implementation.py	/^    def put(self, key, val):$/;"	kind:member	line:14
+put	../src/projects/mapadt/map-textbook-version.py	/^    def put(self,key,data):$/;"	kind:member	line:7
+put	../src/projects/mapadt/mapadt.py	/^    def put(self, key: int, value):$/;"	kind:member	line:60
+q_to_j	../data/projects/keyboard/testing.py	/^q_to_j = find_distance("q", "j")$/;"	kind:variable	line:42
+q_to_s	../data/projects/keyboard/testing.py	/^q_to_s = find_distance("q", "s")$/;"	kind:variable	line:39
+q_to_z	../data/projects/keyboard/testing.py	/^q_to_z = find_distance("m", "u")$/;"	kind:variable	line:66
+read_file	../src/projects/words/words.py	/^def read_file(filename: str) -> dict:$/;"	kind:function	line:61
+rec_upsidedown_triangle	../src/exercises/recursion/testground.py	/^def rec_upsidedown_triangle(levels, count):$/;"	kind:function	line:2
+rec_upsideup_triangle	../src/exercises/recursion/testground.py	/^def rec_upsideup_triangle(levels, count):$/;"	kind:function	line:9
+recursion.py	../src/exercises/recursion/recursion.py	1;"	kind:file	line:1
+recursive_diamond	../src/exercises/recursion/testground.py	/^def recursive_diamond(levels, counter):$/;"	kind:function	line:26
+recursive_hourglass	../src/exercises/recursion/testground.py	/^def recursive_hourglass(levels, counter):$/;"	kind:function	line:16
+rehash	../src/projects/mapadt/map-textbook-version.py	/^    def rehash(self,oldhash,size):$/;"	kind:member	line:31
+remove	../src/projects/dice/dice_classes.py	/^    def remove(self, idx: int):$/;"	kind:member	line:104
+reset_distances	../src/exercises/graphs/graphs.py	/^    def reset_distances(self):$/;"	kind:member	line:140
+rev_string	../src/exercises/stacks/stacks.py	/^def rev_string(my_str):$/;"	kind:function	line:21
+roll	../src/projects/dice/dice_classes.py	/^    def roll(self):$/;"	kind:member	line:37
+roll	../src/projects/dice/dice_classes.py	/^    def roll(self):$/;"	kind:member	line:63
+roll	../src/projects/dice/dice_classes.py	/^    def roll(self, *args) -> None:$/;"	kind:member	line:108
+rpn-old.py	../src/projects/rpn/rpn-old.py	1;"	kind:file	line:1
+rpn.py	../src/projects/rpn/rpn.py	1;"	kind:file	line:1
+rpn_calc	../src/exercises/stacks/stacks.py	/^def rpn_calc(postfix_expr):$/;"	kind:function	line:105
+rpn_calc	../src/projects/rpn/rpn-old.py	/^def rpn_calc(filename: str) -> int:$/;"	kind:function	line:74
+rpn_calc	../src/projects/rpn/rpn.py	/^def rpn_calc(filename: str) -> int:$/;"	kind:function	line:84
+s_to_q	../data/projects/keyboard/testing.py	/^s_to_q = find_distance("s", "q")$/;"	kind:variable	line:38
+say_hello	../src/projects/customproblem/customproblem.py	/^    def say_hello(self):$/;"	kind:member	line:106
+search	../src/exercises/orderedlists/orderedlists_classes.py	/^    def search(self, value: typing.Any) -> bool:$/;"	kind:member	line:177
+search	../src/notes/linkedlists.py	/^    def search(self, value) -> bool:$/;"	kind:member	line:75
+search	../src/notes/searching_sorting.py	/^def search(lst, item):$/;"	kind:function	line:3
+search	../src/projects/water/water.py	/^def search(start_state: object, goal: object, moves_lst: list):$/;"	kind:function	line:86
+searching_sorting.py	../src/notes/searching_sorting.py	1;"	kind:file	line:1
+set_address	../src/projects/bank/bank_classes.py	/^    def set_address(self, value: object):$/;"	kind:member	line:112
+set_balance	../src/projects/bank/bank_classes.py	/^    def set_balance(self, value: float):$/;"	kind:member	line:150
+set_child_left	../src/exercises/trees/trees.py	/^    def set_child_left(self, new_child_left):$/;"	kind:member	line:30
+set_child_left	../src/notes/trees/BinaryTree.py	/^    def set_child_left(self, new_child_left):$/;"	kind:member	line:21
+set_child_right	../src/exercises/trees/trees.py	/^    def set_child_right(self, new_child_right):$/;"	kind:member	line:38
+set_child_right	../src/notes/trees/BinaryTree.py	/^    def set_child_right(self, new_child_right):$/;"	kind:member	line:29
+set_city	../src/projects/bank/bank_classes.py	/^    def set_city(self, value: str):$/;"	kind:member	line:48
+set_color	../src/exercises/graphs/graphs.py	/^    def set_color(self, color: str):$/;"	kind:member	line:68
+set_data	../src/exercises/orderedlists/orderedlists_classes.py	/^    def set_data(self, new_data: typing.Any) -> None:$/;"	kind:member	line:27
+set_data	../src/notes/linkedlists.py	/^    def set_data(self, new_data):$/;"	kind:member	line:9
+set_destination	../src/projects/customproblem/customproblem.py	/^    def set_destination(self, value: str):$/;"	kind:member	line:126
+set_discovery	../src/exercises/graphs/graphs.py	/^    def set_discovery(self, t):$/;"	kind:member	line:78
+set_distance	../src/exercises/graphs/graphs.py	/^    def set_distance(self, distance: int):$/;"	kind:member	line:48
+set_dob	../src/projects/bank/bank_classes.py	/^    def set_dob(self, value: str):$/;"	kind:member	line:102
+set_finish	../src/exercises/graphs/graphs.py	/^    def set_finish(self, t):$/;"	kind:member	line:88
+set_name	../src/projects/bank/bank_classes.py	/^    def set_name(self, value: str):$/;"	kind:member	line:92
+set_neighbor	../src/exercises/graphs/graphs.py	/^    def set_neighbor(self, other: str, weight: int = 0):$/;"	kind:member	line:32
+set_next	../src/exercises/orderedlists/orderedlists_classes.py	/^    def set_next(self, new_next: object) -> None:$/;"	kind:member	line:37
+set_owner	../src/projects/bank/bank_classes.py	/^    def set_owner(self, value: object):$/;"	kind:member	line:140
+set_previous	../src/exercises/graphs/graphs.py	/^    def set_previous(self, previous):$/;"	kind:member	line:58
+set_root_val	../src/exercises/trees/trees.py	/^    def set_root_val(self, new_key):$/;"	kind:member	line:22
+set_root_val	../src/exercises/trees/treeslst.py	/^def set_root_val(root, new_val):$/;"	kind:function	line:36
+set_root_val	../src/notes/trees/BinaryTree.py	/^    def set_root_val(self, new_key):$/;"	kind:member	line:13
+set_state	../src/projects/bank/bank_classes.py	/^    def set_state(self, value: str):$/;"	kind:member	line:58
+set_street	../src/projects/bank/bank_classes.py	/^    def set_street(self, value: str):$/;"	kind:member	line:38
+set_x	../src/notes/Point.py	/^    def set_x(self, new_value):$/;"	kind:member	line:44
+set_zip	../src/projects/bank/bank_classes.py	/^    def set_zip(self, value: str):$/;"	kind:member	line:68
+setup_class	../tests/exercises/fractions/test_fractions.py	/^    def setup_class(self):$/;"	kind:member	line:16
+setup_class	../tests/exercises/graphs/test_graphs.py	/^    def setup_class(self):$/;"	kind:member	line:16
+setup_class	../tests/exercises/heaps/test_heaps.py	/^    def setup_class(self):$/;"	kind:member	line:16
+setup_class	../tests/exercises/trees/test_trees.py	/^    def setup_class(self):$/;"	kind:member	line:18
+setup_class	../tests/exercises/zoo/test_zoo.py	/^    def setup_class(self):$/;"	kind:member	line:26
+setup_class	../tests/projects/customproblem/test_customproblem.py	/^    def setup_class(self):$/;"	kind:member	line:21
+setup_class	../tests/projects/dice/test_dice.py	/^    def setup_class(self):$/;"	kind:member	line:17
+setup_class	../tests/projects/mapadt/test_mapadt.py	/^    def setup_class(self):$/;"	kind:member	line:16
+setup_class	../tests/projects/morse/test_morse.py	/^    def setup_class(self):$/;"	kind:member	line:16
+shake	../src/projects/dice/dice_classes.py	/^    def shake(self) -> None:$/;"	kind:member	line:91
+size	../src/exercises/graphs/graphs.py	/^    def size(self):$/;"	kind:member	line:168
+size	../src/exercises/orderedlists/orderedlists_classes.py	/^    def size(self) -> int:$/;"	kind:member	line:93
+size	../src/notes/linkedlists.py	/^    def size(self) -> int:$/;"	kind:member	line:64
+size	../src/projects/words/testing.py	/^    def size(self):$/;"	kind:member	line:9
+size	../src/projects/words/words.py	/^    def size(self):$/;"	kind:member	line:22
+size	../src/projects/words/words.py	/^    def size(self):$/;"	kind:member	line:56
+sound	../src/exercises/zoo/zoo_classes.py	/^    def sound(self):$/;"	kind:member	line:111
+sound	../src/exercises/zoo/zoo_classes.py	/^    def sound(self):$/;"	kind:member	line:124
+sound	../src/exercises/zoo/zoo_classes.py	/^    def sound(self):$/;"	kind:member	line:22
+sound	../src/exercises/zoo/zoo_classes.py	/^    def sound(self):$/;"	kind:member	line:76
+sound	../src/exercises/zoo/zoo_classes.py	/^    def sound(self):$/;"	kind:member	line:90
+spell_check	../src/projects/keyboard/keyboard.py	/^def spell_check(filename: str) -> None:$/;"	kind:function	line:49
+stack_1	../src/projects/words/testing.py	/^stack_1 = Stack()$/;"	kind:variable	line:31
+stack_2	../src/projects/words/testing.py	/^stack_2 = stack_1.clone()$/;"	kind:variable	line:36
+stacks.py	../src/exercises/stacks/stacks.py	1;"	kind:file	line:1
+state	../src/projects/bank/bank_classes.py	/^    state = property(get_state, set_state)$/;"	kind:variable	line:62
+street	../src/projects/bank/bank_classes.py	/^    street = property(get_street, set_street)$/;"	kind:variable	line:42
+string	../src/projects/stringsearch/StringSearch.py	/^string = input("Enter a string: ")$/;"	kind:variable	line:45
+string	../src/projects/stringsearch/extraneous/exercise1-ugly.py	/^string = input("Enter a string: ")$/;"	kind:variable	line:16
+string	../src/projects/stringsearch/extraneous/exercise1.py	/^string = input("Enter a string: ")$/;"	kind:variable	line:38
+sum_of_n	../src/notes/sum_of_n.py	/^def sum_of_n(n):$/;"	kind:function	line:1
+sum_of_n.py	../src/notes/sum_of_n.py	1;"	kind:file	line:1
+svng_account_attributes	../tests/projects/bank/test_bank_savings.py	/^svng_account_attributes = "owner, rate, balance"$/;"	kind:variable	line:20
+svng_accounts	../tests/projects/bank/test_bank_savings.py	/^svng_accounts = [$/;"	kind:variable	line:21
+test-gcd.py	../src/exercises/recursion/test-gcd.py	1;"	kind:file	line:1
+test_Country	../tests/projects/customproblem/test_customproblem.py	/^    def test_Country(self):$/;"	kind:member	line:33
+test_Language	../tests/projects/customproblem/test_customproblem.py	/^    def test_Language(self):$/;"	kind:member	line:25
+test_Local	../tests/projects/customproblem/test_customproblem.py	/^    def test_Local(self):$/;"	kind:member	line:65
+test_Resident	../tests/projects/customproblem/test_customproblem.py	/^    def test_Resident(self):$/;"	kind:member	line:40
+test_Tourist	../tests/projects/customproblem/test_customproblem.py	/^    def test_Tourist(self):$/;"	kind:member	line:54
+test_abstract_class_account	../tests/projects/bank/test_bank_account.py	/^    def test_abstract_class_account(self):$/;"	kind:member	line:14
+test_account_close	../tests/projects/bank/test_bank_checking.py	/^    def test_account_close(self, owner, fee, balance):$/;"	kind:member	line:53
+test_account_close	../tests/projects/bank/test_bank_savings.py	/^    def test_account_close(self, owner, rate, balance):$/;"	kind:member	line:56
+test_account_deposit	../tests/projects/bank/test_bank_checking.py	/^    def test_account_deposit(self, owner, fee, balance):$/;"	kind:member	line:35
+test_account_deposit	../tests/projects/bank/test_bank_savings.py	/^    def test_account_deposit(self, owner, rate, balance):$/;"	kind:member	line:38
+test_account_deposit_error	../tests/projects/bank/test_bank_checking.py	/^    def test_account_deposit_error(self, owner, fee, balance):$/;"	kind:member	line:43
+test_account_deposit_error	../tests/projects/bank/test_bank_savings.py	/^    def test_account_deposit_error(self, owner, rate, balance):$/;"	kind:member	line:46
+test_add	../tests/exercises/fractions/test_fractions.py	/^    def test_add(self):$/;"	kind:member	line:123
+test_add_error	../tests/exercises/fractions/test_fractions.py	/^    def test_add_error(self):$/;"	kind:member	line:127
+test_address_eq	../tests/projects/bank/test_bank_address.py	/^    def test_address_eq(self, street, city, state, zip_code):$/;"	kind:member	line:42
+test_address_init	../tests/projects/bank/test_bank_address.py	/^    def test_address_init(self, street, city, state, zip_code):$/;"	kind:member	line:24
+test_address_str	../tests/projects/bank/test_bank_address.py	/^    def test_address_str(self, street, city, state, zip_code, capsys):$/;"	kind:member	line:33
+test_animal	../tests/exercises/zoo/test_zoo.py	/^    def test_animal(self):$/;"	kind:member	line:29
+test_append	../tests/exercises/orderedlists/test_orderedlists.py	/^    def test_append(self, a_list, expected):$/;"	kind:member	line:24
+test_bank_account.py	../tests/projects/bank/test_bank_account.py	1;"	kind:file	line:1
+test_bank_address.py	../tests/projects/bank/test_bank_address.py	1;"	kind:file	line:1
+test_bank_checking.py	../tests/projects/bank/test_bank_checking.py	1;"	kind:file	line:1
+test_bank_customer.py	../tests/projects/bank/test_bank_customer.py	1;"	kind:file	line:1
+test_bank_savings.py	../tests/projects/bank/test_bank_savings.py	1;"	kind:file	line:1
+test_base_converter	../tests/exercises/stacks/test_stacks.py	/^def test_base_converter(number, base, expected):$/;"	kind:function	line:74
+test_bird	../tests/exercises/zoo/test_zoo.py	/^    def test_bird(self):$/;"	kind:member	line:39
+test_bobcat	../tests/exercises/zoo/test_zoo.py	/^    def test_bobcat(self):$/;"	kind:member	line:105
+test_canine	../tests/exercises/zoo/test_zoo.py	/^    def test_canine(self):$/;"	kind:member	line:73
+test_checking_account	../tests/projects/bank/test_bank_checking.py	/^    def test_checking_account(self, owner, fee, balance):$/;"	kind:member	line:28
+test_checking_process_check	../tests/projects/bank/test_bank_checking.py	/^    def test_checking_process_check(self, owner, fee, balance):$/;"	kind:member	line:60
+test_checking_str	../tests/projects/bank/test_bank_checking.py	/^    def test_checking_str(self, owner, fee, balance, capsys):$/;"	kind:member	line:74
+test_checksum	../tests/projects/rpn/test_rpn.py	/^def test_checksum(filename, expected):$/;"	kind:function	line:27
+test_clockwise_lst	../tests/exercises/trees/test_trees.py	/^    def test_clockwise_lst(self, capsys):$/;"	kind:member	line:29
+test_clockwise_ref	../tests/exercises/trees/test_trees.py	/^    def test_clockwise_ref(self, capsys):$/;"	kind:member	line:23
+test_cup_add	../tests/projects/dice/test_dice.py	/^    def test_cup_add(self):$/;"	kind:member	line:68
+test_cup_remove	../tests/projects/dice/test_dice.py	/^    def test_cup_remove(self):$/;"	kind:member	line:73
+test_cup_roll	../tests/projects/dice/test_dice.py	/^    def test_cup_roll(self):$/;"	kind:member	line:78
+test_cup_shake	../tests/projects/dice/test_dice.py	/^    def test_cup_shake(self):$/;"	kind:member	line:56
+test_cup_str	../tests/projects/dice/test_dice.py	/^    def test_cup_str(self, capsys):$/;"	kind:member	line:61
+test_customer_init	../tests/projects/bank/test_bank_customer.py	/^    def test_customer_init(self, name, dob, address):$/;"	kind:member	line:28
+test_customer_move	../tests/projects/bank/test_bank_customer.py	/^    def test_customer_move(self, name, dob, address):$/;"	kind:member	line:42
+test_customer_str	../tests/projects/bank/test_bank_customer.py	/^    def test_customer_str(self, name, dob, address):$/;"	kind:member	line:36
+test_customproblem.py	../tests/projects/customproblem/test_customproblem.py	1;"	kind:file	line:1
+test_decode	../tests/projects/morse/test_morse.py	/^    def test_decode(self):$/;"	kind:member	line:66
+test_decode_error	../tests/projects/morse/test_morse.py	/^    def test_decode_error(self):$/;"	kind:member	line:70
+test_dice.py	../tests/projects/dice/test_dice.py	1;"	kind:file	line:1
+test_die_get_value	../tests/projects/dice/test_dice.py	/^    def test_die_get_value(self):$/;"	kind:member	line:25
+test_die_roll	../tests/projects/dice/test_dice.py	/^    def test_die_roll(self):$/;"	kind:member	line:43
+test_die_set_value	../tests/projects/dice/test_dice.py	/^    def test_die_set_value(self):$/;"	kind:member	line:29
+test_die_str	../tests/projects/dice/test_dice.py	/^    def test_die_str(self, capsys):$/;"	kind:member	line:36
+test_dijkstra_t	../tests/exercises/graphs/test_graphs.py	/^    def test_dijkstra_t(self):$/;"	kind:member	line:44
+test_dijkstra_x	../tests/exercises/graphs/test_graphs.py	/^    def test_dijkstra_x(self):$/;"	kind:member	line:51
+test_do_math_advanced	../tests/projects/rpn/test_rpn.py	/^def test_do_math_advanced(operation, operand1, operand2, expected):$/;"	kind:function	line:106
+test_do_math_advanced_error	../tests/projects/rpn/test_rpn.py	/^def test_do_math_advanced_error(operation, operand1, operand2, err_message):$/;"	kind:function	line:118
+test_do_math_simple_error	../tests/projects/rpn/test_rpn.py	/^def test_do_math_simple_error(operation, operand1, operand2, err_message):$/;"	kind:function	line:85
+test_do_math_simple_float_success	../tests/projects/rpn/test_rpn.py	/^def test_do_math_simple_float_success(operation, operand1, operand2, expected):$/;"	kind:function	line:73
+test_do_math_simple_int_success	../tests/projects/rpn/test_rpn.py	/^def test_do_math_simple_int_success(operation, operand1, operand2, expected):$/;"	kind:function	line:65
+test_do_math_syntax_error	../tests/projects/rpn/test_rpn.py	/^def test_do_math_syntax_error(symbol):$/;"	kind:function	line:94
+test_dog	../tests/exercises/zoo/test_zoo.py	/^    def test_dog(self):$/;"	kind:member	line:93
+test_encode	../tests/projects/morse/test_morse.py	/^    def test_encode(self):$/;"	kind:member	line:55
+test_encode_error	../tests/projects/morse/test_morse.py	/^    def test_encode_error(self):$/;"	kind:member	line:59
+test_eq	../tests/exercises/fractions/test_fractions.py	/^    def test_eq(self):$/;"	kind:member	line:83
+test_eq_error	../tests/exercises/fractions/test_fractions.py	/^    def test_eq_error(self):$/;"	kind:member	line:88
+test_feline	../tests/exercises/zoo/test_zoo.py	/^    def test_feline(self):$/;"	kind:member	line:83
+test_find_path	../tests/projects/morse/test_morse.py	/^    def test_find_path(self):$/;"	kind:member	line:30
+test_follow_and_insert	../tests/projects/morse/test_morse.py	/^    def test_follow_and_insert(self):$/;"	kind:member	line:42
+test_follow_and_insert_replacement	../tests/projects/morse/test_morse.py	/^    def test_follow_and_insert_replacement(self):$/;"	kind:member	line:49
+test_follow_and_retrieve	../tests/projects/morse/test_morse.py	/^    def test_follow_and_retrieve(self):$/;"	kind:member	line:35
+test_fractions.py	../tests/exercises/fractions/test_fractions.py	1;"	kind:file	line:1
+test_frozen_die_roll	../tests/projects/dice/test_dice.py	/^    def test_frozen_die_roll(self):$/;"	kind:member	line:47
+test_ge	../tests/exercises/fractions/test_fractions.py	/^    def test_ge(self):$/;"	kind:member	line:109
+test_ge_error	../tests/exercises/fractions/test_fractions.py	/^    def test_ge_error(self):$/;"	kind:member	line:116
+test_get_denominator	../tests/exercises/fractions/test_fractions.py	/^    def test_get_denominator(self):$/;"	kind:member	line:67
+test_get_denominator_2	../tests/exercises/fractions/test_fractions.py	/^    def test_get_denominator_2(self):$/;"	kind:member	line:71
+test_get_numerator	../tests/exercises/fractions/test_fractions.py	/^    def test_get_numerator(self):$/;"	kind:member	line:59
+test_get_numerator_2	../tests/exercises/fractions/test_fractions.py	/^    def test_get_numerator_2(self):$/;"	kind:member	line:63
+test_getitem	../tests/exercises/orderedlists/test_orderedlists.py	/^    def test_getitem(self, a_list, position, expected):$/;"	kind:member	line:91
+test_getter	../tests/projects/mapadt/test_mapadt.py	/^    def test_getter(self):$/;"	kind:member	line:51
+test_graphs.py	../tests/exercises/graphs/test_graphs.py	1;"	kind:file	line:1
+test_gt	../tests/exercises/fractions/test_fractions.py	/^    def test_gt(self):$/;"	kind:member	line:95
+test_gt_error	../tests/exercises/fractions/test_fractions.py	/^    def test_gt_error(self):$/;"	kind:member	line:102
+test_hash_folding	../tests/exercises/hashing/test_hashing.py	/^def test_hash_folding(keys, size, expected):$/;"	kind:function	line:49
+test_hash_hash_mid_sqr	../tests/exercises/hashing/test_hashing.py	/^def test_hash_hash_mid_sqr(keys, size, expected):$/;"	kind:function	line:37
+test_hash_remainder	../tests/exercises/hashing/test_hashing.py	/^def test_hash_remainder(keys, size, expected):$/;"	kind:function	line:25
+test_hash_str	../tests/exercises/hashing/test_hashing.py	/^def test_hash_str(keys, size, expected):$/;"	kind:function	line:75
+test_hash_str_weighted	../tests/exercises/hashing/test_hashing.py	/^def test_hash_str_weighted(keys, size, expected):$/;"	kind:function	line:101
+test_hashing.py	../tests/exercises/hashing/test_hashing.py	1;"	kind:file	line:1
+test_heaps.py	../tests/exercises/heaps/test_heaps.py	1;"	kind:file	line:1
+test_housecat	../tests/exercises/zoo/test_zoo.py	/^    def test_housecat(self):$/;"	kind:member	line:99
+test_hub	../tests/exercises/graphs/test_graphs.py	/^    def test_hub(self):$/;"	kind:member	line:66
+test_index	../tests/exercises/orderedlists/test_orderedlists.py	/^    def test_index(self, a_list, a_number, expected):$/;"	kind:member	line:58
+test_init	../tests/exercises/fractions/test_fractions.py	/^    def test_init(self):$/;"	kind:member	line:23
+test_init	../tests/projects/mapadt/test_mapadt.py	/^    def test_init(self):$/;"	kind:member	line:39
+test_init_denominator_error	../tests/exercises/fractions/test_fractions.py	/^    def test_init_denominator_error(self):$/;"	kind:member	line:38
+test_init_denominator_error_2	../tests/exercises/fractions/test_fractions.py	/^    def test_init_denominator_error_2(self):$/;"	kind:member	line:52
+test_init_error	../tests/projects/morse/test_morse.py	/^    def test_init_error(self):$/;"	kind:member	line:20
+test_init_numerator_error	../tests/exercises/fractions/test_fractions.py	/^    def test_init_numerator_error(self):$/;"	kind:member	line:31
+test_init_numerator_error_2	../tests/exercises/fractions/test_fractions.py	/^    def test_init_numerator_error_2(self):$/;"	kind:member	line:45
+test_init_simplification	../tests/exercises/fractions/test_fractions.py	/^    def test_init_simplification(self):$/;"	kind:member	line:27
+test_insert	../tests/exercises/orderedlists/test_orderedlists.py	/^    def test_insert(self, a_list, expected):$/;"	kind:member	line:41
+test_items	../tests/projects/mapadt/test_mapadt.py	/^    def test_items(self):$/;"	kind:member	line:140
+test_key_found	../tests/projects/mapadt/test_mapadt.py	/^    def test_key_found(self):$/;"	kind:member	line:95
+test_key_not_found	../tests/projects/mapadt/test_mapadt.py	/^    def test_key_not_found(self):$/;"	kind:member	line:102
+test_keyboard.py	../tests/projects/keyboard/test_keyboard.py	1;"	kind:file	line:1
+test_keys	../tests/projects/mapadt/test_mapadt.py	/^    def test_keys(self):$/;"	kind:member	line:118
+test_len	../tests/exercises/graphs/test_graphs.py	/^    def test_len(self):$/;"	kind:member	line:58
+test_len	../tests/exercises/heaps/test_heaps.py	/^    def test_len(self):$/;"	kind:member	line:40
+test_len	../tests/projects/mapadt/test_mapadt.py	/^    def test_len(self):$/;"	kind:member	line:45
+test_mammal	../tests/exercises/zoo/test_zoo.py	/^    def test_mammal(self):$/;"	kind:member	line:49
+test_mapadt.py	../tests/projects/mapadt/test_mapadt.py	1;"	kind:file	line:1
+test_morse.py	../tests/projects/morse/test_morse.py	1;"	kind:file	line:1
+test_mult	../tests/exercises/fractions/test_fractions.py	/^    def test_mult(self):$/;"	kind:member	line:145
+test_mult_error	../tests/exercises/fractions/test_fractions.py	/^    def test_mult_error(self):$/;"	kind:member	line:149
+test_orderedlists.py	../tests/exercises/orderedlists/test_orderedlists.py	1;"	kind:file	line:1
+test_output	../tests/projects/keyboard/test_keyboard.py	/^def test_output(filename, capsys):$/;"	kind:function	line:29
+test_par_checker	../tests/exercises/stacks/test_stacks.py	/^def test_par_checker(string, expected):$/;"	kind:function	line:30
+test_par_checker_file	../tests/exercises/stacks/test_stacks.py	/^def test_par_checker_file(capsys):$/;"	kind:function	line:44
+test_parrot	../tests/exercises/zoo/test_zoo.py	/^    def test_parrot(self):$/;"	kind:member	line:59
+test_pas_checker_ext	../tests/exercises/stacks/test_stacks.py	/^def test_pas_checker_ext(string, expected):$/;"	kind:function	line:39
+test_penguin	../tests/exercises/zoo/test_zoo.py	/^    def test_penguin(self):$/;"	kind:member	line:67
+test_pop	../tests/exercises/orderedlists/test_orderedlists.py	/^    def test_pop(self, a_list, position, expected):$/;"	kind:member	line:74
+test_postfix_eval	../tests/projects/rpn/test_rpn.py	/^def test_postfix_eval(expression, expected):$/;"	kind:function	line:19
+test_postfix_eval_stack_error	../tests/projects/rpn/test_rpn.py	/^def test_postfix_eval_stack_error(expression, err_message):$/;"	kind:function	line:41
+test_postfix_eval_token_error	../tests/projects/rpn/test_rpn.py	/^def test_postfix_eval_token_error(expression, err_message, err_token):$/;"	kind:function	line:53
+test_repr	../tests/exercises/fractions/test_fractions.py	/^    def test_repr(self):$/;"	kind:member	line:79
+test_rev_string	../tests/exercises/stacks/test_stacks.py	/^def test_rev_string(string, expected):$/;"	kind:function	line:21
+test_rpn.py	../tests/projects/rpn/test_rpn.py	1;"	kind:file	line:1
+test_rpn_calc	../tests/exercises/stacks/test_stacks.py	/^def test_rpn_calc(expression, expected):$/;"	kind:function	line:83
+test_rpn_calc_float	../tests/exercises/stacks/test_stacks.py	/^def test_rpn_calc_float(expression, expected):$/;"	kind:function	line:97
+test_rpn_calc_stack_err	../tests/exercises/stacks/test_stacks.py	/^def test_rpn_calc_stack_err(expression, err_message):$/;"	kind:function	line:106
+test_rpn_calc_token_err	../tests/exercises/stacks/test_stacks.py	/^def test_rpn_calc_token_err(expression, err_message, token):$/;"	kind:function	line:118
+test_savings_account	../tests/projects/bank/test_bank_savings.py	/^    def test_savings_account(self, owner, rate, balance):$/;"	kind:member	line:31
+test_savings_str	../tests/projects/bank/test_bank_savings.py	/^    def test_savings_str(self, owner, rate, balance, capsys):$/;"	kind:member	line:71
+test_savings_yield_interest	../tests/projects/bank/test_bank_savings.py	/^    def test_savings_yield_interest(self, owner, rate, balance):$/;"	kind:member	line:63
+test_setter	../tests/projects/mapadt/test_mapadt.py	/^    def test_setter(self):$/;"	kind:member	line:58
+test_setter_error	../tests/projects/mapadt/test_mapadt.py	/^    def test_setter_error(self):$/;"	kind:member	line:80
+test_size	../tests/exercises/graphs/test_graphs.py	/^    def test_size(self, capsys):$/;"	kind:member	line:62
+test_stacks.py	../tests/exercises/stacks/test_stacks.py	1;"	kind:file	line:1
+test_str	../tests/exercises/fractions/test_fractions.py	/^    def test_str(self):$/;"	kind:member	line:75
+test_str	../tests/exercises/heaps/test_heaps.py	/^    def test_str(self):$/;"	kind:member	line:45
+test_str	../tests/projects/mapadt/test_mapadt.py	/^    def test_str(self):$/;"	kind:member	line:109
+test_sub	../tests/exercises/fractions/test_fractions.py	/^    def test_sub(self):$/;"	kind:member	line:134
+test_sub_error	../tests/exercises/fractions/test_fractions.py	/^    def test_sub_error(self):$/;"	kind:member	line:138
+test_trees.py	../tests/exercises/trees/test_trees.py	1;"	kind:file	line:1
+test_truediv	../tests/exercises/fractions/test_fractions.py	/^    def test_truediv(self):$/;"	kind:member	line:156
+test_truediv_error	../tests/exercises/fractions/test_fractions.py	/^    def test_truediv_error(self):$/;"	kind:member	line:160
+test_updater	../tests/projects/mapadt/test_mapadt.py	/^    def test_updater(self):$/;"	kind:member	line:69
+test_value_none	../tests/projects/mapadt/test_mapadt.py	/^    def test_value_none(self):$/;"	kind:member	line:90
+test_values	../tests/projects/mapadt/test_mapadt.py	/^    def test_values(self):$/;"	kind:member	line:124
+test_zoo.py	../tests/exercises/zoo/test_zoo.py	1;"	kind:file	line:1
+testground.py	../src/exercises/recursion/testground.py	1;"	kind:file	line:1
+testing.py	../data/projects/keyboard/testing.py	1;"	kind:file	line:1
+testing.py	../src/projects/words/testing.py	1;"	kind:file	line:1
+testing1.py	../src/projects/words/testing1.py	1;"	kind:file	line:1
+thanks	../src/projects/customproblem/customproblem.py	/^    thanks = property(get_thanks)$/;"	kind:variable	line:45
+thanks	../src/projects/customproblem/fun.py	/^    thanks = property(get_thanks)$/;"	kind:variable	line:30
+top_distances_to_q	../data/projects/keyboard/testing.py	/^top_distances_to_q = {"q": 0, "w": 1, "e": 2, "r": 3, "t": 4, "y": 5, "u": 6, "i": 7, "o": 8, "p": 9}$/;"	kind:variable	line:1
+travel	../src/projects/customproblem/customproblem.py	/^    def travel(self, new_destination: str):$/;"	kind:member	line:150
+trees.py	../src/exercises/trees/trees.py	1;"	kind:file	line:1
+treeslst.py	../src/exercises/trees/treeslst.py	1;"	kind:file	line:1
+value	../src/projects/dice/dice_classes.py	/^    def value(self):$/;"	kind:member	line:23
+value	../src/projects/dice/dice_classes.py	/^    def value(self, _):$/;"	kind:member	line:28
+values	../src/projects/mapadt/mapadt.py	/^    def values(self):$/;"	kind:member	line:113
+water.py	../src/projects/water/water.py	1;"	kind:file	line:1
+words.py	../src/projects/words/words.py	1;"	kind:file	line:1
+x	../src/notes/Point.py	/^    x = property(get_x, set_x)$/;"	kind:variable	line:49
+y	../src/notes/Point.py	/^    def y(self):$/;"	kind:member	line:53
+y	../src/notes/Point.py	/^    def y(self, new_value):$/;"	kind:member	line:58
+yield_interest	../src/projects/bank/bank_classes.py	/^    def yield_interest(self):$/;"	kind:member	line:209
+z	../src/notes/Point.py	/^    def z(self):$/;"	kind:member	line:132
+zip	../src/projects/bank/bank_classes.py	/^    zip = property(get_zip, set_zip)$/;"	kind:variable	line:72
+zoo_classes.py	../src/exercises/zoo/zoo_classes.py	1;"	kind:file	line:1
+zoo_main.py	../src/exercises/zoo/zoo_main.py	1;"	kind:file	line:1
