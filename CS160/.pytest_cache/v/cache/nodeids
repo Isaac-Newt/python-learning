@@ -1,7 +1,11 @@
 [
-  "tests/exercises/graphs/test_graphs.py::TestGraphMethods::test_dijkstra_t",
-  "tests/exercises/graphs/test_graphs.py::TestGraphMethods::test_dijkstra_x",
-  "tests/exercises/graphs/test_graphs.py::TestGraphMethods::test_len",
-  "tests/exercises/graphs/test_graphs.py::TestGraphMethods::test_size",
-  "tests/exercises/graphs/test_graphs.py::TestGraphMethods::test_hub"
+  "tests/projects/morse/test_morse.py::TestMorseMethods::test_init_error",
+  "tests/projects/morse/test_morse.py::TestMorseMethods::test_find_path",
+  "tests/projects/morse/test_morse.py::TestMorseMethods::test_follow_and_retrieve",
+  "tests/projects/morse/test_morse.py::TestMorseMethods::test_follow_and_insert",
+  "tests/projects/morse/test_morse.py::TestMorseMethods::test_follow_and_insert_replacement",
+  "tests/projects/morse/test_morse.py::TestMorseMethods::test_encode",
+  "tests/projects/morse/test_morse.py::TestMorseMethods::test_encode_error",
+  "tests/projects/morse/test_morse.py::TestMorseMethods::test_decode",
+  "tests/projects/morse/test_morse.py::TestMorseMethods::test_decode_error"
 ]

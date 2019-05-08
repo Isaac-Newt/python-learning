@@ -15,5 +15,7 @@
   "tests/projects/mapadt/test_mapadt.py::TestMap::test_str": true,
   "tests/projects/mapadt/test_mapadt.py::TestMap::test_updater": true,
   "tests/projects/mapadt/test_mapadt.py::TestMap::test_values": true,
+  "tests/projects/morse/test_morse.py::TestMorseMethods::test_encode_error": true,
+  "tests/projects/morse/test_morse.py::TestMorseMethods::test_find_path": true,
   "tests/projects/rpn/test_rpn.py::test_checksum[rpn_input_2.txt-8118]": true
 }
