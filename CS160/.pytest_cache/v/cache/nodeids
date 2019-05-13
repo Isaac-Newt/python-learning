@@ -1,11 +1,6 @@
 [
-  "tests/projects/morse/test_morse.py::TestMorseMethods::test_init_error",
-  "tests/projects/morse/test_morse.py::TestMorseMethods::test_find_path",
-  "tests/projects/morse/test_morse.py::TestMorseMethods::test_follow_and_retrieve",
-  "tests/projects/morse/test_morse.py::TestMorseMethods::test_follow_and_insert",
-  "tests/projects/morse/test_morse.py::TestMorseMethods::test_follow_and_insert_replacement",
-  "tests/projects/morse/test_morse.py::TestMorseMethods::test_encode",
-  "tests/projects/morse/test_morse.py::TestMorseMethods::test_encode_error",
-  "tests/projects/morse/test_morse.py::TestMorseMethods::test_decode",
-  "tests/projects/morse/test_morse.py::TestMorseMethods::test_decode_error"
+  "tests/projects/kevinbacon/test_kevinbacon.py::TestMoviesMethods::test_read_file_vertices",
+  "tests/projects/kevinbacon/test_kevinbacon.py::TestMoviesMethods::test_read_file_edges",
+  "tests/projects/kevinbacon/test_kevinbacon.py::TestMoviesMethods::test_bfs",
+  "tests/projects/kevinbacon/test_kevinbacon.py::TestMoviesMethods::test_traversal"
 ]
