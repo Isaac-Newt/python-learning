@@ -50,24 +50,42 @@ def read_file(filename):
     return kevinbacon_graph
 
 
-def find_kbn(kevinbacon_graph):
+def find_kevin_bacon_numbers(graph):
     """Find kevin bacon number for all actors (start at Kevin)"""
-    kevinbacon_graph.bfs("Kevin Bacon")
+    graph.bfs(graph.get_vertex("Kevin Bacon"))
 
 
-def traverse(y):
-    x = y
-    while (x.getPred()):
-        print(x.getId())
-        x = x.getPred()
-    print(x.getId())
+def traverse(graph, src, dst):
+    """Traverse a graph"""
+    path = []
+    current = dst
+    # Find the actor path
+    while current:
+        path.append(current)
+        current = current.previous
+    # Build the path string
+    path_strings = []
+    for idx in range(1, len(path)):
+        string = f"{path[idx - 1].key} acted with {path[idx].key}"
+        path_strings.append(string)
+    print("\n".join(path_strings))
+    # print(" ".join(vertex.key for vertex in (path)))
 
 
 def main():
     print("---Kevin Bacon number calculator---")
     print("\nReading the file")
     b_graph = read_file("data/projects/kevinbacon/movie_actors_full.txt")
-    find_kbn(b_graph)
+    find_kevin_bacon_numbers(b_graph)
+    # Loop to find number and links for any actor entered
+    actor = input("What Actor would you like to trace? (exit to quit): ")
+    while actor != "exit":
+        print(f"The Kevin Bacon number for {actor} is {b_graph.get_vertex(actor).get_distance()}.")
+
+        traverse(b_graph, b_graph.get_vertex("Kevin Bacon"), b_graph.get_vertex(actor))
+
+        actor = input("What Actor would you like to trace? (exit to quit): ")
+
 
 if __name__ == "__main__":
     main()
