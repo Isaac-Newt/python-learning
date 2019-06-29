@@ -1,6 +1,12 @@
-# This demonstrates text input by immitating
-# a login form.  It displays the entered text
-# in the console when the button is clicked.
+"""
+Credit: Isaac List
+Modified: June 27, 2019
+
+This simple app takes three inputs 
+a, b, c in the form ax^2 + bx + c, 
+and outputs the resulting x values
+in the console.  
+"""
 
 import math
 import gi
@@ -9,10 +15,11 @@ from gi.repository import Gtk, Gio
 
 # define window
 class MainWindow(Gtk.Window):
+    """Extend Gtk.Window"""
 
-    # set up window contents
     def __init__(self):
-        Gtk.Window.__init__(self, title="Quadratics")
+        """Build the application window"""
+        Gtk.Window.__init__(self, title="Quadratic Solver")
         self.set_border_width(10)
         self.set_default_size(200, 100)
 
@@ -20,28 +27,42 @@ class MainWindow(Gtk.Window):
         vbox = Gtk.Box(orientation = Gtk.Orientation.VERTICAL, spacing = 8)
         self.add(vbox)
 
-        # A
+        # Practicing your ABC's
         self.A = Gtk.Entry()
-        self.A.set_text("A")
-        vbox.pack_start(self.A, True, True, 0)
-
-        # B
         self.B = Gtk.Entry()
-        self.B.set_text("B")
-        vbox.pack_start(self.B, True, True, 0)
-        
-        # C
         self.C = Gtk.Entry()
-        self.C.set_text("C")
-        vbox.pack_start(self.C, True, True, 0)
+        entries = [self.A, self.B, self.C]
+        characters = ["A", "B", "C"]
+
+        # Build the inputs
+        for index in range(len(characters)):
+            hbox = Gtk.Box(spacing = 8)
+            # Don't use this index thing
+            label = Gtk.Label(characters[index])
+
+            hbox.pack_start(label, True, True, 0)
+            # Don't use this index thing
+            hbox.pack_start(entries[index], True, True, 0)
+
+            vbox.pack_start(hbox, True, True, 0)
 
         # Submit Button
-        self.button = Gtk.Button(label = "Calculate")
-        self.button.connect("clicked", self.calculate)
-        vbox.pack_start(self.button, True, True, 0)
+        self.submit_button = Gtk.Button(label = "Calculate")
+        self.submit_button.connect("clicked", self.calculate)
+        vbox.pack_start(self.submit_button, True, True, 0)
+
+        # Answer field
+        self.answer_field = Gtk.Label("")        
+        vbox.pack_start(self.answer_field, True, True, 0)
+
+    
+    def display_answer(self, result):
+        """Display the results in the window"""
+        self.answer_field = Gtk.Label()
 
     # Run this when button clicked
     def calculate(self, widget):
+        """Calculate the quadratic formula"""
         # read in results
         A = float(self.A.get_text())
         B = float(self.B.get_text())
@@ -51,9 +72,10 @@ class MainWindow(Gtk.Window):
         result_1 = (-B + math.  sqrt((B**2)-(4*A*C))) / (2*A)
         result_2 = (-B - math.sqrt((B**2)-(4*A*C))) / (2*A)
     	
-        # print results
-        print("x = ", end = '')
-        print(str(result_1), ",", str(result_2), sep = '')
+        # format result
+        result = f"x = {result_1}, {result_2}"
+        display_answer(result)
+        
 
 window = MainWindow()
 window.connect("delete-event", Gtk.main_quit)
