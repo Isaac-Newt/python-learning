@@ -28,7 +28,8 @@ class MainWindow(Gtk.Window):
     def __init__(self):
         """Initialize Application"""
         # Create morse code tree
-        self.morse_coder = Coder("resources/morse.txt")
+        # Should fix this path, as it's based on the root of the current terminal view.
+        self.morse_coder = Coder("Morse Code Transcriber/resources/morse.txt")
 
         # Window title
         Gtk.Window.__init__(self, title="Morse Code Generator")
@@ -101,12 +102,13 @@ class MainWindow(Gtk.Window):
         code_string = self.morse_coder.encode(input_text)
         return code_string
 
-    def display_morse(self):
+    def display_morse(self, input_text):
         """Display converted text in the output box"""
-        input_text = self.text_input
+        input_text = self.text_input.get_text()
+        input_text = input_text.lower()
         print(input_text)
-        # morse_string = self.to_morse(input_text)
-        # self.morse_output.set_text(morse_string)
+        morse_string = self.to_morse(input_text)
+        self.morse_output.set_text(morse_string)
         
 
 
