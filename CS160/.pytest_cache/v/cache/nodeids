@@ -1,6 +1,1 @@
-[
-  "tests/projects/kevinbacon/test_kevinbacon.py::TestMoviesMethods::test_read_file_vertices",
-  "tests/projects/kevinbacon/test_kevinbacon.py::TestMoviesMethods::test_read_file_edges",
-  "tests/projects/kevinbacon/test_kevinbacon.py::TestMoviesMethods::test_bfs",
-  "tests/projects/kevinbacon/test_kevinbacon.py::TestMoviesMethods::test_traversal"
-]
+[]

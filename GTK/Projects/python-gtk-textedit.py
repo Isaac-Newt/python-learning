@@ -34,7 +34,7 @@ class MainWindow(Gtk.Window):
         open_button.connect("clicked", self.on_open_clicked)
         headerbar.pack_start(open_button)
 
-        save_button = Gtk.Button(label="Save")
+        save_button = Gtk.Button(labeMorse Transcriptionl="Save")
         save_button.connect("clicked", self.on_save_clicked)
         headerbar.pack_start(save_button)
 
@@ -61,9 +61,7 @@ class MainWindow(Gtk.Window):
 
     def on_save_clicked(self, widget):
         print("save")
-        self.textbuffer.get_text(self.textbuffer.get_start_iter(), self.textbuffer.get_end_iter(), True)
-        filename = savechooser.get_filename()
-        print(filename, 'selected.')
+        print(self.textbuffer.get_text(self.textbuffer.get_start_iter(), self.textbuffer.get_end_iter(), True))
 
     # About Dialog actions
     def on_about_clicked(self, widget):
