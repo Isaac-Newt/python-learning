@@ -1,0 +1,22 @@
+{
+  "CS160/tests/exercises/fractions/test_fractions.py": true,
+  "CS160/tests/exercises/graphs/test_graphs.py": true,
+  "CS160/tests/exercises/hashing/test_hashing.py": true,
+  "CS160/tests/exercises/heaps/test_heaps.py": true,
+  "CS160/tests/exercises/orderedlists/test_orderedlists.py": true,
+  "CS160/tests/exercises/stacks/test_stacks.py": true,
+  "CS160/tests/exercises/trees/test_trees.py": true,
+  "CS160/tests/exercises/zoo/test_zoo.py": true,
+  "CS160/tests/projects/bank/test_bank_account.py": true,
+  "CS160/tests/projects/bank/test_bank_address.py": true,
+  "CS160/tests/projects/bank/test_bank_checking.py": true,
+  "CS160/tests/projects/bank/test_bank_customer.py": true,
+  "CS160/tests/projects/bank/test_bank_savings.py": true,
+  "CS160/tests/projects/customproblem/test_customproblem.py": true,
+  "CS160/tests/projects/dice/test_dice.py": true,
+  "CS160/tests/projects/kevinbacon/test_kevinbacon.py": true,
+  "CS160/tests/projects/keyboard/test_keyboard.py": true,
+  "CS160/tests/projects/mapadt/test_mapadt.py": true,
+  "CS160/tests/projects/morse/test_morse.py": true,
+  "CS160/tests/projects/rpn/test_rpn.py": true
+}

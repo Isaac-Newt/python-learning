@@ -1,0 +1,34 @@
+is_prime	isPrime.py	/^def is_prime(n):$/;"	f
+myName	hello.py	/^myName = input()$/;"	v
+myAge	hello.py	/^myAge = input()$/;"	v
+sale	tax.py	/^sale = float(input())$/;"	v
+state	tax.py	/^state = input()$/;"	v
+rate	tax.py	/^    rate = 0.055$/;"	v
+rate	tax.py	/^    rate = 0.0688$/;"	v
+rate	tax.py	/^    rate = 0.06$/;"	v
+tax	tax.py	/^tax = rate * sale$/;"	v
+total	tax.py	/^total = sale + tax$/;"	v
+decimalToHexadecimal	decimal-to-hexadecimal-the-HARD-way.py	/^def decimalToHexadecimal(integer):$/;"	f
+number	decimal-to-hexadecimal-the-HARD-way.py	/^number = 0$/;"	v
+number	decimal-to-hexadecimal-the-HARD-way.py	/^    number = int(input("Enter an int between 0 and 255 inclusive: "))$/;"	v
+red	hex-colors-from-rgb.py	/^red = int(input("Enter a 'red' value: "))$/;"	v
+green	hex-colors-from-rgb.py	/^green = int(input("Enter a 'green' value: "))$/;"	v
+blue	hex-colors-from-rgb.py	/^blue = int(input("Enter a 'blue' value: "))$/;"	v
+rgbValue	hex-colors-from-rgb.py	/^rgbValue = "(" + str(red) + "," + str(green) + "," + str(blue) + ")"$/;"	v
+redHex	hex-colors-from-rgb.py	/^redHex = hex(red)$/;"	v
+greenHex	hex-colors-from-rgb.py	/^greenHex = hex(green)$/;"	v
+blueHex	hex-colors-from-rgb.py	/^blueHex = hex(blue)$/;"	v
+redHex	hex-colors-from-rgb.py	/^redHex = str(redHex)[2:]$/;"	v
+greenHex	hex-colors-from-rgb.py	/^greenHex = str(greenHex)[2:]$/;"	v
+blueHex	hex-colors-from-rgb.py	/^blueHex = str(blueHex)[2:]$/;"	v
+redHex	hex-colors-from-rgb.py	/^    redHex = "0" + redHex$/;"	v
+greenHex	hex-colors-from-rgb.py	/^    greenHex = "0" + greenHex$/;"	v
+blueHex	hex-colors-from-rgb.py	/^    blueHex = "0" + blueHex$/;"	v
+hexcode	hex-colors-from-rgb.py	/^hexcode = "#" + redHex + greenHex + blueHex$/;"	v
+isOperator	manual-calculator.py	/^def isOperator(x):$/;"	f
+findOperator	manual-calculator.py	/^def findOperator(list, index):$/;"	f
+isNumberPart	manual-calculator.py	/^def isNumberPart(x):$/;"	f
+buildNumber	manual-calculator.py	/^def buildNumber(char):$/;"	f
+evaluate	manual-calculator.py	/^def evaluate(exp):$/;"	f
+expression	manual-calculator.py	/^expression = input("Enter an expression:" )$/;"	v
+result	manual-calculator.py	/^result = evaluate(expression)$/;"	v
