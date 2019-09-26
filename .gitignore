@@ -1,0 +1,5 @@
+# Ignore vscode and __pycache__ stuff
+**/.vscode
+**/__pycache__
+**/.pytest_cache
+**/.mypy_cache
