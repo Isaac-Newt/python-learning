@@ -1,11 +1,11 @@
 {
-    "python.pythonPath": "/home/isaac/.pyenv/versions/3.7.3/bin/python",
-    "python.testing.pyTestArgs": [
+    "python.pythonPath": "/home/isaac/.pyenv/shims/python3",
+    "python.testing.pytestArgs": [
         "data"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
-    "python.testing.pyTestEnabled": false,
+    "python.testing.pytestEnabled": false,
     "python.testing.promptToConfigure": false,
     "python.linting.enabled": false
 }
